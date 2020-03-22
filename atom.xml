@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>木头的博客</title>
+  <icon>https://blog.mutoe.com/icon.png</icon>
+  <subtitle>我是木头 有些想法 有点精力</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://blog.mutoe.com/"/>
+  <updated>2020-01-26T14:28:54.000Z</updated>
+  <id>https://blog.mutoe.com/</id>
+  
+  <author>
+    <name>mutoe</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Flutter 学习笔记</title>
+    <link href="https://blog.mutoe.com/2020/flutter-study-notes/"/>
+    <id>https://blog.mutoe.com/2020/flutter-study-notes/</id>
+    <published>2020-01-21T11:17:19.000Z</published>
+    <updated>2020-01-26T14:28:54.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这里记录了一些个人学习 Flutter 时遇到的一些问题, 可以作为避免踩坑和速查手册. 如有疑问欢迎留言.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="笔记" scheme="https://blog.mutoe.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Flutter" scheme="https://blog.mutoe.com/tags/Flutter/"/>
+    
+      <category term="Dart" scheme="https://blog.mutoe.com/tags/Dart/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>手把手带你实践 TDD Nestjs Realworld 项目 - 3. 鉴权认证</title>
+    <link href="https://blog.mutoe.com/2020/TDD-nestjs-realworld-example-app-3/"/>
+    <id>https://blog.mutoe.com/2020/TDD-nestjs-realworld-example-app-3/</id>
+    <published>2020-01-08T07:32:50.000Z</published>
+    <updated>2020-03-22T06:02:34.173Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;上一章我们创建了一个用户表, 但是还没有实现真正的注册和登录. 要实现注册登录以及后续的权限校验, 我们还有一些工作要做.&lt;/p&gt;
+&lt;p&gt;目前有比较多的思路来对用户进行鉴权, 我们选用 Conduit 示例中展示的也是现在比较广泛的做法 JWT 进行认证.&lt;/p&gt;
+&lt;p&gt;要实现 JWT 鉴权, NestJS 为我们做好了大部分工作.&lt;/p&gt;
+&lt;h1 id=&quot;1-安装依赖&quot;&gt;&lt;a href=&quot;#1-安装依赖&quot; class=&quot;headerlink&quot; title=&quot;1. 安装依赖&quot;&gt;&lt;/a&gt;1. 安装依赖&lt;/h1&gt;&lt;p&gt;但是在这之前, 我们要先安装下面的依赖&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yarn add @nestjs/passport passport passport-local&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;yarn add -D @types/passport-local&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;Passport 你可以把它看作是一个小型的框架, 因为你可以通过一些简单的回调函数来进行配置. Passport 会在适当的时候对其进行调用.&lt;/p&gt;
+&lt;p&gt;而 &lt;code&gt;@nestjs/passport&lt;/code&gt; 则对 Passport 进行了很好的集成.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="教程" scheme="https://blog.mutoe.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Nestjs" scheme="https://blog.mutoe.com/tags/Nestjs/"/>
+    
+      <category term="TypeScript" scheme="https://blog.mutoe.com/tags/TypeScript/"/>
+    
+      <category term="Postgres" scheme="https://blog.mutoe.com/tags/Postgres/"/>
+    
+      <category term="TypeORM" scheme="https://blog.mutoe.com/tags/TypeORM/"/>
+    
+      <category term="JWT" scheme="https://blog.mutoe.com/tags/JWT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>手把手带你实践 TDD Nestjs Realworld 项目 - 2. 数据库连接</title>
+    <link href="https://blog.mutoe.com/2020/TDD-nestjs-realworld-example-app-2/"/>
+    <id>https://blog.mutoe.com/2020/TDD-nestjs-realworld-example-app-2/</id>
+    <published>2020-01-03T13:37:17.000Z</published>
+    <updated>2020-03-22T06:02:34.172Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;上一个文章我们介绍了如何搭建一个开发环境和 Pipeline, 这篇文章开始我们将正式的用 TDD 的模式实现一个后端项目.&lt;/p&gt;
+&lt;h1 id=&quot;1-安装依赖&quot;&gt;&lt;a href=&quot;#1-安装依赖&quot; class=&quot;headerlink&quot; title=&quot;1. 安装依赖&quot;&gt;&lt;/a&gt;1. 安装依赖&lt;/h1&gt;&lt;p&gt;我们选用了 Postgres 作为我们的数据库, 操作数据库的 ORM 我们选用 TypeORM, 这是一个 TypeScript 友好的 ORM, 并且 nest 也提供了非常便利的集成方法.&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yarn add @nestjs/typeorm typeorm pg&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;2-接入-TypeORM&quot;&gt;&lt;a href=&quot;#2-接入-TypeORM&quot; class=&quot;headerlink&quot; title=&quot;2. 接入 TypeORM&quot;&gt;&lt;/a&gt;2. 接入 TypeORM&lt;/h1&gt;&lt;p&gt;编辑 &lt;code&gt;app.module.ts&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight ts&quot;&gt;&lt;figcaption&gt;&lt;span&gt;app.module.ts&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; &amp;#123; Module &amp;#125; &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;@nestjs/common&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; &amp;#123; AppController &amp;#125; &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;./app.controller&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; &amp;#123; AppService &amp;#125; &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;./app.service&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; &amp;#123; TypeOrmModule &amp;#125; &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;@nestjs/typeorm&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;@Module&lt;/span&gt;(&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  imports: [&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    TypeOrmModule.forRoot(&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;type&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;postgres&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      host: &lt;span class=&quot;string&quot;&gt;&#39;localhost&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      port: &lt;span class=&quot;number&quot;&gt;5432&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      username: &lt;span class=&quot;string&quot;&gt;&#39;realworld&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      password: &lt;span class=&quot;string&quot;&gt;&#39;123456&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      database: &lt;span class=&quot;string&quot;&gt;&#39;nestjs&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      entities: [&lt;span class=&quot;string&quot;&gt;&#39;dist/**/*.entity&amp;#123;.ts,.js&amp;#125;&#39;&lt;/span&gt;],&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      synchronize: &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  ],&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  controllers: [AppController],&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  providers: [AppService],&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; AppModule &amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="教程" scheme="https://blog.mutoe.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Nestjs" scheme="https://blog.mutoe.com/tags/Nestjs/"/>
+    
+      <category term="TypeScript" scheme="https://blog.mutoe.com/tags/TypeScript/"/>
+    
+      <category term="Postgres" scheme="https://blog.mutoe.com/tags/Postgres/"/>
+    
+      <category term="TypeORM" scheme="https://blog.mutoe.com/tags/TypeORM/"/>
+    
+      <category term="Jest" scheme="https://blog.mutoe.com/tags/Jest/"/>
+    
+      <category term="TDD" scheme="https://blog.mutoe.com/tags/TDD/"/>
+    
+      <category term="Docker" scheme="https://blog.mutoe.com/tags/Docker/"/>
+    
+      <category term="GitHub Actions" scheme="https://blog.mutoe.com/tags/GitHub-Actions/"/>
+    
+      <category term="ESLint" scheme="https://blog.mutoe.com/tags/ESLint/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>手把手带你实践 TDD Nestjs Realworld 项目 - 1. 环境搭建篇</title>
+    <link href="https://blog.mutoe.com/2019/TDD-nestjs-realworld-example-app-1/"/>
+    <id>https://blog.mutoe.com/2019/TDD-nestjs-realworld-example-app-1/</id>
+    <published>2019-12-30T05:27:04.000Z</published>
+    <updated>2020-03-22T06:02:34.172Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;emmm, 最近计划着学习后端，本来想从 Java 开始，奈何新的知识点一股脑涌进来，只知道教程怎么做，而不说为什么，很是迷茫。&lt;/p&gt;
+&lt;p&gt;于是想从熟悉的技术栈开始，结合最近学习的知识（TDD、Docker、GitHub Actions）和想学的知识（NestJS、Postgres、Swagger）一步一步巩固和学习。&lt;/p&gt;
+&lt;p&gt;顺便记录下来沉淀和输出自己的知识，也希望能帮到大家少走一些弯路，告别 2019，迎接 2020！&lt;/p&gt;
+&lt;h1 id=&quot;0-内容预告&quot;&gt;&lt;a href=&quot;#0-内容预告&quot; class=&quot;headerlink&quot; title=&quot;0. 内容预告&quot;&gt;&lt;/a&gt;0. 内容预告&lt;/h1&gt;&lt;p&gt;我们这次将要实现的系统是 &lt;a href=&quot;https://preact-realworld.mutoe.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Conduit&lt;/a&gt; 的 API 部分，前些时间我已经 TDD 实践实现了 &lt;a href=&quot;https://github.com/mutoe/preact-realworld-example-app&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Conduit 的前端部分&lt;/a&gt;，技术栈选择了 Preact.&lt;/p&gt;
+&lt;p&gt;Conduit 是什么，这是一个基于 &lt;a href=&quot;https://github.com/gothinkster/realworld&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Realworld&lt;/a&gt; 的示例项目。Realworld 集合了现今大部分的前后端框架，他们用不同的语言和技术展实现了同一个系统，也就是我们这次要做的 Conduit。&lt;/p&gt;
+&lt;p&gt;当然，Realworld 现在也有 NestJS 的实现，不过既然是结合自己的知识点来学，当然不能照抄啦，假装网友们还没用 NestJS 实现它好啦，[偷笑][偷笑]&lt;/p&gt;
+&lt;p&gt;这次用到的技术栈有：&lt;code&gt;Nestjs&lt;/code&gt; &lt;code&gt;TypeScript&lt;/code&gt; &lt;code&gt;Postgres&lt;/code&gt; &lt;code&gt;Jest&lt;/code&gt; &lt;code&gt;Docker&lt;/code&gt; &lt;code&gt;Github Actions&lt;/code&gt; &lt;code&gt;Swagger&lt;/code&gt; &lt;code&gt;ESLint&lt;/code&gt; , 然后我们会以 TDD 的方式进行开发，遵循“红-绿-重构”的方式一步一步的完成我们的项目。&lt;/p&gt;
+&lt;p&gt;好，话不多说，赶紧进入实战演练吧！&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="教程" scheme="https://blog.mutoe.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Nestjs" scheme="https://blog.mutoe.com/tags/Nestjs/"/>
+    
+      <category term="TypeScript" scheme="https://blog.mutoe.com/tags/TypeScript/"/>
+    
+      <category term="Postgres" scheme="https://blog.mutoe.com/tags/Postgres/"/>
+    
+      <category term="TypeORM" scheme="https://blog.mutoe.com/tags/TypeORM/"/>
+    
+      <category term="Jest" scheme="https://blog.mutoe.com/tags/Jest/"/>
+    
+      <category term="TDD" scheme="https://blog.mutoe.com/tags/TDD/"/>
+    
+      <category term="Docker" scheme="https://blog.mutoe.com/tags/Docker/"/>
+    
+      <category term="GitHub Actions" scheme="https://blog.mutoe.com/tags/GitHub-Actions/"/>
+    
+      <category term="ESLint" scheme="https://blog.mutoe.com/tags/ESLint/"/>
+    
+      <category term="Swagger" scheme="https://blog.mutoe.com/tags/Swagger/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker 学习心得</title>
+    <link href="https://blog.mutoe.com/2019/docker-study-note/"/>
+    <id>https://blog.mutoe.com/2019/docker-study-note/</id>
+    <published>2019-11-14T05:58:15.000Z</published>
+    <updated>2020-03-22T06:02:34.176Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;通信&quot;&gt;&lt;a href=&quot;#通信&quot; class=&quot;headerlink&quot; title=&quot;通信&quot;&gt;&lt;/a&gt;通信&lt;/h1&gt;&lt;h2 id=&quot;容器间通信的一些-Q-amp-A&quot;&gt;&lt;a href=&quot;#容器间通信的一些-Q-amp-A&quot; class=&quot;headerlink&quot; 
+        
+      
+    
+    </summary>
+    
+    
+      <category term="心得" scheme="https://blog.mutoe.com/categories/%E5%BF%83%E5%BE%97/"/>
+    
+    
+      <category term="Docker" scheme="https://blog.mutoe.com/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在 Jenkins 中产出由 Cypress 生成的测试视频</title>
+    <link href="https://blog.mutoe.com/2019/generate-cypress-video-report-in-jenkins/"/>
+    <id>https://blog.mutoe.com/2019/generate-cypress-video-report-in-jenkins/</id>
+    <published>2019-10-27T10:34:02.000Z</published>
+    <updated>2020-03-22T06:02:34.177Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近在使用 Cypress 作为前端项目的 E2E 测试，发布到 CI 环境时自动运行。&lt;/p&gt;
+&lt;p&gt;运行时发现在 Pipeline 测试报告中有生成 mp4 格式的视频，这才想起来 Cypress 自带生成视频快照的功能，结合 Jenkins 收集报告产物，不就可以拿到视频快照了吗？&lt;/p&gt;
+&lt;p&gt;哈哈，talk is cheap, show my code!&lt;/p&gt;
+&lt;p&gt;下面是 jenkins 配置&lt;/p&gt;
+&lt;figure class=&quot;highlight groovy&quot;&gt;&lt;figcaption&gt;&lt;span&gt;Jenkinsfile&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pipeline &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  agent any&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  environment &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    CHROME_BIN = &lt;span class=&quot;string&quot;&gt;&#39;/bin/google-chrome&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  stages &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    stage(&lt;span class=&quot;string&quot;&gt;&#39;Environment&#39;&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      steps &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        sh &lt;span class=&quot;string&quot;&gt;&#39;uname -a&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        sh &lt;span class=&quot;string&quot;&gt;&#39;apt-get update&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        sh &lt;span class=&quot;string&quot;&gt;&#39;apt-get install -y xvfb libgtk-3-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 ttf-wqy-zenhei&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        sh &lt;span class=&quot;string&quot;&gt;&#39;fc-cache -v&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        sh &lt;span class=&quot;string&quot;&gt;&#39;yarn install&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    stage(&lt;span class=&quot;string&quot;&gt;&#39;Test&#39;&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      steps &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        sh &lt;span class=&quot;string&quot;&gt;&#39;yarn test:e2e --headless&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        junit &lt;span class=&quot;string&quot;&gt;&#39;reporter/output.xml&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        archiveArtifacts &lt;span class=&quot;string&quot;&gt;&#39;tests/e2e/videos/*.mp4&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;其中 &lt;code&gt;ttf-wqy-zenhei&lt;/code&gt; 是用来解决 Ubuntu 系统中没有中文字体等问题，否则生成的视频报告中的中文都为方框乱码。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果是在 CentOS 中，执行 &lt;code&gt;yum -y groupinstall chinese-support&lt;/code&gt; 解决中文问题&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果不知道 Jenkins 所属运行环境，使用 &lt;code&gt;uname -a&lt;/code&gt; 查看系统信息&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;archiveArtifacts&lt;/code&gt; 用来收集报告产物&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;junit&lt;/code&gt; 用来收集测试报告，但 Cypress 默认是不生成报告的，需要在 &lt;code&gt;cypress.json&lt;/code&gt; 中增加以下内容&lt;/p&gt;
+&lt;figure class=&quot;highlight json&quot;&gt;&lt;figcaption&gt;&lt;span&gt;cypress.json&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;&quot;reporter&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;junit&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;&quot;reporterOptions&quot;&lt;/span&gt;: &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;&quot;mochaFile&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;reporter/output.xml&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;&quot;toConsole&quot;&lt;/span&gt;: &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="心得" scheme="https://blog.mutoe.com/categories/%E5%BF%83%E5%BE%97/"/>
+    
+    
+      <category term="Cypress" scheme="https://blog.mutoe.com/tags/Cypress/"/>
+    
+      <category term="CI" scheme="https://blog.mutoe.com/tags/CI/"/>
+    
+      <category term="Jenkins" scheme="https://blog.mutoe.com/tags/Jenkins/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在 Shell 脚本中进行交互的一些心得</title>
+    <link href="https://blog.mutoe.com/2019/interactive-command-in-shell/"/>
+    <id>https://blog.mutoe.com/2019/interactive-command-in-shell/</id>
+    <published>2019-10-17T04:12:16.000Z</published>
+    <updated>2020-03-22T06:02:34.180Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我们在写 shell 脚本时经常会遇到一些需要交互的操作，比如修改某个文件，或是使用 &lt;code&gt;yum install&lt;/code&gt; &lt;code&gt;ssh-keygen&lt;/code&gt; &lt;code&gt;certbot --nginx&lt;/code&gt; 等操作时，需要输入一些指令如 “y”, “Enter” 和其他的一些信息。&lt;/p&gt;
+&lt;p&gt;我们写脚本就是为了自动操作，怎么可以等命令执行一会之后在按个回车进行下一步呢？既然我知道接下来要输入什么命令，我告诉你你帮我输入了不就得了？&lt;/p&gt;
+&lt;p&gt;&lt;ruby&gt;聪明&lt;rt&gt;tōu lǎn&lt;rt&gt;&lt;/ruby&gt;的我们想到了一些办法来避免这种无谓的等待，记录下来分享给大家&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="心得" scheme="https://blog.mutoe.com/categories/%E5%BF%83%E5%BE%97/"/>
+    
+    
+      <category term="Linux" scheme="https://blog.mutoe.com/tags/Linux/"/>
+    
+      <category term="Shell" scheme="https://blog.mutoe.com/tags/Shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>flutter 环境搭建</title>
+    <link href="https://blog.mutoe.com/2019/flutter-starting/"/>
+    <id>https://blog.mutoe.com/2019/flutter-starting/</id>
+    <published>2019-08-28T06:29:49.000Z</published>
+    <updated>2020-03-22T06:02:34.177Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近在学习 Flutter 补充移动端开发的技术栈，刚好换电脑，特此从 0 开始重新搭建 Flutter 开发环境&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;整个安装环境是基于 macOS 操作系统的，如果你使用的是 Windows 操作系统，可以参考其他教程或本博文大致思路&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;1-环境安装包下载&quot;&gt;&lt;a href=&quot;#1-环境安装包下载&quot; class=&quot;headerlink&quot; title=&quot;1. 环境安装包下载&quot;&gt;&lt;/a&gt;1. 环境安装包下载&lt;/h1&gt;&lt;p&gt;以下几个安装包体积较大，所以在观看本教程前需要提前进行下载&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://flutter.dev/docs/get-started/install&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Flutter SDK&lt;/a&gt; (提供 Flutter 相关命令行)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://developer.apple.com/xcode&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;XCode&lt;/a&gt; (提供 iOS 模拟器和编译环境)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.android.com/studio&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Android Studio&lt;/a&gt; (提供 Android 模拟器和编译环境)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;2-Flutter-SDK-安装&quot;&gt;&lt;a href=&quot;#2-Flutter-SDK-安装&quot; class=&quot;headerlink&quot; title=&quot;2. Flutter SDK 安装&quot;&gt;&lt;/a&gt;2. Flutter SDK 安装&lt;/h1&gt;&lt;p&gt;下载好 Flutter SDK 后，解压到一个存放 SDK 的目录，我这里存放在 &lt;code&gt;~/.flutter-sdk&lt;/code&gt; 下&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mkdir ~/.flutter-sdk&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; ~/.flutter-sdk&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;unzip ~/Downloads/flutter_macos_v1.7.8+hotfix.4-stable.zip&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;然后将 Flutter SDK 的安装目录暴露给环境变量，在 &lt;code&gt;~/.zshrc&lt;/code&gt; 或 &lt;code&gt;~/.bashrc&lt;/code&gt; 文件中增加以下内容&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Flutter&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;export&lt;/span&gt; PATH=&lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;variable&quot;&gt;$PATH&lt;/span&gt;:&lt;span class=&quot;variable&quot;&gt;$HOME&lt;/span&gt;/.flutter-sdk/flutter/bin&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;然后你还可以下载 Flutter 在未来会需要的二进制包（可选的，也可以在未来下载）&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;flutter precache&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;最后运行检查工具 &lt;code&gt;flutter doctor&lt;/code&gt; ，来检查你的 Flutter 是否可以正常运行, 如果出现下面的信息，就说明你安装 Flutter SDK 成功啦&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;flutter doctor&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;➜  .flutter-sdk flutter doctor&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[✓] Flutter (Channel stable, v1.7.8+hotfix.4, on Mac OS X 10.14.5 18F132, locale en-CN)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    • Flutter version 1.7.8+hotfix.4 at /Users/yourusername/.flutter-sdk/flutter&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    • Framework revision 20e59316b8 (6 weeks ago), 2019-07-18 20:04:33 -0700&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    • Engine revision fee001c93f&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    • Dart version 2.4.0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;...&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="心得" scheme="https://blog.mutoe.com/categories/%E5%BF%83%E5%BE%97/"/>
+    
+    
+      <category term="Flutter" scheme="https://blog.mutoe.com/tags/Flutter/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TypeScript 常见错误整理</title>
+    <link href="https://blog.mutoe.com/2019/typescript-errors/"/>
+    <id>https://blog.mutoe.com/2019/typescript-errors/</id>
+    <published>2019-07-22T01:19:11.000Z</published>
+    <updated>2020-03-22T06:02:34.184Z</updated>
+    
+    <summary type="html">
+    
+      这里记录下了我在学习和使用 TypeScript 时遇到的常见错误, 如果你有什么疑问, 欢迎在下方留言或点击右上方小铅笔补充修改
+    
+    </summary>
+    
+    
+      <category term="笔记" scheme="https://blog.mutoe.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="TypeScript" scheme="https://blog.mutoe.com/tags/TypeScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>记一个项目改造为 TypeScript 心得</title>
+    <link href="https://blog.mutoe.com/2019/javascript-to-typescript/"/>
+    <id>https://blog.mutoe.com/2019/javascript-to-typescript/</id>
+    <published>2019-07-20T03:38:11.000Z</published>
+    <updated>2020-03-22T06:02:34.180Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;现手上有一个小型的 js 项目, 内容比较简单, 就是提供一个单页, 其中引用了 quill 富文本编辑器. &lt;/p&gt;
+&lt;p&gt;该页面需要嵌入到其他客户端(如 iframe 或 webview) 以提供统一的富文本编辑的用户体验.&lt;/p&gt;
+&lt;p&gt;项目内部使用 webpack 将 js / stylus 打包, 对外提供两个 html, 一个用于大屏的 iframe 显示, 另一个用于小屏的 Android / IOS 设备显示.&lt;/p&gt;
+&lt;p&gt;项目结构如下&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;//static.mutoe.com/2019/javascript-to-typescript/file-tree.png&quot; alt=&quot;file-tree&quot;&gt;&lt;/p&gt;
+&lt;p&gt;你可以参考此项目对自己的项目进行改造, 过程大致相同&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;阅读本贴, 你可能需要了解以下前置内容&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;typescript&lt;/li&gt;
+&lt;li&gt;webpack&lt;/li&gt;
+&lt;li&gt;yarn&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;本次改造所有改动可在 github &lt;a href=&quot;https://github.com/slimkit/plus-editor/commit/3424d38e0e60ce39eeaa419113fb67cf73411d36&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;查看 commit 记录&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="心得" scheme="https://blog.mutoe.com/categories/%E5%BF%83%E5%BE%97/"/>
+    
+    
+      <category term="TypeScript" scheme="https://blog.mutoe.com/tags/TypeScript/"/>
+    
+      <category term="JavaScript" scheme="https://blog.mutoe.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为什么要上 TypeScript</title>
+    <link href="https://blog.mutoe.com/2019/why-typescreipt/"/>
+    <id>https://blog.mutoe.com/2019/why-typescreipt/</id>
+    <published>2019-07-15T11:47:26.000Z</published>
+    <updated>2020-03-22T06:02:34.185Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;“TypeScript 又是什么东西啊, 怎么又在出新语言, 求不要再出了, 学不动了!!”&lt;/p&gt;
+&lt;h2 id=&quot;场景1-–-检查类型&quot;&gt;&lt;a href=&quot;#场景1-–-检查类型&quot; class=&quot;headerlink&quot; title=&quot;场景1 – 检查类型&quot;&gt;&lt;/a&gt;场景1 – 检查类型&lt;/h2&gt;&lt;p&gt;开心的撸代码中, 突然接到老大消息: xxx离职了, 现在你来接手他维护的项目.😳&lt;/p&gt;
+&lt;p&gt;拿到代码后, 看到了这段东西&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/** 根据用户id获取用户信息 */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;getUsers&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;id&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; users = &lt;span class=&quot;keyword&quot;&gt;await&lt;/span&gt; fetchUsers(id)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; users&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;这个 &lt;code&gt;id&lt;/code&gt; 是什么? 是  &lt;code&gt;1&lt;/code&gt; 还是 &lt;code&gt;&amp;quot;1&amp;quot;&lt;/code&gt; 还是 &lt;code&gt;[1,2,3]&lt;/code&gt; 还是 &lt;code&gt;&amp;quot;1,2,3&amp;quot;&lt;/code&gt; ???&lt;/p&gt;
+&lt;p&gt;这个 &lt;code&gt;users&lt;/code&gt; 又是什么? 是普通权限用户? 还是管理员看到的用户?&lt;/p&gt;
+&lt;p&gt;全局搜索了一下调用该方法的地方, 发现这是个“万能”的方法, 传入 id 为 &lt;code&gt;1&lt;/code&gt; 时会返回 1 号用户的不含私密信息的对象&lt;/p&gt;
+&lt;p&gt;传入 &lt;code&gt;[1,2,3]&lt;/code&gt; 或 &lt;code&gt;&amp;quot;1,2,3&amp;quot;&lt;/code&gt; 时会获取一个数组 &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;//static.mutoe.com/xianzhuo.jpg&quot; alt=&quot;[掀桌]&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;如果上了ts&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;//static.mutoe.com/2019/why-typescript/example-1-ts.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="心得" scheme="https://blog.mutoe.com/categories/%E5%BF%83%E5%BE%97/"/>
+    
+    
+      <category term="TypeScript" scheme="https://blog.mutoe.com/tags/TypeScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>玩转 javascript 正则表达式</title>
+    <link href="https://blog.mutoe.com/2019/javascript-regexp/"/>
+    <id>https://blog.mutoe.com/2019/javascript-regexp/</id>
+    <published>2019-05-06T04:29:34.000Z</published>
+    <updated>2020-03-22T06:02:34.180Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;正则表达式是什么&quot;&gt;&lt;a href=&quot;#正则表达式是什么&quot; class=&quot;headerlink&quot; title=&quot;正则表达式是什么&quot;&gt;&lt;/a&gt;正则表达式是什么&lt;/h1&gt;&lt;p&gt;正则表达式可以从一段文本中提取特定内容的功能, 几乎所有编程语言都支持. 使用在爬虫、检查用户输入合法性、XSS 过滤等.&lt;/p&gt;
+&lt;p&gt;在整个学习过程中, 给大家推荐一个可视化正则表达式的网站 &lt;a href=&quot;https://jex.im/regulex/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://jex.im/regulex/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;他可以根据你输入的正则表达式动态的生成匹配图, 帮助你理解一个复杂的正则表达式. 像下面这样&lt;/p&gt;
+&lt;iframe frameborder=&quot;0&quot; style=&quot;width: 100%;&quot; height=&quot;236&quot; src=&quot;https://jex.im/regulex/#!embed=true&amp;flags=&amp;re=%5Ehttps%3F%3A%5C%2F%5C%2F(%3F%3A%5B%5Cw-%5D%2B%5C.)%2B%5B%5Cw-%5D%2B(%3F%3A%2F%5B%5Cw-.%2F%3F%23%25%26%3D%5D*)%3F%24&quot;&gt;&lt;/iframe&gt;
+
+&lt;h1 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h1&gt;&lt;p&gt;javascript 中支持 3 种正则表达式语法: 字面量、构造函数和工厂符号, 他们的签名如下&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/pattern/flags
+new RegExp(pattern, [, flags])
+RegExp(pattern, [, flags])&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+    
+      <category term="笔记" scheme="https://blog.mutoe.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="JavaScript" scheme="https://blog.mutoe.com/tags/JavaScript/"/>
+    
+      <category term="RegExp" scheme="https://blog.mutoe.com/tags/RegExp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TypeScript 进阶：Class 中的动态类型参数</title>
+    <link href="https://blog.mutoe.com/2019/typescript-dynamic-type-parameters-of-class-constractor/"/>
+    <id>https://blog.mutoe.com/2019/typescript-dynamic-type-parameters-of-class-constractor/</id>
+    <published>2019-04-24T16:24:57.000Z</published>
+    <updated>2020-03-22T06:02:34.183Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;前段时间听说 Vue3.x 要使用 TypeScript 重构了, 本来一直都想研究一下 Vue 的源码, 这次带着夙愿来从头编写一个简单的、现代化的 Vue.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;搭建好 TypeScript 开发环境后, 开始了一段 TypeScript 与 Vue 源码的探索之旅.&lt;/p&gt;
+&lt;h1 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h1&gt;&lt;p&gt;我使用 ES6 &lt;code&gt;class&lt;/code&gt; 创建了一个 Vue 类, 为了实现数据监听, 我使用了 ES2015 中的 &lt;code&gt;proxy&lt;/code&gt; 方法来对数据进行封装,&lt;br&gt;并且将这个 &lt;code&gt;proxy&lt;/code&gt; 返回给类的构造方法, 以便于获取 &lt;code&gt;vm&lt;/code&gt; 实例.&lt;/p&gt;
+&lt;p&gt;代码如下&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;查看源代码&lt;/summary&gt;
+
+&lt;figure class=&quot;highlight ts&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;interface&lt;/span&gt; IOptions &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  data: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; =&amp;gt;&lt;/span&gt; Record&amp;lt;&lt;span class=&quot;built_in&quot;&gt;string&lt;/span&gt;, &lt;span class=&quot;built_in&quot;&gt;any&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; Vue &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; $options: IOptions = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    data: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; =&amp;gt;&lt;/span&gt; (&amp;#123;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;constructor&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;options: IOptions&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.$options = options&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; proxy = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.initProxy()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; proxy&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  initProxy() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; data = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.$options.data ? &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.$options.data() : &amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Proxy(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;, &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;set&lt;/span&gt;(_, key: &lt;span class=&quot;built_in&quot;&gt;string&lt;/span&gt;, value) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        data[key] = value&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;get&lt;/span&gt;(_, key: &lt;span class=&quot;built_in&quot;&gt;string&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; data[key]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; vm = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Vue(&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  data() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      a: &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;vm.a = &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// ^ Property &#39;a&#39; does not exist on type &#39;Vue&#39;.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(vm.a) &lt;span class=&quot;comment&quot;&gt;// =&amp;gt; 2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//             ^ Property &#39;a&#39; does not exist on type &#39;Vue&#39;.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/details&gt;
+
+&lt;details open&gt;
+&lt;summary&gt;在线版本&lt;/summary&gt;
+
+&lt;iframe class=&quot;stackblitz&quot; src=&quot;https://stackblitz.com/edit/typescript-kh4zmn?ctl=1&amp;embed=1&amp;file=index.ts&amp;hideExplorer=1&amp;hideNavigation=1&amp;view=editor&quot; /&gt;
+&lt;/details&gt;
+
+
+&lt;p&gt;如果你查看了在线版本, 可以看到, 我们在使用实例属性 &lt;code&gt;vm.a&lt;/code&gt; 时报了一个 TS 错误 &lt;code&gt;Property &amp;#39;a&amp;#39; does not exist on type &amp;#39;Vue&amp;#39;&lt;/code&gt;,&lt;br&gt;意思是说 &lt;code&gt;vm&lt;/code&gt; 实例上不存在属性 &lt;code&gt;a&lt;/code&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="心得" scheme="https://blog.mutoe.com/categories/%E5%BF%83%E5%BE%97/"/>
+    
+    
+      <category term="TypeScript" scheme="https://blog.mutoe.com/tags/TypeScript/"/>
+    
+      <category term="Vue" scheme="https://blog.mutoe.com/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用 Javascript 将内容复制到剪贴板</title>
+    <link href="https://blog.mutoe.com/2019/copy-content-to-clipboard-in-javascript/"/>
+    <id>https://blog.mutoe.com/2019/copy-content-to-clipboard-in-javascript/</id>
+    <published>2019-03-25T07:00:11.000Z</published>
+    <updated>2020-03-22T06:02:34.175Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在 js 中，将内容复制到剪贴板的原理是利用 &lt;code&gt;document.execCommand()&lt;/code&gt; 方法进行操作.&lt;/p&gt;
+&lt;h1 id=&quot;document-execCommand&quot;&gt;&lt;a href=&quot;#document-execCommand&quot; class=&quot;headerlink&quot; title=&quot;document.execCommand()&quot;&gt;&lt;/a&gt;document.execCommand()&lt;/h1&gt;&lt;p&gt;&lt;code&gt;document.execCommand()&lt;/code&gt; 的签名是这样的&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;bool = &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.execCommand(aCommandName, aShwoDefaultUI, aValueArgument)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;需要注意的是，该命令复制的内容是当前页面选中的内容.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="心得" scheme="https://blog.mutoe.com/categories/%E5%BF%83%E5%BE%97/"/>
+    
+    
+      <category term="JavaScript" scheme="https://blog.mutoe.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>动态规划：从入门到放弃</title>
+    <link href="https://blog.mutoe.com/2019/dynamic-programming/"/>
+    <id>https://blog.mutoe.com/2019/dynamic-programming/</id>
+    <published>2019-02-25T13:57:14.000Z</published>
+    <updated>2020-03-22T06:02:34.176Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;什么是动态规划&quot;&gt;&lt;a href=&quot;#什么是动态规划&quot; class=&quot;headerlink&quot; title=&quot;什么是动态规划&quot;&gt;&lt;/a&gt;什么是动态规划&lt;/h1&gt;&lt;p&gt;动态规划（DP, Dynamic Programming）&lt;/p&gt;
+&lt;p&gt;一句话总结：&lt;strong&gt;在求解一个复杂问题时，将其分解为若干个简单问题。通过求解简单问题的最优解，来找到目标问题的最优解。&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&quot;动态规划能做什么&quot;&gt;&lt;a href=&quot;#动态规划能做什么&quot; class=&quot;headerlink&quot; title=&quot;动态规划能做什么&quot;&gt;&lt;/a&gt;动态规划能做什么&lt;/h1&gt;&lt;p&gt;常见问题&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;求解斐波那契数列第 N 项 (&lt;a href=&quot;https://leetcode.com/problems/fibonacci-number/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Leetcode 509. Fibonacci Number&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;背包问题&lt;/li&gt;
+&lt;li&gt;阶梯问题 (&lt;a href=&quot;https://leetcode.com/problems/climbing-stairs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Leetcode 70. Climbing Stairs&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;硬币问题 (&lt;a href=&quot;https://leetcode.com/problems/coin-change/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Leetcode 322. Coin Change&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;怎么求解动态规划问题&quot;&gt;&lt;a href=&quot;#怎么求解动态规划问题&quot; class=&quot;headerlink&quot; title=&quot;怎么求解动态规划问题&quot;&gt;&lt;/a&gt;怎么求解动态规划问题&lt;/h1&gt;&lt;p&gt;我们通过一个例子来了解一下DP的基本原理。&lt;/p&gt;
+&lt;p&gt;首先，我们要找到某个状态的最优解，然后在它的帮助下，找到下一个状态的最优解。&lt;/p&gt;
+&lt;p&gt;如硬币问题的例子&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;硬币问题：如果我们有面值为1元、3元和5元的硬币若干枚，如何用最少的硬币凑够11元？&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="心得" scheme="https://blog.mutoe.com/categories/%E5%BF%83%E5%BE%97/"/>
+    
+    
+      <category term="Dynamic Programming" scheme="https://blog.mutoe.com/tags/Dynamic-Programming/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>比较 javascript 中 filter 和 splice 删除数组的性能</title>
+    <link href="https://blog.mutoe.com/2019/compare-filter-vs-splice-in-javascript/"/>
+    <id>https://blog.mutoe.com/2019/compare-filter-vs-splice-in-javascript/</id>
+    <published>2019-01-18T06:53:20.000Z</published>
+    <updated>2020-03-22T06:02:34.174Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;因为最近在项目中经常需要将数组中的一个元素从数组中剔除，基于 ES6 的选择有比较多，&lt;br&gt;产生了一个关于几种方法之间执行效率的疑惑，网上也没有太多资料，于是乎本着学习性能测试的想法，展开了一段性能测试的旅程&lt;/p&gt;
+&lt;h1 id=&quot;测试工具&quot;&gt;&lt;a href=&quot;#测试工具&quot; class=&quot;headerlink&quot; title=&quot;测试工具&quot;&gt;&lt;/a&gt;测试工具&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;benchmark&lt;/code&gt; 性能测试核心依赖&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mockjs&lt;/code&gt; 生成假数据&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lodash&lt;/code&gt; 提供另外的筛选数组的方法用于参照&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yarn add benchmark mockjs lodash&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;测试思路&quot;&gt;&lt;a href=&quot;#测试思路&quot; class=&quot;headerlink&quot; title=&quot;测试思路&quot;&gt;&lt;/a&gt;测试思路&lt;/h1&gt;&lt;p&gt;首先定义四种方法来测试数据删除操作，他们分别是 &lt;code&gt;Array.prototype.filter&lt;/code&gt; &lt;code&gt;Array.prototype.splice&lt;/code&gt; &lt;code&gt;lodash.reject&lt;/code&gt; &lt;code&gt;lodash.filter&lt;/code&gt; &lt;/p&gt;
+&lt;p&gt;然后使用 &lt;code&gt;mockjs&lt;/code&gt; 生成两个数组，长度分别是 100 和 1000，用四种方法分别对这两组数据进行测试。&lt;br&gt;需要注意的是，在测试时需要对测试数组进行深拷贝，避免他们之间相互影响(毕竟 &lt;code&gt;Array.prototype.splice&lt;/code&gt; 会改变原数组)&lt;/p&gt;
+&lt;p&gt;然后我们对其中一组数据进行测试，来校验我们写的方法是否正确&lt;/p&gt;
+&lt;p&gt;最后运行 &lt;code&gt;benchmark&lt;/code&gt;，比较结果得出结论&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="心得" scheme="https://blog.mutoe.com/categories/%E5%BF%83%E5%BE%97/"/>
+    
+    
+      <category term="JavaScript" scheme="https://blog.mutoe.com/tags/JavaScript/"/>
+    
+      <category term="benchmark" scheme="https://blog.mutoe.com/tags/benchmark/"/>
+    
+      <category term="mockjs" scheme="https://blog.mutoe.com/tags/mockjs/"/>
+    
+      <category term="lodash" scheme="https://blog.mutoe.com/tags/lodash/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>testcafe -- 一个基于 nodejs 自动化测试框架</title>
+    <link href="https://blog.mutoe.com/2018/testcafe/"/>
+    <id>https://blog.mutoe.com/2018/testcafe/</id>
+    <published>2018-10-21T13:50:35.000Z</published>
+    <updated>2020-03-22T06:02:34.182Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h1&gt;&lt;p&gt;testcafe (&lt;a href=&quot;https://devexpress.github.io/testcafe/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;官网&lt;/a&gt;) 是一个基于 nodejs 的自动化测试框架，优点就先不多说了，我们直接进入正题！&lt;/p&gt;
+&lt;h1 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h1&gt;&lt;p&gt;testcafe 是一个 npm 包，它可以使用 npm 或 yarn 包管理器进行安装，这里我们使用 yarn 进行安装（因为它很快）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果你的机器上没有安装 yarn，那么你可以使用 npm 来安装 yarn 😊&lt;br&gt;  &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm install -g yarn&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在命令行中运行以下命令&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yarn global add testcafe&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;这样， testcafe 就安装在你本机上啦&lt;/p&gt;
+&lt;h1 id=&quot;小试牛刀&quot;&gt;&lt;a href=&quot;#小试牛刀&quot; class=&quot;headerlink&quot; title=&quot;小试牛刀&quot;&gt;&lt;/a&gt;小试牛刀&lt;/h1&gt;&lt;h2 id=&quot;创建一个测试项目&quot;&gt;&lt;a href=&quot;#创建一个测试项目&quot; class=&quot;headerlink&quot; title=&quot;创建一个测试项目&quot;&gt;&lt;/a&gt;创建一个测试项目&lt;/h2&gt;&lt;p&gt;我们新建一个目录，用于练习我们的自动化测试框架 testcafe&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 首先切换到你用于管理 web 项目的根目录，我本机是 &quot;~/www&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; ~/www&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mkdir testcafe &amp;amp;&amp;amp; &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; testcafe&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="心得" scheme="https://blog.mutoe.com/categories/%E5%BF%83%E5%BE%97/"/>
+    
+    
+      <category term="nodejs" scheme="https://blog.mutoe.com/tags/nodejs/"/>
+    
+      <category term="test" scheme="https://blog.mutoe.com/tags/test/"/>
+    
+      <category term="testcafe" scheme="https://blog.mutoe.com/tags/testcafe/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 Vue + Koa 打造全栈应用《时光·印象》图片分享应用 -- 项目框架搭建篇</title>
+    <link href="https://blog.mutoe.com/2018/vue-koa-setup-app-framework/"/>
+    <id>https://blog.mutoe.com/2018/vue-koa-setup-app-framework/</id>
+    <published>2018-10-15T12:12:02.000Z</published>
+    <updated>2020-03-22T06:02:34.185Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;使用 Vue + Koa 打造全栈应用《时光·印象》图片分享应用&lt;/em&gt; 系列教程&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;之前在学校用前端 pjax 无刷新跳转 + 后端 php 服务端渲染做了一个应用, 用来做校内的图片分享网站, 后来离校后就没怎么管了, 所以只做了一点就弃坑了. &lt;/p&gt;
+&lt;p&gt;最近又想起来那个项目, 所以这次抱着学习的心态使用 vue + koa 来重新将这个项目拾起来, 一方面可以学习一些当下的新框架了解前段发展趋势, 另一方面也可以充实下自己的简历.&lt;/p&gt;
+&lt;h2 id=&quot;选型&quot;&gt;&lt;a href=&quot;#选型&quot; class=&quot;headerlink&quot; title=&quot;选型&quot;&gt;&lt;/a&gt;选型&lt;/h2&gt;&lt;p&gt;下面列出该项目的技术选型, 以及原因 (按重要程度排序)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;h3 id=&quot;Vue-v2-5-单文件组件-响应式&quot;&gt;&lt;a href=&quot;#Vue-v2-5-单文件组件-响应式&quot; class=&quot;headerlink&quot; title=&quot;Vue (v2.5) 单文件组件 响应式&quot;&gt;&lt;/a&gt;Vue (v2.5) &lt;code&gt;单文件组件&lt;/code&gt; &lt;code&gt;响应式&lt;/code&gt;&lt;/h3&gt;&lt;p&gt;以及 &lt;code&gt;vue-router&lt;/code&gt; &lt;code&gt;vuex&lt;/code&gt; &lt;code&gt;axios&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;选 Vue 作为前端框架是因为他的单文件组件做模块化开发很方便, 还有现成的脚手架工具 &lt;code&gt;vue-cli&lt;/code&gt;, 以及对 &lt;a href=&quot;https://github.com/yyx990803&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;@尤大&lt;/a&gt; 的 &lt;strong&gt;信仰&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;h3 id=&quot;Koa-v2-5-中间件&quot;&gt;&lt;a href=&quot;#Koa-v2-5-中间件&quot; class=&quot;headerlink&quot; title=&quot;Koa (v2.5) 中间件&quot;&gt;&lt;/a&gt;Koa (v2.5) &lt;code&gt;中间件&lt;/code&gt;&lt;/h3&gt;&lt;p&gt;以及 &lt;code&gt;koa-router&lt;/code&gt; &lt;code&gt;koa-jwt&lt;/code&gt; &lt;/p&gt;
+&lt;p&gt;选用 Koa 而非 Express 是因为 Express 了解过一些, 想换个口味试试. Express 也确实感受过回调地狱的痛, Koa 的洋葱模型似乎很不错!&lt;/p&gt;
+&lt;p&gt;后端只用来提供 API 接口不做 &lt;span class=&quot;explain&quot; title=&quot;Server-Side Render, 服务端渲染.&quot;&gt;SSR&lt;/span&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;h3 id=&quot;MySQL-v8-0-SQL-Database&quot;&gt;&lt;a href=&quot;#MySQL-v8-0-SQL-Database&quot; class=&quot;headerlink&quot; title=&quot;MySQL (v8.0) SQL Database&quot;&gt;&lt;/a&gt;MySQL (v8.0) &lt;code&gt;SQL Database&lt;/code&gt;&lt;/h3&gt;&lt;p&gt;常规的关系型数据库，深入学习一下 MySQL，为全栈发展打好坚实的基础&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;h3 id=&quot;Eslint-语法检查-防傻瓜&quot;&gt;&lt;a href=&quot;#Eslint-语法检查-防傻瓜&quot; class=&quot;headerlink&quot; title=&quot;Eslint 语法检查 防傻瓜&quot;&gt;&lt;/a&gt;Eslint &lt;code&gt;语法检查&lt;/code&gt; &lt;code&gt;防傻瓜&lt;/code&gt;&lt;/h3&gt;&lt;p&gt;Eslint 进行代码风格检查和防傻瓜还是非常方便的, 尤其是配合其自带的 &lt;code&gt;--fix&lt;/code&gt; 功能自动进行代码格式化. 避免在 coding 的过程中出现一些傻瓜式的语法错误带来的不必要的时间浪费.&lt;/p&gt;
+&lt;p&gt;使用 Eslint Standard 配置（Vue 使用 @vue/standard 配置）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;h3 id=&quot;ES6-Stylus-语法糖-预处理&quot;&gt;&lt;a href=&quot;#ES6-Stylus-语法糖-预处理&quot; class=&quot;headerlink&quot; title=&quot;ES6, Stylus 语法糖 预处理&quot;&gt;&lt;/a&gt;ES6, Stylus &lt;code&gt;语法糖&lt;/code&gt; &lt;code&gt;预处理&lt;/code&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;语法糖!&lt;/strong&gt; 提高 coding 效率. 但是 &lt;span class=&quot;explain&quot; title=&quot;一个类似 Less \ Sass 的 CSS 预处理器&quot;&gt;Stylus&lt;/span&gt;, 一个小众的 css 预处理器, 提供了非常高效和酷炫的写法.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;h3 id=&quot;Yarn-依赖安装&quot;&gt;&lt;a href=&quot;#Yarn-依赖安装&quot; class=&quot;headerlink&quot; title=&quot;Yarn 依赖安装&quot;&gt;&lt;/a&gt;Yarn &lt;code&gt;依赖安装&lt;/code&gt;&lt;/h3&gt;&lt;p&gt;用 Yarn 就是因为快! 比 npm 快了不是一丁半点! yarn 执行项目内 bin 文件也非常方便, 免去了安装全局依赖的烦恼.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="心得" scheme="https://blog.mutoe.com/categories/%E5%BF%83%E5%BE%97/"/>
+    
+    
+      <category term="Vue" scheme="https://blog.mutoe.com/tags/Vue/"/>
+    
+      <category term="ESLint" scheme="https://blog.mutoe.com/tags/ESLint/"/>
+    
+      <category term="Koa" scheme="https://blog.mutoe.com/tags/Koa/"/>
+    
+      <category term="pm2" scheme="https://blog.mutoe.com/tags/pm2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>记使用 yum 升级 nodejs 遇到的坑</title>
+    <link href="https://blog.mutoe.com/2018/upgrade-nodejs-using-yum/"/>
+    <id>https://blog.mutoe.com/2018/upgrade-nodejs-using-yum/</id>
+    <published>2018-07-11T14:36:41.000Z</published>
+    <updated>2020-03-22T06:02:34.184Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;tips: 解决办法在文章底部，请使用右侧导航直接跳转到 &lt;strong&gt;解决办法&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;p&gt;最近在使用 centos 7 时需要升级到 nodejs 10 版本，直接执行 &lt;code&gt;yum update nodejs&lt;/code&gt; 发现 yum 源里还是 6.x，并且提示已经是最新版本了。。&lt;/p&gt;
+&lt;p&gt;？？什么鬼，去 nodesource 查看原来需要将 nodesource 源升级一下，so，执行以下命令&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;curl -sL https://rpm.nodesource.com/setup_10.x | bash -&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;yum upgrade nodejs&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;竟然发现还是 6.x 版本&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; Package               Arch                  Version                                Repository                 Size&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Installing:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; nodejs                x86_64                2:6.11.2-1nodesource                   nodesource                 17 M&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Transaction Summary&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;咦？难道是需要将 node 先卸载了吗？于是 &lt;code&gt;yum remove nodejs&lt;/code&gt; 然后 &lt;code&gt;yum install nodejs&lt;/code&gt;。。。然后是你猜到的结果，还还还还是 6.x 版本。。。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="心得" scheme="https://blog.mutoe.com/categories/%E5%BF%83%E5%BE%97/"/>
+    
+    
+      <category term="nodejs" scheme="https://blog.mutoe.com/tags/nodejs/"/>
+    
+      <category term="yum" scheme="https://blog.mutoe.com/tags/yum/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用 stylus 写一个 50 行代码的栅格化布局</title>
+    <link href="https://blog.mutoe.com/2018/create-the-grids-layout-with-50-lines-of-code-using-stylus/"/>
+    <id>https://blog.mutoe.com/2018/create-the-grids-layout-with-50-lines-of-code-using-stylus/</id>
+    <published>2018-03-23T18:24:20.000Z</published>
+    <updated>2020-03-22T06:02:34.175Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;相信前端的同学们已经接触过栅格化布局了, 只要你用过 bootstrap 或者一些其他的 css 框架.&lt;/p&gt;
+&lt;p&gt;栅格化布局是一个非常方便的布局方式, 尤其是它的自适应布局, 可以根据屏幕大小缩放容器的宽度.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;//static.mutoe.com/2018/create-the-grids-layout-with-50-lines-of-code-using-stylus/preview.png&quot; alt=&quot;preview&quot; title=&quot;图片来自 ElementUI Layout&quot;&gt;&lt;/p&gt;
+&lt;p&gt;今天我们用一个 css 预处理器 stylus 来编写一个 &lt;strong&gt;只有 50 行代码&lt;/strong&gt;, 能自定义栅格数, 能响应多个断点, 能推能拉的栅格化布局!&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="教程" scheme="https://blog.mutoe.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="stylus" scheme="https://blog.mutoe.com/tags/stylus/"/>
+    
+  </entry>
+  
+</feed>
