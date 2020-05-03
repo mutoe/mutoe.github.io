@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.mutoe.com/"/>
-  <updated>2020-01-26T14:28:54.000Z</updated>
+  <updated>2020-05-03T09:34:55.391Z</updated>
   <id>https://blog.mutoe.com/</id>
   
   <author>
@@ -15,6 +15,45 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>手把手带你实践 TDD Nestjs Realworld 项目 - 5. Swagger 自动生成接口文档</title>
+    <link href="https://blog.mutoe.com/2020/TDD-nestjs-realworld-example-app-5/"/>
+    <id>https://blog.mutoe.com/2020/TDD-nestjs-realworld-example-app-5/</id>
+    <published>2020-05-03T09:09:52.000Z</published>
+    <updated>2020-05-03T09:34:55.391Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这一节， 我们引入 Swagger 来自动根据代码里的注脚来生成接口文档。&lt;/p&gt;
+&lt;p&gt;Nest 为我们提供了一个专用的模块来搭配 Swagger 来使用&lt;/p&gt;
+&lt;h1 id=&quot;1-安装依赖&quot;&gt;&lt;a href=&quot;#1-安装依赖&quot; class=&quot;headerlink&quot; title=&quot;1. 安装依赖&quot;&gt;&lt;/a&gt;1. 安装依赖&lt;/h1&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yarn add @nestjs/swagger swagger-ui-express&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;2-初始化-Swagger-模块&quot;&gt;&lt;a href=&quot;#2-初始化-Swagger-模块&quot; class=&quot;headerlink&quot; title=&quot;2. 初始化 Swagger 模块&quot;&gt;&lt;/a&gt;2. 初始化 Swagger 模块&lt;/h1&gt;&lt;p&gt;在我们的应用入口文件 &lt;code&gt;main.ts&lt;/code&gt; 中添加一个 &lt;code&gt;createSwagger&lt;/code&gt; 方法， 并在 &lt;code&gt;bootstrap&lt;/code&gt; 方法中初始化它&lt;/p&gt;
+&lt;figure class=&quot;highlight ts&quot;&gt;&lt;figcaption&gt;&lt;span&gt;main.ts&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; &amp;#123; INestApplication, ValidationPipe &amp;#125; &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;@nestjs/common&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; &amp;#123; NestFactory &amp;#125; &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;@nestjs/core&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; &amp;#123; DocumentBuilder, SwaggerModule &amp;#125; &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;@nestjs/swagger&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; &amp;#123; AppModule &amp;#125; &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;app.module&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;createSwagger&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;app: INestApplication&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; version = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;../package.json&#39;&lt;/span&gt;).version || &lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; options = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; DocumentBuilder()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    .setTitle(&lt;span class=&quot;string&quot;&gt;&#39;Nestjs Realworld Example App&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    .setVersion(version)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    .addBearerAuth()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    .build()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt; = SwaggerModule.createDocument(app, options)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  SwaggerModule.setup(&lt;span class=&quot;string&quot;&gt;&#39;/docs&#39;&lt;/span&gt;, app, &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;bootstrap&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; app = &lt;span class=&quot;keyword&quot;&gt;await&lt;/span&gt; NestFactory.create(AppModule)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  app.useGlobalPipes(&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; ValidationPipe())&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (process.env.SWAGGER_ENABLE &amp;amp;&amp;amp; process.env.SWAGGER_ENABLE === &lt;span class=&quot;string&quot;&gt;&#39;true&#39;&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    createSwagger(app)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;await&lt;/span&gt; app.listen(&lt;span class=&quot;number&quot;&gt;3000&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bootstrap().catch(&lt;span class=&quot;function&quot;&gt;(&lt;span class=&quot;params&quot;&gt;err&lt;/span&gt;) =&amp;gt;&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.error(err))&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;在 &lt;code&gt;createSwagger&lt;/code&gt; 中， 我们首先读取了来自 &lt;code&gt;package.json&lt;/code&gt; 中的版本号来作为接口的版本&lt;/p&gt;
+&lt;p&gt;然后我们设置了 Title 和 Bearer 鉴权认证入口， 我们还设置了 &lt;code&gt;/docs&lt;/code&gt; 为我们文档的入口&lt;/p&gt;
+&lt;p&gt;最后，我们判断环境变量中的 &lt;code&gt;SWAGGER_ENABLE&lt;/code&gt; 是否打开， 如果打开我们就初始化 Swagger 文档系统。&lt;/p&gt;
+&lt;p&gt;在 &lt;code&gt;.env&lt;/code&gt; 和 &lt;code&gt;.env.template&lt;/code&gt; 中增加 &lt;code&gt;SWAGGER_ENABLE=true&lt;/code&gt;, 然后启动服务器&lt;/p&gt;
+&lt;p&gt;访问 &lt;code&gt;http://localhost:3000/docs&lt;/code&gt; 就能看见我们的接口文档创建好啦！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://static.mutoe.com/2020/TDD-nestjs-realworld-example-app/swagger-preview.png&quot; alt=&quot;swagger preview&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="教程" scheme="https://blog.mutoe.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Nestjs" scheme="https://blog.mutoe.com/tags/Nestjs/"/>
+    
+      <category term="TypeScript" scheme="https://blog.mutoe.com/tags/TypeScript/"/>
+    
+      <category term="TypeORM" scheme="https://blog.mutoe.com/tags/TypeORM/"/>
+    
+      <category term="Swagger" scheme="https://blog.mutoe.com/tags/Swagger/"/>
+    
+  </entry>
   
   <entry>
     <title>Flutter 学习笔记</title>
@@ -44,19 +83,20 @@
     <link href="https://blog.mutoe.com/2020/TDD-nestjs-realworld-example-app-4/"/>
     <id>https://blog.mutoe.com/2020/TDD-nestjs-realworld-example-app-4/</id>
     <published>2020-01-08T12:36:22.000Z</published>
-    <updated>2020-05-03T08:58:17.081Z</updated>
+    <updated>2020-05-03T09:24:54.897Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;上一章中, 我们完成了鉴权功能, 也就是 Auth 模块, 顺便简单实现了下注册和登录功能. 这一章我们就来正式的将登录和实现功能做完, 含有完整的数据校验和转化.&lt;/p&gt;
+      &lt;p&gt;上一章中, 我们完成了鉴权功能, 也就是 Auth 模块, 顺便简单实现了下注册和登录功能. 这一章我们就来正式的将登录和实现功能做完, 含有完整的数据校验和转化.&lt;/p&gt;
 &lt;p&gt;在正式的开始完善功能之前, 我们现清理重构一下已有的代码.&lt;/p&gt;
-&lt;h1 id=&quot;1-重构代
-        
-      
+&lt;h1 id=&quot;1-重构代码&quot;&gt;&lt;a href=&quot;#1-重构代码&quot; class=&quot;headerlink&quot; title=&quot;1. 重构代码&quot;&gt;&lt;/a&gt;1. 重构代码&lt;/h1&gt;&lt;h2 id=&quot;1-1-整理路由&quot;&gt;&lt;a href=&quot;#1-1-整理路由&quot; class=&quot;headerlink&quot; title=&quot;1.1 整理路由&quot;&gt;&lt;/a&gt;1.1 整理路由&lt;/h2&gt;&lt;p&gt;我们上一张的登录和注册是写在 &lt;code&gt;app.controller.ts&lt;/code&gt; 中的, 如果所有的路由都写在这里的话就会比较杂乱, 所以我们将它移动到 Auth 模块下.&lt;/p&gt;
+&lt;p&gt;首先生成 AuthController&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;nest g controller auth&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;然后将 &lt;code&gt;/auth/register&lt;/code&gt; 和 &lt;code&gt;/auth/login&lt;/code&gt; 移到 AuthController 下&lt;/p&gt;
+&lt;figure class=&quot;highlight ts&quot;&gt;&lt;figcaption&gt;&lt;span&gt;auth.controller.ts&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; &amp;#123; Body, Controller, Post, Request, UseGuards &amp;#125; &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;@nestjs/common&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; &amp;#123; AuthGuard &amp;#125; &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;@nestjs/passport&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; &amp;#123; UserService &amp;#125; &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;../user/user.service&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; &amp;#123; AuthService &amp;#125; &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;./auth.service&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;@Controller&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;auth&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; AuthController &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;constructor&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;params&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; readonly userService: UserService,&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;params&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; readonly authService: AuthService,&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;params&quot;&gt;  &lt;/span&gt;) &amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;meta&quot;&gt;@Post&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;/register&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;async&lt;/span&gt; register(&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;meta&quot;&gt;@Body&lt;/span&gt;() requestBody: &amp;#123; email: &lt;span class=&quot;built_in&quot;&gt;string&lt;/span&gt;; username: &lt;span class=&quot;built_in&quot;&gt;string&lt;/span&gt;; password: &lt;span class=&quot;built_in&quot;&gt;string&lt;/span&gt; &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  ) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; user = &lt;span class=&quot;keyword&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.userService.createUser(requestBody)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; token = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.authService.generateToken(user.id, user.username)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      user: &amp;#123; ...user, token &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;meta&quot;&gt;@UseGuards&lt;/span&gt;(AuthGuard(&lt;span class=&quot;string&quot;&gt;&#39;local&#39;&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;meta&quot;&gt;@Post&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;/login&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;async&lt;/span&gt; login(&lt;span class=&quot;meta&quot;&gt;@Request&lt;/span&gt;() req) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; &amp;#123; user &amp;#125; = req&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; token = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.authService.generateToken(user.id, user.username)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      user: &amp;#123; ...user, token &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;顺便也移动下测试代码, 这里就不再赘述了.&lt;/p&gt;
     
     </summary>
     
@@ -328,27 +368,6 @@
     
     
       <category term="Flutter" scheme="https://blog.mutoe.com/tags/Flutter/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>TypeScript 常见错误整理</title>
-    <link href="https://blog.mutoe.com/2019/typescript-errors/"/>
-    <id>https://blog.mutoe.com/2019/typescript-errors/</id>
-    <published>2019-07-22T01:19:11.000Z</published>
-    <updated>2020-03-22T06:02:34.184Z</updated>
-    
-    <summary type="html">
-    
-      这里记录下了我在学习和使用 TypeScript 时遇到的常见错误, 如果你有什么疑问, 欢迎在下方留言或点击右上方小铅笔补充修改
-    
-    </summary>
-    
-    
-      <category term="笔记" scheme="https://blog.mutoe.com/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="TypeScript" scheme="https://blog.mutoe.com/tags/TypeScript/"/>
     
   </entry>
   
