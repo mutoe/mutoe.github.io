@@ -1191,7 +1191,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #83d5b6;
+  background: #935205;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2358,7 +2358,7 @@ embed {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-:root {
+html {
   font-size: 87.5%;
 }
 table {
@@ -2367,47 +2367,18 @@ table {
 .inline-block {
   display: inline-block;
 }
-.pagination {
-  border: none;
-  margin-top: 60px;
+.main {
+  padding-bottom: 217px;
 }
-.pagination .page-number,
-.pagination .next {
-  border-top: none;
-  padding: 12px 24px;
-  margin: 0;
-  transition: 0.4s;
-}
-.pagination .page-number:not(.current):hover,
-.pagination .next:not(.current):hover {
-  background-color: var(--card-bg-color);
-}
-.header {
-  font-size: 110%;
-  padding-bottom: 70px;
-  border-bottom: 4px dashed var(--card-bg-color);
-}
-.header .brand {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-.footer {
-  font-size: 100%;
-  padding-top: 56px;
-  padding-bottom: 56px;
+#footer {
+  margin-top: 56px;
   border-top: 1px solid #eee;
-}
-.sidebar {
-  font-size: 110%;
 }
 .author {
   margin-right: 8px;
 }
 .theme-info {
   margin-left: 8px;
-}
-.fa.fa-pencil {
-  font-size: 21px;
 }
 .external-link {
   margin: 28px;
@@ -2463,13 +2434,6 @@ table {
 .post-body p {
   text-align: left;
 }
-.posts-expand .post-title {
-  line-height: 1.6;
-  margin-bottom: 12px;
-}
-.posts-expand .post-title .post-edit-link {
-  line-height: 1;
-}
 .posts-expand .post-meta .post-description {
   margin-top: 48px;
   padding: 24px;
@@ -2488,26 +2452,9 @@ table {
 .posts-expand .post-body ul > li > ol > li {
   list-style: lower-roman;
 }
-.posts-expand .followme {
-  margin-top: 40px;
-  flex-direction: row;
-}
-.posts-expand .followme p {
-  margin: 0;
-}
-.posts-expand .followme .social-item {
-  padding: 0 2em;
-  margin: 0;
-}
-.posts-expand .post-tags {
-  font-size: 120%;
-}
-.posts-expand .post-nav {
-  margin-top: 40px;
-}
 .utterances {
-  margin: 60px 0 0;
-  max-width: unset;
+  margin: 24px 0 0;
+  max-width: none;
 }
 .stackblitz {
   width: 100%;
