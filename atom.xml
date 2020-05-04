@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.mutoe.com/"/>
-  <updated>2020-05-03T09:51:44.908Z</updated>
+  <updated>2020-05-04T04:18:24.800Z</updated>
   <id>https://blog.mutoe.com/</id>
   
   <author>
@@ -17,11 +17,47 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>手把手带你实践 TDD Nestjs Realworld 项目 - 6. 编写 API 集成测试</title>
+    <link href="https://blog.mutoe.com/2020/TDD-nestjs-realworld-example-app-6/"/>
+    <id>https://blog.mutoe.com/2020/TDD-nestjs-realworld-example-app-6/</id>
+    <published>2020-05-04T04:16:42.000Z</published>
+    <updated>2020-05-04T04:18:24.800Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;第二章我们简单的介绍了下如何连接测试数据库，这篇我们将结合 TDD 来完整的实现注册和登录功能。（如果接下来我写的内容你已经做过，可以跳过该步）&lt;/p&gt;
+&lt;h1 id=&quot;1-编写第一个集成测试&quot;&gt;&lt;a href=&quot;#1-编写第一个集成测试&quot; class=&quot;headerlink&quot; title=&quot;1. 编写第一个集成测试&quot;&gt;&lt;/a&gt;1. 编写第一个集成测试&lt;/h1&gt;&lt;p&gt;按照 Nest 提供的示例 E2E 测试， 位于 &lt;code&gt;test/app.e2e-spec.ts&lt;/code&gt; 应该长这样&lt;/p&gt;
+&lt;figure class=&quot;highlight ts&quot;&gt;&lt;figcaption&gt;&lt;span&gt;test/app.e2e-spec.ts&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; &amp;#123; Test, TestingModule &amp;#125; &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;@nestjs/testing&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; * &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; request &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;supertest&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; &amp;#123; AppModule &amp;#125; &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;./../src/app.module&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;describe(&lt;span class=&quot;string&quot;&gt;&#39;AppController (e2e)&#39;&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; =&amp;gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; app&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  beforeEach(&lt;span class=&quot;keyword&quot;&gt;async&lt;/span&gt; () =&amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; moduleFixture: TestingModule = &lt;span class=&quot;keyword&quot;&gt;await&lt;/span&gt; Test.createTestingModule(&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      imports: [AppModule],&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;).compile()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    app = moduleFixture.createNestApplication()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;await&lt;/span&gt; app.init()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  it(&lt;span class=&quot;string&quot;&gt;&#39;/ (GET)&#39;&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; =&amp;gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; request(app.getHttpServer())&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      .get(&lt;span class=&quot;string&quot;&gt;&#39;/&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      .expect(&lt;span class=&quot;number&quot;&gt;200&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      .expect(&lt;span class=&quot;string&quot;&gt;&#39;Hello World!&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;现在是运行不了的，不过没关系，我们稍稍改造一下&lt;/p&gt;
+&lt;p&gt;首先我们测试一个用于检查健康的接口 &lt;code&gt;/hello&lt;/code&gt;, 无需导入整个 &lt;code&gt;AppModule&lt;/code&gt;, 只需导入 &lt;code&gt;AppController&lt;/code&gt; ，改造为下列的样子&lt;/p&gt;
+&lt;figure class=&quot;highlight ts&quot;&gt;&lt;figcaption&gt;&lt;span&gt;app.e2e-spec.ts&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; &amp;#123; Test, TestingModule &amp;#125; &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;@nestjs/testing&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; &amp;#123; AppController &amp;#125; &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;app.controller&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; * &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; request &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;supertest&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;describe(&lt;span class=&quot;string&quot;&gt;&#39;app module&#39;&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; =&amp;gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; app&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  beforeAll(&lt;span class=&quot;keyword&quot;&gt;async&lt;/span&gt; () =&amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; moduleFixture: TestingModule = &lt;span class=&quot;keyword&quot;&gt;await&lt;/span&gt; Test.createTestingModule(&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      controllers: [AppController],&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;).compile()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    app = moduleFixture.createNestApplication()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;await&lt;/span&gt; app.init()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  afterAll(&lt;span class=&quot;keyword&quot;&gt;async&lt;/span&gt; () =&amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;await&lt;/span&gt; app.close()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  it(&lt;span class=&quot;string&quot;&gt;&#39;/hello (GET)&#39;&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; =&amp;gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; request(app.getHttpServer())&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      .get(&lt;span class=&quot;string&quot;&gt;&#39;/hello?name=world&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      .expect(&lt;span class=&quot;number&quot;&gt;200&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      .expect(&lt;span class=&quot;string&quot;&gt;&#39;Hello world!&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;然后执行&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yarn &lt;span class=&quot;built_in&quot;&gt;test&lt;/span&gt;:e2e&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://static.mutoe.com/2020/TDD-nestjs-realworld-example-app/yarn-e2e-test.png&quot; alt=&quot;yarn e2e test&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="教程" scheme="https://blog.mutoe.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Nestjs" scheme="https://blog.mutoe.com/tags/Nestjs/"/>
+    
+      <category term="TypeScript" scheme="https://blog.mutoe.com/tags/TypeScript/"/>
+    
+      <category term="Test" scheme="https://blog.mutoe.com/tags/Test/"/>
+    
+  </entry>
+  
+  <entry>
     <title>手把手带你实践 TDD Nestjs Realworld 项目 - 5. Swagger 自动生成接口文档</title>
     <link href="https://blog.mutoe.com/2020/TDD-nestjs-realworld-example-app-5/"/>
     <id>https://blog.mutoe.com/2020/TDD-nestjs-realworld-example-app-5/</id>
     <published>2020-05-03T09:09:52.000Z</published>
-    <updated>2020-05-03T09:51:44.908Z</updated>
+    <updated>2020-05-03T10:13:36.774Z</updated>
     
     <summary type="html">
     
@@ -48,8 +84,6 @@
       <category term="Nestjs" scheme="https://blog.mutoe.com/tags/Nestjs/"/>
     
       <category term="TypeScript" scheme="https://blog.mutoe.com/tags/TypeScript/"/>
-    
-      <category term="TypeORM" scheme="https://blog.mutoe.com/tags/TypeORM/"/>
     
       <category term="Swagger" scheme="https://blog.mutoe.com/tags/Swagger/"/>
     
@@ -232,9 +266,9 @@
     
       <category term="GitHub Actions" scheme="https://blog.mutoe.com/tags/GitHub-Actions/"/>
     
-      <category term="Swagger" scheme="https://blog.mutoe.com/tags/Swagger/"/>
-    
       <category term="ESLint" scheme="https://blog.mutoe.com/tags/ESLint/"/>
+    
+      <category term="Swagger" scheme="https://blog.mutoe.com/tags/Swagger/"/>
     
   </entry>
   
@@ -327,47 +361,6 @@
       <category term="Linux" scheme="https://blog.mutoe.com/tags/Linux/"/>
     
       <category term="Shell" scheme="https://blog.mutoe.com/tags/Shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>flutter 环境搭建</title>
-    <link href="https://blog.mutoe.com/2019/flutter-starting/"/>
-    <id>https://blog.mutoe.com/2019/flutter-starting/</id>
-    <published>2019-08-28T06:29:49.000Z</published>
-    <updated>2020-03-22T06:02:34.177Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近在学习 Flutter 补充移动端开发的技术栈，刚好换电脑，特此从 0 开始重新搭建 Flutter 开发环境&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;整个安装环境是基于 macOS 操作系统的，如果你使用的是 Windows 操作系统，可以参考其他教程或本博文大致思路&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&quot;1-环境安装包下载&quot;&gt;&lt;a href=&quot;#1-环境安装包下载&quot; class=&quot;headerlink&quot; title=&quot;1. 环境安装包下载&quot;&gt;&lt;/a&gt;1. 环境安装包下载&lt;/h1&gt;&lt;p&gt;以下几个安装包体积较大，所以在观看本教程前需要提前进行下载&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://flutter.dev/docs/get-started/install&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Flutter SDK&lt;/a&gt; (提供 Flutter 相关命令行)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://developer.apple.com/xcode&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;XCode&lt;/a&gt; (提供 iOS 模拟器和编译环境)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://developer.android.com/studio&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Android Studio&lt;/a&gt; (提供 Android 模拟器和编译环境)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;2-Flutter-SDK-安装&quot;&gt;&lt;a href=&quot;#2-Flutter-SDK-安装&quot; class=&quot;headerlink&quot; title=&quot;2. Flutter SDK 安装&quot;&gt;&lt;/a&gt;2. Flutter SDK 安装&lt;/h1&gt;&lt;p&gt;下载好 Flutter SDK 后，解压到一个存放 SDK 的目录，我这里存放在 &lt;code&gt;~/.flutter-sdk&lt;/code&gt; 下&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mkdir ~/.flutter-sdk&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; ~/.flutter-sdk&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;unzip ~/Downloads/flutter_macos_v1.7.8+hotfix.4-stable.zip&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;然后将 Flutter SDK 的安装目录暴露给环境变量，在 &lt;code&gt;~/.zshrc&lt;/code&gt; 或 &lt;code&gt;~/.bashrc&lt;/code&gt; 文件中增加以下内容&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Flutter&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;export&lt;/span&gt; PATH=&lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;variable&quot;&gt;$PATH&lt;/span&gt;:&lt;span class=&quot;variable&quot;&gt;$HOME&lt;/span&gt;/.flutter-sdk/flutter/bin&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;然后你还可以下载 Flutter 在未来会需要的二进制包（可选的，也可以在未来下载）&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;flutter precache&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;最后运行检查工具 &lt;code&gt;flutter doctor&lt;/code&gt; ，来检查你的 Flutter 是否可以正常运行, 如果出现下面的信息，就说明你安装 Flutter SDK 成功啦&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;flutter doctor&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;➜  .flutter-sdk flutter doctor&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[✓] Flutter (Channel stable, v1.7.8+hotfix.4, on Mac OS X 10.14.5 18F132, locale en-CN)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    • Flutter version 1.7.8+hotfix.4 at /Users/yourusername/.flutter-sdk/flutter&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    • Framework revision 20e59316b8 (6 weeks ago), 2019-07-18 20:04:33 -0700&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    • Engine revision fee001c93f&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    • Dart version 2.4.0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;...&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-    
-      <category term="心得" scheme="https://blog.mutoe.com/categories/%E5%BF%83%E5%BE%97/"/>
-    
-    
-      <category term="Flutter" scheme="https://blog.mutoe.com/tags/Flutter/"/>
     
   </entry>
   
