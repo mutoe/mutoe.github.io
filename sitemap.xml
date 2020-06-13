@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.mutoe.com/2017/linux-study-notes/</loc>
+    
+    <lastmod>2020-06-13T07:23:59.808Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.mutoe.com/2017/vi-vim-study-notes/</loc>
+    
+    <lastmod>2020-06-13T07:15:52.538Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.mutoe.com/2020/TDD-nestjs-realworld-example-app-6/</loc>
     
     <lastmod>2020-05-04T04:23:24.774Z</lastmod>
@@ -72,7 +86,7 @@
   </url>
   
   <url>
-    <loc>https://blog.mutoe.com/2019/why-typescreipt/</loc>
+    <loc>https://blog.mutoe.com/2018/vue-koa-setup-app-framework/</loc>
     
     <lastmod>2020-03-22T06:02:34.185Z</lastmod>
     
@@ -86,7 +100,7 @@
   </url>
   
   <url>
-    <loc>https://blog.mutoe.com/2018/vue-koa-setup-app-framework/</loc>
+    <loc>https://blog.mutoe.com/2019/why-typescreipt/</loc>
     
     <lastmod>2020-03-22T06:02:34.185Z</lastmod>
     
@@ -94,13 +108,6 @@
   
   <url>
     <loc>https://blog.mutoe.com/2019/typescript-errors/</loc>
-    
-    <lastmod>2020-03-22T06:02:34.184Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.mutoe.com/2017/vi-vim-study-notes/</loc>
     
     <lastmod>2020-03-22T06:02:34.184Z</lastmod>
     
@@ -163,13 +170,6 @@
   </url>
   
   <url>
-    <loc>https://blog.mutoe.com/2017/linux-study-notes/</loc>
-    
-    <lastmod>2020-03-22T06:02:34.181Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.mutoe.com/2019/interactive-command-in-shell/</loc>
     
     <lastmod>2020-03-22T06:02:34.180Z</lastmod>
@@ -191,14 +191,14 @@
   </url>
   
   <url>
-    <loc>https://blog.mutoe.com/2016/hexo-image-plugin/</loc>
+    <loc>https://blog.mutoe.com/2016/hexo-post-livereload-edit/</loc>
     
     <lastmod>2020-03-22T06:02:34.179Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.mutoe.com/2016/hexo-post-livereload-edit/</loc>
+    <loc>https://blog.mutoe.com/2016/hexo-image-plugin/</loc>
     
     <lastmod>2020-03-22T06:02:34.179Z</lastmod>
     
