@@ -260,8 +260,6 @@
     
       <category term="TypeORM" scheme="https://blog.mutoe.com/tags/TypeORM/"/>
     
-      <category term="Swagger" scheme="https://blog.mutoe.com/tags/Swagger/"/>
-    
       <category term="TDD" scheme="https://blog.mutoe.com/tags/TDD/"/>
     
       <category term="Docker" scheme="https://blog.mutoe.com/tags/Docker/"/>
@@ -269,6 +267,8 @@
       <category term="GitHub Actions" scheme="https://blog.mutoe.com/tags/GitHub-Actions/"/>
     
       <category term="ESLint" scheme="https://blog.mutoe.com/tags/ESLint/"/>
+    
+      <category term="Swagger" scheme="https://blog.mutoe.com/tags/Swagger/"/>
     
   </entry>
   
