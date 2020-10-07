@@ -44,11 +44,11 @@
       <category term="教程" scheme="https://blog.mutoe.com/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="Test" scheme="https://blog.mutoe.com/tags/Test/"/>
-    
       <category term="Nestjs" scheme="https://blog.mutoe.com/tags/Nestjs/"/>
     
       <category term="TypeScript" scheme="https://blog.mutoe.com/tags/TypeScript/"/>
+    
+      <category term="Test" scheme="https://blog.mutoe.com/tags/Test/"/>
     
   </entry>
   
@@ -206,8 +206,6 @@
       <category term="教程" scheme="https://blog.mutoe.com/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="Jest" scheme="https://blog.mutoe.com/tags/Jest/"/>
-    
       <category term="Nestjs" scheme="https://blog.mutoe.com/tags/Nestjs/"/>
     
       <category term="TypeScript" scheme="https://blog.mutoe.com/tags/TypeScript/"/>
@@ -217,6 +215,8 @@
       <category term="TypeORM" scheme="https://blog.mutoe.com/tags/TypeORM/"/>
     
       <category term="TDD" scheme="https://blog.mutoe.com/tags/TDD/"/>
+    
+      <category term="Jest" scheme="https://blog.mutoe.com/tags/Jest/"/>
     
       <category term="Docker" scheme="https://blog.mutoe.com/tags/Docker/"/>
     
@@ -250,8 +250,6 @@
       <category term="教程" scheme="https://blog.mutoe.com/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="Jest" scheme="https://blog.mutoe.com/tags/Jest/"/>
-    
       <category term="Nestjs" scheme="https://blog.mutoe.com/tags/Nestjs/"/>
     
       <category term="TypeScript" scheme="https://blog.mutoe.com/tags/TypeScript/"/>
@@ -261,6 +259,8 @@
       <category term="TypeORM" scheme="https://blog.mutoe.com/tags/TypeORM/"/>
     
       <category term="TDD" scheme="https://blog.mutoe.com/tags/TDD/"/>
+    
+      <category term="Jest" scheme="https://blog.mutoe.com/tags/Jest/"/>
     
       <category term="Docker" scheme="https://blog.mutoe.com/tags/Docker/"/>
     
