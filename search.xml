@@ -131,12 +131,12 @@ mutoe/nestjs-realworld-example-app   latest              b7cedde8299d        5 s
         <category>教程</category>
       </categories>
       <tags>
-        <tag>Jest</tag>
         <tag>Nestjs</tag>
         <tag>TypeScript</tag>
         <tag>Postgres</tag>
         <tag>TypeORM</tag>
         <tag>TDD</tag>
+        <tag>Jest</tag>
         <tag>Docker</tag>
         <tag>GitHub Actions</tag>
         <tag>Swagger</tag>
@@ -249,12 +249,12 @@ mutoe/nestjs-realworld-example-app   latest              b7cedde8299d        5 s
         <category>教程</category>
       </categories>
       <tags>
-        <tag>Jest</tag>
         <tag>Nestjs</tag>
         <tag>TypeScript</tag>
         <tag>Postgres</tag>
         <tag>TypeORM</tag>
         <tag>TDD</tag>
+        <tag>Jest</tag>
         <tag>Docker</tag>
         <tag>GitHub Actions</tag>
         <tag>ESLint</tag>
@@ -360,6 +360,70 @@ mutoe/nestjs-realworld-example-app   latest              b7cedde8299d        5 s
       </tags>
   </entry>
   <entry>
+    <title>FastStone Image Viewer - 轻量级图像查看器</title>
+    <url>/2017/app-recommend-fastone-image-viewer/</url>
+    <content><![CDATA[<p><strong>写在前面:</strong>
+应用推荐的相关文章其实一直想做, 因为我自己用的一些软件或应用都非常小众, 感觉很轻量 / 实用, 不像 360 全家桶那些应用浓重的商业气味. 这类软件知道的人不多, 介绍给朋友时他们总有种 “你哪来这么多有意思的软件啊!” 的感觉, 所以写下这个系列的文章, 让这类软件让更多的人知道, 支持作者, 支持优质应用 !</p>
+<p>我先慢慢积累一些推荐, 后面我会做成一个应用小仓库之类的东西, 推荐一些小众的、轻量的、实用性非常高的应用程序。</p>
+<a id="more"></a>
+
+<hr>
+<h2 id="FastStone-Image-Viewer"><a href="#FastStone-Image-Viewer" class="headerlink" title="FastStone Image Viewer"></a>FastStone Image Viewer</h2><p><img src="//static.mutoe.com/2017/app-recommend-fastone-image-viewer/faststone.jpg" alt="faststone"></p>
+<p><a href="http://www.faststone.org/">http://www.faststone.org/</a> (需翻墙)</p>
+<h2 id="1-应用简介"><a href="#1-应用简介" class="headerlink" title="1. 应用简介"></a>1. 应用简介</h2><p>运行平台 : Win 7/8/10
+是否付费 : 完全免费
+应用大小 : 6.4 M
+中文支持 : 官方支持
+安装方式 : 注册安装 (需管理员权限)</p>
+<h2 id="2-功能概述"><a href="#2-功能概述" class="headerlink" title="2. 功能概述"></a>2. 功能概述</h2><p>在一些内存只有 2GB 或 4GB 的电脑程序开多了就显得有些吃力, 对于一些文字工作者来说, 在文章中使用图片还是比较频繁的, 这时候你开着浏览器打开几个网页, 一个 WORD 程序, 听着音乐, 用 ACDSee \ Bridge \ 美图看看 甚至 windows 图片查看器找些配图, 再开个 Photoshop, 你的电脑肯定已经开始有些卡顿了.</p>
+<p>我相信你一定需要一款轻量级的软件, 最好还附带一些简单的编辑功能. FastStone Image Viewer 这款软件就适用于这种场景.</p>
+<p><em>以下内容均在虚拟机中运行并演示.</em></p>
+<h3 id="图片浏览"><a href="#图片浏览" class="headerlink" title="图片浏览"></a>图片浏览</h3><p>作为一个图像管理器, 图片浏览应该是最基本的功能了. FastStone 的主界面虽然不是那么美观, 但中规中矩, 基本功能应有尽有.</p>
+<p><img src="//static.mutoe.com/2017/app-recommend-fastone-image-viewer/viewer.jpg" alt="图片浏览"></p>
+<p>在全屏浏览模式下, 鼠标移至屏幕顶部可显示当前文件夹下的图片概览, 底部可显示导航及一些小工具快捷方式.</p>
+<p><img src="//static.mutoe.com/2017/app-recommend-fastone-image-viewer/view-top-down.jpg" alt="顶部和底部小工具"></p>
+<p>左侧显示比较全面的对图片的调整操作, 而右侧则能看到当前图像的一些元数据及直方图等数据.</p>
+<p><img src="//static.mutoe.com/2017/app-recommend-fastone-image-viewer/view-left-right.jpg" alt="左边和右边小工具"></p>
+<h3 id="图片编辑"><a href="#图片编辑" class="headerlink" title="图片编辑"></a>图片编辑</h3><p>如上图左侧工具栏所示, 这款软件能进行图片旋转、调整尺寸/画布大小、裁切、模糊、调色、降噪等基本功能, 软件还带了一些简单的图片滤镜, 如素描 / 浮雕 / 移轴模糊等.</p>
+<h3 id="图像格式转换及压缩"><a href="#图像格式转换及压缩" class="headerlink" title="图像格式转换及压缩"></a>图像格式转换及压缩</h3><p>这项功能的强大也是我在众多图像浏览软件里选择这款软件的原因之一, 压缩效率可谓之高.
+一个 1080P 大小 PNG 格式的截图大约在 1M 左右 (这取决于画面复杂程度), 经过软件转换格式压缩后, 能基本 “无损” 压缩至一半大小, 在一些情况下还会有惊喜 !</p>
+<p><img src="//static.mutoe.com/2017/app-recommend-fastone-image-viewer/compression.png" alt="图像压缩"></p>
+<p>软件也支持批量操作, 对于一类的图片能非常方便的进行图片编辑中的<strong>所有操作</strong> !</p>
+
+
+<h2 id="3-使用技巧"><a href="#3-使用技巧" class="headerlink" title="3. 使用技巧"></a>3. 使用技巧</h2><h3 id="修改图片默认打开方式"><a href="#修改图片默认打开方式" class="headerlink" title="修改图片默认打开方式"></a>修改图片默认打开方式</h3><p>我在虚拟机中安装完毕后双击图片打开居然还是用的原来的图片浏览器, 原来软件默认没有注册打开方式. 我们进入设置页面, 文件关联选项卡下面点击全选即可.</p>
+<p><img src="//static.mutoe.com/2017/app-recommend-fastone-image-viewer/link.png" alt="默认打开方式"></p>
+<h3 id="退出软件时取消确认提示"><a href="#退出软件时取消确认提示" class="headerlink" title="退出软件时取消确认提示"></a>退出软件时取消确认提示</h3><p>默认情况下按 ESC 退出程序时会弹出一个小对话框, 勾选 ‘不再显示次对话框’ 即可.</p>
+<p><img src="//static.mutoe.com/2017/app-recommend-fastone-image-viewer/quit.png" alt="退出确认"></p>
+<h3 id="强大的自定义功能"><a href="#强大的自定义功能" class="headerlink" title="强大的自定义功能"></a>强大的自定义功能</h3><p>软件的设置页面提供了非常多的选项, 每个人可以根据自己的使用习惯进行调整, 不要被这么多文字及选项吓到了, 磨刀不误砍柴工, 花 10 分钟来了解这个软件可为日后的使用节约大把的时间.</p>
+<p><img src="//static.mutoe.com/2017/app-recommend-fastone-image-viewer/setting.png" alt="设置页面"></p>
+<p>无论你是一个电脑小白, 还是一个资深极客, 你都<strong>不应该错过每款软件的设置页面</strong>, 别不相信, 一些 “微不足道” 的细节足以改变一款软件的使用寿命.</p>
+<h2 id="4-同类软件"><a href="#4-同类软件" class="headerlink" title="4. 同类软件"></a>4. 同类软件</h2><p>简单评价一下我使用过的其他图像浏览(图像管理)工具.</p>
+<h3 id="Adobe-Bridge"><a href="#Adobe-Bridge" class="headerlink" title="Adobe Bridge"></a>Adobe Bridge</h3><p>如果你是一个从事设计类的工作者, 那这款软件你不应该错过. 它是属于 Adobe 全家桶中的一员, 能完美兼容 Photoshop / Illustrator 等软件.
+它还有一个特点, 就是它可以给每张图片设置若干标签, 这样当你图片比较多时, 想选出与某主题相关的照片就方便许多了. 这项功能似乎是写在图像元数据中的, 也就是说, 只要你是用 Adobe 系列的软件, 标签就不会丢失.</p>
+<h3 id="ACDSee"><a href="#ACDSee" class="headerlink" title="ACDSee"></a>ACDSee</h3><p>这款软件是 Google 旗下的一款图像浏览器, 在很早的时候用过很久, 可以很方便的管理计算机内的图片.
+但这款软件大版本迭代太快了, 随着时间推进, 占用资源越来越多, 甚至还需要付费使用, 让我不得不放弃使用这款软件.</p>
+<h3 id="美图看看"><a href="#美图看看" class="headerlink" title="美图看看"></a>美图看看</h3><p>这款软件最开始是美图秀秀绑在我电脑上的, 但用起来似乎还不错, 在较老的一些机器上也能比较流畅的运行.
+最主要的是界面也比较美观, 在使用 FastStone 之前我就是一直在使用这款图像浏览器, 以至于后面卸载了美图秀秀之后还专门下载了这款软件的独立版本.
+这款软件同样也有批量重命名和处理的功能, 但不如 FastStone 那样强大, 如果你比较<strong>在乎软件的外观并且不是经常用来批量处理图片</strong>, 这款软件也推荐给你.</p>
+<p>如果你也想看其他同类软件的横评, 请在下方评论区留言, 我看到后会尽量使用一段时间并简单分享.</p>
+<h2 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h2><p><strong>网盘分流</strong>
+<a href="https://pan.baidu.com/s/1o82Sj4A">百度网盘</a>
+<a href="https://mega.nz/#!PthzGbDL!HHkgZEKrarL66OQlr5h_gtN_68ecjTtHJU0tzFpctPY">MEGA网盘</a>
+<em>更新日期 2017-3-22 软件版本 6.2
+安装包大小: 6.37 MB 安装后大小: 15.8 MB</em></p>
+<p><strong>其他渠道</strong>
+<a href="http://xiazai.zol.com.cn/detail/10/99979.shtml">ZOL软件</a>
+<a href="http://download.pchome.net/multimedia/viewer/detail-19822.html">PCHOME</a></p>
+]]></content>
+      <categories>
+        <category>心得</category>
+      </categories>
+      <tags>
+        <tag>应用推荐</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>手把手带你实践 TDD Nestjs Realworld 项目 - 6. 编写 API 集成测试</title>
     <url>/2020/TDD-nestjs-realworld-example-app-6/</url>
     <content><![CDATA[<p>第二章我们简单的介绍了下如何连接测试数据库，这篇我们将结合 TDD 来完整的实现注册和登录功能。（如果接下来我写的内容你已经做过，可以跳过该步）</p>
@@ -428,73 +492,9 @@ mutoe/nestjs-realworld-example-app   latest              b7cedde8299d        5 s
         <category>教程</category>
       </categories>
       <tags>
-        <tag>Test</tag>
         <tag>Nestjs</tag>
         <tag>TypeScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>FastStone Image Viewer - 轻量级图像查看器</title>
-    <url>/2017/app-recommend-fastone-image-viewer/</url>
-    <content><![CDATA[<p><strong>写在前面:</strong>
-应用推荐的相关文章其实一直想做, 因为我自己用的一些软件或应用都非常小众, 感觉很轻量 / 实用, 不像 360 全家桶那些应用浓重的商业气味. 这类软件知道的人不多, 介绍给朋友时他们总有种 “你哪来这么多有意思的软件啊!” 的感觉, 所以写下这个系列的文章, 让这类软件让更多的人知道, 支持作者, 支持优质应用 !</p>
-<p>我先慢慢积累一些推荐, 后面我会做成一个应用小仓库之类的东西, 推荐一些小众的、轻量的、实用性非常高的应用程序。</p>
-<a id="more"></a>
-
-<hr>
-<h2 id="FastStone-Image-Viewer"><a href="#FastStone-Image-Viewer" class="headerlink" title="FastStone Image Viewer"></a>FastStone Image Viewer</h2><p><img src="//static.mutoe.com/2017/app-recommend-fastone-image-viewer/faststone.jpg" alt="faststone"></p>
-<p><a href="http://www.faststone.org/">http://www.faststone.org/</a> (需翻墙)</p>
-<h2 id="1-应用简介"><a href="#1-应用简介" class="headerlink" title="1. 应用简介"></a>1. 应用简介</h2><p>运行平台 : Win 7/8/10
-是否付费 : 完全免费
-应用大小 : 6.4 M
-中文支持 : 官方支持
-安装方式 : 注册安装 (需管理员权限)</p>
-<h2 id="2-功能概述"><a href="#2-功能概述" class="headerlink" title="2. 功能概述"></a>2. 功能概述</h2><p>在一些内存只有 2GB 或 4GB 的电脑程序开多了就显得有些吃力, 对于一些文字工作者来说, 在文章中使用图片还是比较频繁的, 这时候你开着浏览器打开几个网页, 一个 WORD 程序, 听着音乐, 用 ACDSee \ Bridge \ 美图看看 甚至 windows 图片查看器找些配图, 再开个 Photoshop, 你的电脑肯定已经开始有些卡顿了.</p>
-<p>我相信你一定需要一款轻量级的软件, 最好还附带一些简单的编辑功能. FastStone Image Viewer 这款软件就适用于这种场景.</p>
-<p><em>以下内容均在虚拟机中运行并演示.</em></p>
-<h3 id="图片浏览"><a href="#图片浏览" class="headerlink" title="图片浏览"></a>图片浏览</h3><p>作为一个图像管理器, 图片浏览应该是最基本的功能了. FastStone 的主界面虽然不是那么美观, 但中规中矩, 基本功能应有尽有.</p>
-<p><img src="//static.mutoe.com/2017/app-recommend-fastone-image-viewer/viewer.jpg" alt="图片浏览"></p>
-<p>在全屏浏览模式下, 鼠标移至屏幕顶部可显示当前文件夹下的图片概览, 底部可显示导航及一些小工具快捷方式.</p>
-<p><img src="//static.mutoe.com/2017/app-recommend-fastone-image-viewer/view-top-down.jpg" alt="顶部和底部小工具"></p>
-<p>左侧显示比较全面的对图片的调整操作, 而右侧则能看到当前图像的一些元数据及直方图等数据.</p>
-<p><img src="//static.mutoe.com/2017/app-recommend-fastone-image-viewer/view-left-right.jpg" alt="左边和右边小工具"></p>
-<h3 id="图片编辑"><a href="#图片编辑" class="headerlink" title="图片编辑"></a>图片编辑</h3><p>如上图左侧工具栏所示, 这款软件能进行图片旋转、调整尺寸/画布大小、裁切、模糊、调色、降噪等基本功能, 软件还带了一些简单的图片滤镜, 如素描 / 浮雕 / 移轴模糊等.</p>
-<h3 id="图像格式转换及压缩"><a href="#图像格式转换及压缩" class="headerlink" title="图像格式转换及压缩"></a>图像格式转换及压缩</h3><p>这项功能的强大也是我在众多图像浏览软件里选择这款软件的原因之一, 压缩效率可谓之高.
-一个 1080P 大小 PNG 格式的截图大约在 1M 左右 (这取决于画面复杂程度), 经过软件转换格式压缩后, 能基本 “无损” 压缩至一半大小, 在一些情况下还会有惊喜 !</p>
-<p><img src="//static.mutoe.com/2017/app-recommend-fastone-image-viewer/compression.png" alt="图像压缩"></p>
-<p>软件也支持批量操作, 对于一类的图片能非常方便的进行图片编辑中的<strong>所有操作</strong> !</p>
-
-
-<h2 id="3-使用技巧"><a href="#3-使用技巧" class="headerlink" title="3. 使用技巧"></a>3. 使用技巧</h2><h3 id="修改图片默认打开方式"><a href="#修改图片默认打开方式" class="headerlink" title="修改图片默认打开方式"></a>修改图片默认打开方式</h3><p>我在虚拟机中安装完毕后双击图片打开居然还是用的原来的图片浏览器, 原来软件默认没有注册打开方式. 我们进入设置页面, 文件关联选项卡下面点击全选即可.</p>
-<p><img src="//static.mutoe.com/2017/app-recommend-fastone-image-viewer/link.png" alt="默认打开方式"></p>
-<h3 id="退出软件时取消确认提示"><a href="#退出软件时取消确认提示" class="headerlink" title="退出软件时取消确认提示"></a>退出软件时取消确认提示</h3><p>默认情况下按 ESC 退出程序时会弹出一个小对话框, 勾选 ‘不再显示次对话框’ 即可.</p>
-<p><img src="//static.mutoe.com/2017/app-recommend-fastone-image-viewer/quit.png" alt="退出确认"></p>
-<h3 id="强大的自定义功能"><a href="#强大的自定义功能" class="headerlink" title="强大的自定义功能"></a>强大的自定义功能</h3><p>软件的设置页面提供了非常多的选项, 每个人可以根据自己的使用习惯进行调整, 不要被这么多文字及选项吓到了, 磨刀不误砍柴工, 花 10 分钟来了解这个软件可为日后的使用节约大把的时间.</p>
-<p><img src="//static.mutoe.com/2017/app-recommend-fastone-image-viewer/setting.png" alt="设置页面"></p>
-<p>无论你是一个电脑小白, 还是一个资深极客, 你都<strong>不应该错过每款软件的设置页面</strong>, 别不相信, 一些 “微不足道” 的细节足以改变一款软件的使用寿命.</p>
-<h2 id="4-同类软件"><a href="#4-同类软件" class="headerlink" title="4. 同类软件"></a>4. 同类软件</h2><p>简单评价一下我使用过的其他图像浏览(图像管理)工具.</p>
-<h3 id="Adobe-Bridge"><a href="#Adobe-Bridge" class="headerlink" title="Adobe Bridge"></a>Adobe Bridge</h3><p>如果你是一个从事设计类的工作者, 那这款软件你不应该错过. 它是属于 Adobe 全家桶中的一员, 能完美兼容 Photoshop / Illustrator 等软件.
-它还有一个特点, 就是它可以给每张图片设置若干标签, 这样当你图片比较多时, 想选出与某主题相关的照片就方便许多了. 这项功能似乎是写在图像元数据中的, 也就是说, 只要你是用 Adobe 系列的软件, 标签就不会丢失.</p>
-<h3 id="ACDSee"><a href="#ACDSee" class="headerlink" title="ACDSee"></a>ACDSee</h3><p>这款软件是 Google 旗下的一款图像浏览器, 在很早的时候用过很久, 可以很方便的管理计算机内的图片.
-但这款软件大版本迭代太快了, 随着时间推进, 占用资源越来越多, 甚至还需要付费使用, 让我不得不放弃使用这款软件.</p>
-<h3 id="美图看看"><a href="#美图看看" class="headerlink" title="美图看看"></a>美图看看</h3><p>这款软件最开始是美图秀秀绑在我电脑上的, 但用起来似乎还不错, 在较老的一些机器上也能比较流畅的运行.
-最主要的是界面也比较美观, 在使用 FastStone 之前我就是一直在使用这款图像浏览器, 以至于后面卸载了美图秀秀之后还专门下载了这款软件的独立版本.
-这款软件同样也有批量重命名和处理的功能, 但不如 FastStone 那样强大, 如果你比较<strong>在乎软件的外观并且不是经常用来批量处理图片</strong>, 这款软件也推荐给你.</p>
-<p>如果你也想看其他同类软件的横评, 请在下方评论区留言, 我看到后会尽量使用一段时间并简单分享.</p>
-<h2 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h2><p><strong>网盘分流</strong>
-<a href="https://pan.baidu.com/s/1o82Sj4A">百度网盘</a>
-<a href="https://mega.nz/#!PthzGbDL!HHkgZEKrarL66OQlr5h_gtN_68ecjTtHJU0tzFpctPY">MEGA网盘</a>
-<em>更新日期 2017-3-22 软件版本 6.2
-安装包大小: 6.37 MB 安装后大小: 15.8 MB</em></p>
-<p><strong>其他渠道</strong>
-<a href="http://xiazai.zol.com.cn/detail/10/99979.shtml">ZOL软件</a>
-<a href="http://download.pchome.net/multimedia/viewer/detail-19822.html">PCHOME</a></p>
-]]></content>
-      <categories>
-        <category>心得</category>
-      </categories>
-      <tags>
-        <tag>应用推荐</tag>
+        <tag>Test</tag>
       </tags>
   </entry>
   <entry>
@@ -603,6 +603,49 @@ mutoe/nestjs-realworld-example-app   latest              b7cedde8299d        5 s
       </tags>
   </entry>
   <entry>
+    <title>用 stylus 写一个 50 行代码的栅格化布局</title>
+    <url>/2018/create-the-grids-layout-with-50-lines-of-code-using-stylus/</url>
+    <content><![CDATA[<p>相信前端的同学们已经接触过栅格化布局了, 只要你用过 bootstrap 或者一些其他的 css 框架.</p>
+<p>栅格化布局是一个非常方便的布局方式, 尤其是它的自适应布局, 可以根据屏幕大小缩放容器的宽度.</p>
+<p><img src="//static.mutoe.com/2018/create-the-grids-layout-with-50-lines-of-code-using-stylus/preview.png" alt="preview" title="图片来自 ElementUI Layout"></p>
+<p>今天我们用一个 css 预处理器 stylus 来编写一个 <strong>只有 50 行代码</strong>, 能自定义栅格数, 能响应多个断点, 能推能拉的栅格化布局!</p>
+<a id="more"></a>
+
+<h2 id="代码解析"><a href="#代码解析" class="headerlink" title="代码解析"></a>代码解析</h2><figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="variable">$cols</span> = <span class="number">12</span>      <span class="comment">// 自定义栅格数</span></span><br><span class="line"><span class="variable">$query</span> = &#123;      <span class="comment">// 自定义断点</span></span><br><span class="line">  <span class="attribute">normal</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">  xs: <span class="string">&#x27;max-width: 768px&#x27;</span>,</span><br><span class="line">  sm: <span class="string">&#x27;min-width: 768px&#x27;</span>,</span><br><span class="line">  md: <span class="string">&#x27;min-width: 992px&#x27;</span>,</span><br><span class="line">  lg: <span class="string">&#x27;min-width: 1200px&#x27;</span>,</span><br><span class="line">  xl: <span class="string">&#x27;min-width: 1920px&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">media</span><span class="params">(<span class="variable">$class</span> = <span class="string">&#x27;&#x27;</span>)</span></span></span><br><span class="line">  <span class="variable">$class</span> += <span class="string">&#x27;-&#x27;</span> unless <span class="variable">$class</span> == <span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">  .el-col-&#123;<span class="variable">$class</span>&#125;<span class="number">0</span></span><br><span class="line">    <span class="attribute">display</span> none</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> <span class="variable">$c</span> <span class="keyword">in</span> <span class="number">1</span>..<span class="variable">$cols</span></span><br><span class="line">    $percent = (100 / $cols * $c)%</span><br><span class="line"></span><br><span class="line">    .el-col-&#123;<span class="variable">$class</span>&#125;&#123;<span class="variable">$c</span>&#125;</span><br><span class="line">      <span class="attribute">width</span> <span class="variable">$percent</span></span><br><span class="line">    .el-col-&#123;<span class="variable">$class</span>&#125;offset-&#123;<span class="variable">$c</span>&#125;</span><br><span class="line">      <span class="attribute">margin-left</span> <span class="variable">$percent</span></span><br><span class="line">    .el-col-&#123;<span class="variable">$class</span>&#125;pull-&#123;<span class="variable">$c</span>&#125;</span><br><span class="line">      <span class="attribute">position</span> relative</span><br><span class="line">      <span class="attribute">right</span> <span class="variable">$percent</span></span><br><span class="line">    .el-col-&#123;<span class="variable">$class</span>&#125;push-&#123;<span class="variable">$c</span>&#125;</span><br><span class="line">      <span class="attribute">position</span> relative</span><br><span class="line">      <span class="attribute">left</span> <span class="variable">$percent</span></span><br><span class="line"></span><br><span class="line">.el-row</span><br><span class="line">  <span class="attribute">position</span> relative</span><br><span class="line">  <span class="attribute">box-sizing</span> border-box</span><br><span class="line">  </span><br><span class="line">  &amp;::after</span><br><span class="line">    <span class="attribute">clear</span> both</span><br><span class="line"></span><br><span class="line">[class*=<span class="string">&quot;el-col-&quot;</span>]</span><br><span class="line">  <span class="attribute">float</span> left</span><br><span class="line">  <span class="attribute">box-sizing</span> border-box</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> <span class="variable">$k</span>, <span class="variable">$v</span> <span class="keyword">in</span> <span class="variable">$query</span></span><br><span class="line">  <span class="keyword">if</span> <span class="variable">$k</span> == <span class="string">&#x27;normal&#x27;</span></span><br><span class="line">    media()</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    @media only screen and (&#123;<span class="variable">$v</span>&#125;)</span><br><span class="line">      media(<span class="variable">$k</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>去除那些空行, 这段代码只有 39 行, 为了方便阅读, 所以加上一些空行.</p>
+<p>下面我将逐行为大家解释这段代码, 请善用右侧导航栏进行跳转.</p>
+<h3 id="1-cols-12"><a href="#1-cols-12" class="headerlink" title=":1 $cols = 12"></a>:1 <code>$cols = 12</code></h3><p>这里声明了一个变量, 用来定义栅格数. 在 stylus 中, 变量无需 <code>$</code> 字符开头, 但本人为了区分这是自定义变量, 习惯在变量前加该字符.</p>
+<h3 id="2-9-query"><a href="#2-9-query" class="headerlink" title=":2-9 $query = {...}"></a>:2-9 <code>$query = &#123;...&#125;</code></h3><p>这里声明了一个对象 ( Hash 数组 ), 键名为 class 缩写, 键值为 media query 条件 (第一行除外).</p>
+<h3 id="11-media-class-39-39"><a href="#11-media-class-39-39" class="headerlink" title=":11 media($class = &#39;&#39;) {...}"></a>:11 <code>media($class = &#39;&#39;) &#123;...&#125;</code></h3><p>这里声明了一个方法, 用于创建某个 media query 条件下的栅格布局.</p>
+<p>该方法含有一个参数, 该参数用于给栅格化布局增加响应式断点, 默认值为空. 该参数为空时表示无自适应布局时的条件</p>
+<h3 id="12-class-39-39-unless-class-39-39"><a href="#12-class-39-39-unless-class-39-39" class="headerlink" title=":12 $class += &#39;-&#39; unless $class == &#39;&#39;"></a>:12 <code>$class += &#39;-&#39; unless $class == &#39;&#39;</code></h3><p>这里给自适应类增加后缀 <code>-</code>, 用于接下来将变量作为插值拼接到 class 名中</p>
+<h3 id="14-15-el-col-class-0"><a href="#14-15-el-col-class-0" class="headerlink" title=":14-15 .el-col-{$class}0"></a>:14-15 <code>.el-col-&#123;$class&#125;0</code></h3><p>这一行就是将变量 <code>$class</code> 作为差值拼入 class 名中了</p>
+<p>如果 <code>$class = &#39;&#39;</code>, 则生成代码为 <code>.el-col-0</code>, 如果 <code>$class = &#39;xs&#39;</code>, 则生成代码为 <code>.el-col-xs-0</code>. 插值是不是很方便?</p>
+<h3 id="17-for-c-in-1-cols"><a href="#17-for-c-in-1-cols" class="headerlink" title=":17 for $c in 1..$cols"></a>:17 <code>for $c in 1..$cols</code></h3><p>这里使用了一个迭代 (Iteration, 也可以叫做循环). 意思是将 <code>$c</code> 作为循环变量, 从 <code>1</code> 到 <code>$cols</code> 进行循环.</p>
+<p>界限操作符 <code>1..5</code> 意思是从 1 开始, 一直到 5</p>
+<p>范围操作符 <code>1...5</code> 意思是从 1 开始, 到 4 (不含 5) 结束</p>
+<h3 id="18-percent-100-cols-c"><a href="#18-percent-100-cols-c" class="headerlink" title=":18 $percent = (100 / $cols * $c)%"></a>:18 <code>$percent = (100 / $cols * $c)%</code></h3><p>这里声明了本次循环中的变量 <code>$percent</code>, 有两个注意点.</p>
+<p>在 stylus 中计算属性最好将其用圆括号 <code>()</code> 包裹起来, 避免某些情况下编译器将其理解为多个值, 如 <code>border-raidus: 4px / 2px;</code>.</p>
+<p><code>(expr)%</code> 的意思是将 expr 表达式强行加个单位, 是内置函数 <code>unit(expr, &#39;%&#39;)</code> 的语法糖</p>
+<h3 id="20-29-el-col-class-c"><a href="#20-29-el-col-class-c" class="headerlink" title=":20-29 .el-col-{$class}{$c}"></a>:20-29 <code>.el-col-&#123;$class&#125;&#123;$c&#125;</code></h3><p>这里就开始循环声明 class 了, 设置栅格宽度, 设置偏移量, 设置推拉. 同样使用了变量插值.</p>
+<h3 id="31-36-el-row"><a href="#31-36-el-row" class="headerlink" title=":31-36 .el-row"></a>:31-36 <code>.el-row</code></h3><p>所有声明完毕后, 从这一行开始实际生成 css. </p>
+<p>没什么多说了的, 栅格容器. 设置清除浮动.</p>
+<h3 id="38-40-class-quot-el-col-quot"><a href="#38-40-class-quot-el-col-quot" class="headerlink" title=":38-40 [class*=&quot;el-col-&quot;]"></a>:38-40 <code>[class*=&quot;el-col-&quot;]</code></h3><p>这里使用了 css 的属性选择器, 选择以 <code>.el-col-</code> 开头的元素, 为其设置浮动和盒模型.</p>
+<h3 id="42-47-for-k-v-in-query"><a href="#42-47-for-k-v-in-query" class="headerlink" title=":42-47 for $k, $v in $query"></a>:42-47 <code>for $k, $v in $query</code></h3><p>遍历 <code>$query</code>, 将所有断点取出来. 然后判断如果键名为 <code>normal</code> (<code>$query</code> 的第一个键值对), 则调用无参的 <code>media()</code> 方法. 否则生成相应断点和 media query 的方法.</p>
+<h2 id="最终生成的-css-代码"><a href="#最终生成的-css-代码" class="headerlink" title="最终生成的 css 代码"></a>最终生成的 css 代码</h2><p><a href="https://codepen.io/mutoe/pen/JLyGVa">codepen 在线查看</a></p>
+<p><img src="//static.mutoe.com/2018/create-the-grids-layout-with-50-lines-of-code-using-stylus/preview-stylus.png" alt="preview"></p>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="http://element-cn.eleme.io/#/zh-CN/component/layout">ElementUI - Layout 布局</a> 灵感来自其 sass 源码</p>
+<p><a href="http://www.zhangxinxu.com/jq/stylus/">张鑫旭 - stylus中文版参考文档</a></p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>stylus</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>比较 javascript 中 filter 和 splice 删除数组的性能</title>
     <url>/2019/compare-filter-vs-splice-in-javascript/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>因为最近在项目中经常需要将数组中的一个元素从数组中剔除，基于 ES6 的选择有比较多，
@@ -658,49 +701,6 @@ Faster is lodash.filter 1000,lodash.filter 100</code></pre>
         <tag>benchmark</tag>
         <tag>mockjs</tag>
         <tag>lodash</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>用 stylus 写一个 50 行代码的栅格化布局</title>
-    <url>/2018/create-the-grids-layout-with-50-lines-of-code-using-stylus/</url>
-    <content><![CDATA[<p>相信前端的同学们已经接触过栅格化布局了, 只要你用过 bootstrap 或者一些其他的 css 框架.</p>
-<p>栅格化布局是一个非常方便的布局方式, 尤其是它的自适应布局, 可以根据屏幕大小缩放容器的宽度.</p>
-<p><img src="//static.mutoe.com/2018/create-the-grids-layout-with-50-lines-of-code-using-stylus/preview.png" alt="preview" title="图片来自 ElementUI Layout"></p>
-<p>今天我们用一个 css 预处理器 stylus 来编写一个 <strong>只有 50 行代码</strong>, 能自定义栅格数, 能响应多个断点, 能推能拉的栅格化布局!</p>
-<a id="more"></a>
-
-<h2 id="代码解析"><a href="#代码解析" class="headerlink" title="代码解析"></a>代码解析</h2><figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="variable">$cols</span> = <span class="number">12</span>      <span class="comment">// 自定义栅格数</span></span><br><span class="line"><span class="variable">$query</span> = &#123;      <span class="comment">// 自定义断点</span></span><br><span class="line">  <span class="attribute">normal</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">  xs: <span class="string">&#x27;max-width: 768px&#x27;</span>,</span><br><span class="line">  sm: <span class="string">&#x27;min-width: 768px&#x27;</span>,</span><br><span class="line">  md: <span class="string">&#x27;min-width: 992px&#x27;</span>,</span><br><span class="line">  lg: <span class="string">&#x27;min-width: 1200px&#x27;</span>,</span><br><span class="line">  xl: <span class="string">&#x27;min-width: 1920px&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">media</span><span class="params">(<span class="variable">$class</span> = <span class="string">&#x27;&#x27;</span>)</span></span></span><br><span class="line">  <span class="variable">$class</span> += <span class="string">&#x27;-&#x27;</span> unless <span class="variable">$class</span> == <span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">  .el-col-&#123;<span class="variable">$class</span>&#125;<span class="number">0</span></span><br><span class="line">    <span class="attribute">display</span> none</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> <span class="variable">$c</span> <span class="keyword">in</span> <span class="number">1</span>..<span class="variable">$cols</span></span><br><span class="line">    $percent = (100 / $cols * $c)%</span><br><span class="line"></span><br><span class="line">    .el-col-&#123;<span class="variable">$class</span>&#125;&#123;<span class="variable">$c</span>&#125;</span><br><span class="line">      <span class="attribute">width</span> <span class="variable">$percent</span></span><br><span class="line">    .el-col-&#123;<span class="variable">$class</span>&#125;offset-&#123;<span class="variable">$c</span>&#125;</span><br><span class="line">      <span class="attribute">margin-left</span> <span class="variable">$percent</span></span><br><span class="line">    .el-col-&#123;<span class="variable">$class</span>&#125;pull-&#123;<span class="variable">$c</span>&#125;</span><br><span class="line">      <span class="attribute">position</span> relative</span><br><span class="line">      <span class="attribute">right</span> <span class="variable">$percent</span></span><br><span class="line">    .el-col-&#123;<span class="variable">$class</span>&#125;push-&#123;<span class="variable">$c</span>&#125;</span><br><span class="line">      <span class="attribute">position</span> relative</span><br><span class="line">      <span class="attribute">left</span> <span class="variable">$percent</span></span><br><span class="line"></span><br><span class="line">.el-row</span><br><span class="line">  <span class="attribute">position</span> relative</span><br><span class="line">  <span class="attribute">box-sizing</span> border-box</span><br><span class="line">  </span><br><span class="line">  &amp;::after</span><br><span class="line">    <span class="attribute">clear</span> both</span><br><span class="line"></span><br><span class="line">[class*=<span class="string">&quot;el-col-&quot;</span>]</span><br><span class="line">  <span class="attribute">float</span> left</span><br><span class="line">  <span class="attribute">box-sizing</span> border-box</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> <span class="variable">$k</span>, <span class="variable">$v</span> <span class="keyword">in</span> <span class="variable">$query</span></span><br><span class="line">  <span class="keyword">if</span> <span class="variable">$k</span> == <span class="string">&#x27;normal&#x27;</span></span><br><span class="line">    media()</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    @media only screen and (&#123;<span class="variable">$v</span>&#125;)</span><br><span class="line">      media(<span class="variable">$k</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>去除那些空行, 这段代码只有 39 行, 为了方便阅读, 所以加上一些空行.</p>
-<p>下面我将逐行为大家解释这段代码, 请善用右侧导航栏进行跳转.</p>
-<h3 id="1-cols-12"><a href="#1-cols-12" class="headerlink" title=":1 $cols = 12"></a>:1 <code>$cols = 12</code></h3><p>这里声明了一个变量, 用来定义栅格数. 在 stylus 中, 变量无需 <code>$</code> 字符开头, 但本人为了区分这是自定义变量, 习惯在变量前加该字符.</p>
-<h3 id="2-9-query"><a href="#2-9-query" class="headerlink" title=":2-9 $query = {...}"></a>:2-9 <code>$query = &#123;...&#125;</code></h3><p>这里声明了一个对象 ( Hash 数组 ), 键名为 class 缩写, 键值为 media query 条件 (第一行除外).</p>
-<h3 id="11-media-class-39-39"><a href="#11-media-class-39-39" class="headerlink" title=":11 media($class = &#39;&#39;) {...}"></a>:11 <code>media($class = &#39;&#39;) &#123;...&#125;</code></h3><p>这里声明了一个方法, 用于创建某个 media query 条件下的栅格布局.</p>
-<p>该方法含有一个参数, 该参数用于给栅格化布局增加响应式断点, 默认值为空. 该参数为空时表示无自适应布局时的条件</p>
-<h3 id="12-class-39-39-unless-class-39-39"><a href="#12-class-39-39-unless-class-39-39" class="headerlink" title=":12 $class += &#39;-&#39; unless $class == &#39;&#39;"></a>:12 <code>$class += &#39;-&#39; unless $class == &#39;&#39;</code></h3><p>这里给自适应类增加后缀 <code>-</code>, 用于接下来将变量作为插值拼接到 class 名中</p>
-<h3 id="14-15-el-col-class-0"><a href="#14-15-el-col-class-0" class="headerlink" title=":14-15 .el-col-{$class}0"></a>:14-15 <code>.el-col-&#123;$class&#125;0</code></h3><p>这一行就是将变量 <code>$class</code> 作为差值拼入 class 名中了</p>
-<p>如果 <code>$class = &#39;&#39;</code>, 则生成代码为 <code>.el-col-0</code>, 如果 <code>$class = &#39;xs&#39;</code>, 则生成代码为 <code>.el-col-xs-0</code>. 插值是不是很方便?</p>
-<h3 id="17-for-c-in-1-cols"><a href="#17-for-c-in-1-cols" class="headerlink" title=":17 for $c in 1..$cols"></a>:17 <code>for $c in 1..$cols</code></h3><p>这里使用了一个迭代 (Iteration, 也可以叫做循环). 意思是将 <code>$c</code> 作为循环变量, 从 <code>1</code> 到 <code>$cols</code> 进行循环.</p>
-<p>界限操作符 <code>1..5</code> 意思是从 1 开始, 一直到 5</p>
-<p>范围操作符 <code>1...5</code> 意思是从 1 开始, 到 4 (不含 5) 结束</p>
-<h3 id="18-percent-100-cols-c"><a href="#18-percent-100-cols-c" class="headerlink" title=":18 $percent = (100 / $cols * $c)%"></a>:18 <code>$percent = (100 / $cols * $c)%</code></h3><p>这里声明了本次循环中的变量 <code>$percent</code>, 有两个注意点.</p>
-<p>在 stylus 中计算属性最好将其用圆括号 <code>()</code> 包裹起来, 避免某些情况下编译器将其理解为多个值, 如 <code>border-raidus: 4px / 2px;</code>.</p>
-<p><code>(expr)%</code> 的意思是将 expr 表达式强行加个单位, 是内置函数 <code>unit(expr, &#39;%&#39;)</code> 的语法糖</p>
-<h3 id="20-29-el-col-class-c"><a href="#20-29-el-col-class-c" class="headerlink" title=":20-29 .el-col-{$class}{$c}"></a>:20-29 <code>.el-col-&#123;$class&#125;&#123;$c&#125;</code></h3><p>这里就开始循环声明 class 了, 设置栅格宽度, 设置偏移量, 设置推拉. 同样使用了变量插值.</p>
-<h3 id="31-36-el-row"><a href="#31-36-el-row" class="headerlink" title=":31-36 .el-row"></a>:31-36 <code>.el-row</code></h3><p>所有声明完毕后, 从这一行开始实际生成 css. </p>
-<p>没什么多说了的, 栅格容器. 设置清除浮动.</p>
-<h3 id="38-40-class-quot-el-col-quot"><a href="#38-40-class-quot-el-col-quot" class="headerlink" title=":38-40 [class*=&quot;el-col-&quot;]"></a>:38-40 <code>[class*=&quot;el-col-&quot;]</code></h3><p>这里使用了 css 的属性选择器, 选择以 <code>.el-col-</code> 开头的元素, 为其设置浮动和盒模型.</p>
-<h3 id="42-47-for-k-v-in-query"><a href="#42-47-for-k-v-in-query" class="headerlink" title=":42-47 for $k, $v in $query"></a>:42-47 <code>for $k, $v in $query</code></h3><p>遍历 <code>$query</code>, 将所有断点取出来. 然后判断如果键名为 <code>normal</code> (<code>$query</code> 的第一个键值对), 则调用无参的 <code>media()</code> 方法. 否则生成相应断点和 media query 的方法.</p>
-<h2 id="最终生成的-css-代码"><a href="#最终生成的-css-代码" class="headerlink" title="最终生成的 css 代码"></a>最终生成的 css 代码</h2><p><a href="https://codepen.io/mutoe/pen/JLyGVa">codepen 在线查看</a></p>
-<p><img src="//static.mutoe.com/2018/create-the-grids-layout-with-50-lines-of-code-using-stylus/preview-stylus.png" alt="preview"></p>
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="http://element-cn.eleme.io/#/zh-CN/component/layout">ElementUI - Layout 布局</a> 灵感来自其 sass 源码</p>
-<p><a href="http://www.zhangxinxu.com/jq/stylus/">张鑫旭 - stylus中文版参考文档</a></p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>stylus</tag>
       </tags>
   </entry>
   <entry>
@@ -768,8 +768,8 @@ Faster is lodash.filter 1000,lodash.filter 100</code></pre>
         <category>心得</category>
       </categories>
       <tags>
-        <tag>Git</tag>
         <tag>Hexo</tag>
+        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
@@ -874,6 +874,77 @@ Faster is lodash.filter 1000,lodash.filter 100</code></pre>
       </categories>
       <tags>
         <tag>Flutter</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在 Jenkins 中产出由 Cypress 生成的测试视频</title>
+    <url>/2019/generate-cypress-video-report-in-jenkins/</url>
+    <content><![CDATA[<p>最近在使用 Cypress 作为前端项目的 E2E 测试，发布到 CI 环境时自动运行。</p>
+<p>运行时发现在 Pipeline 测试报告中有生成 mp4 格式的视频，这才想起来 Cypress 自带生成视频快照的功能，结合 Jenkins 收集报告产物，不就可以拿到视频快照了吗？</p>
+<p>哈哈，talk is cheap, show my code!</p>
+<p>下面是 jenkins 配置</p>
+<figure class="highlight groovy"><figcaption><span>Jenkinsfile</span></figcaption><table><tr><td class="code"><pre><span class="line">pipeline &#123;</span><br><span class="line">  agent any</span><br><span class="line"></span><br><span class="line">  environment &#123;</span><br><span class="line">    CHROME_BIN = <span class="string">&#x27;/bin/google-chrome&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  stages &#123;</span><br><span class="line">    stage(<span class="string">&#x27;Environment&#x27;</span>) &#123;</span><br><span class="line">      steps &#123;</span><br><span class="line">        sh <span class="string">&#x27;uname -a&#x27;</span></span><br><span class="line">        sh <span class="string">&#x27;apt-get update&#x27;</span></span><br><span class="line">        sh <span class="string">&#x27;apt-get install -y xvfb libgtk-3-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 ttf-wqy-zenhei&#x27;</span></span><br><span class="line">        sh <span class="string">&#x27;fc-cache -v&#x27;</span></span><br><span class="line">        sh <span class="string">&#x27;yarn install&#x27;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    stage(<span class="string">&#x27;Test&#x27;</span>) &#123;</span><br><span class="line">      steps &#123;</span><br><span class="line">        sh <span class="string">&#x27;yarn test:e2e --headless&#x27;</span></span><br><span class="line">        junit <span class="string">&#x27;reporter/output.xml&#x27;</span></span><br><span class="line">        archiveArtifacts <span class="string">&#x27;tests/e2e/videos/*.mp4&#x27;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中 <code>ttf-wqy-zenhei</code> 是用来解决 Ubuntu 系统中没有中文字体等问题，否则生成的视频报告中的中文都为方框乱码。</p>
+<blockquote>
+<p>如果是在 CentOS 中，执行 <code>yum -y groupinstall chinese-support</code> 解决中文问题</p>
+</blockquote>
+<blockquote>
+<p>如果不知道 Jenkins 所属运行环境，使用 <code>uname -a</code> 查看系统信息</p>
+</blockquote>
+<p><code>archiveArtifacts</code> 用来收集报告产物</p>
+<p><code>junit</code> 用来收集测试报告，但 Cypress 默认是不生成报告的，需要在 <code>cypress.json</code> 中增加以下内容</p>
+<figure class="highlight json"><figcaption><span>cypress.json</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;reporter&quot;</span>: <span class="string">&quot;junit&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;reporterOptions&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;mochaFile&quot;</span>: <span class="string">&quot;reporter/output.xml&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;toConsole&quot;</span>: <span class="literal">true</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<p><strong>效果图</strong></p>
+<p><img src="https://static.mutoe.com/2019/generate-cypress-video-report-in-jenkins/output-screenshot.png" alt="output"></p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
+<li><a href="https://or2.in/2016/05/31/Cutycapt-webSnapshot/">Linux+Cutycapt+Xvfb 实现网页快照</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>心得</category>
+      </categories>
+      <tags>
+        <tag>Cypress</tag>
+        <tag>CI</tag>
+        <tag>Jenkins</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>将 GitHub Pages 绑定到自己的域名</title>
+    <url>/2016/github-pages-custom-domain/</url>
+    <content><![CDATA[<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ul>
+<li>一个域名</li>
+<li>一个创建好 GitHub Pages 的项目</li>
+</ul>
+<h3 id="1-解析域名"><a href="#1-解析域名" class="headerlink" title="1 解析域名"></a>1 解析域名</h3><p>登录到你购买域名的服务商, 找到解析入口, 这里我以万网提供的解析为例</p>
+<p><img src="//static.mutoe.com/2016/github-pages-custom-domain/analysis.png" alt="analysis"></p>
+<p>添加一条 CNAME 记录, 将您的 www 或自己定义的子域名解析到您的 GitHub Pages 上.</p>
+<p><img src="//static.mutoe.com/2016/github-pages-custom-domain/cname.png" alt="cname"></p>
+<blockquote>
+<p>如果您打算直接用 <code>www.xxx.com</code> 或 <code>xxx.com</code> 作为您的博客地址, 那么就分别创建主机记录为 www 和 @ 的记录指向到你的 GitHub Pages 上.</p>
+</blockquote>
+<a id="more"></a>
+
+<h3 id="2-配置-GitHub-Pages-项目"><a href="#2-配置-GitHub-Pages-项目" class="headerlink" title="2 配置 GitHub Pages 项目"></a>2 配置 GitHub Pages 项目</h3><p>在你项目的 “Setting” 页面中找到 “GitHub Pages” 子栏目, 在 “Custom domain” 中填上你刚才设置好的解析地址.</p>
+
+
+<p>稍等片刻, 你就可以访问这个域名了.
+但是接下来还有一步要做的工作, 就是在这个项目下创建一个 CNAME 文件, 来保证以后生成的静态页面下都含有该文件, 避免出现无法解析的情况.</p>
+<h3 id="3-创建-CNAME-文件"><a href="#3-创建-CNAME-文件" class="headerlink" title="3 创建 CNAME 文件"></a>3 创建 CNAME 文件</h3><p>打开你本地保存项目的目录, 找到 <code>./source/</code> , 在该目录下创建一个文件, 文件名为 <code>CNAME</code>, 注意没有后缀, 文件内容就是你的域名.</p>
+
+
+<p>保存后使用 hexo 生成并发布就可以啦.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo g -d <span class="comment"># -d 参数用来在生成静态文件时同时发布</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>GitHub Pages</tag>
       </tags>
   </entry>
   <entry>
@@ -988,74 +1059,90 @@ Faster is lodash.filter 1000,lodash.filter 100</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>在 Jenkins 中产出由 Cypress 生成的测试视频</title>
-    <url>/2019/generate-cypress-video-report-in-jenkins/</url>
-    <content><![CDATA[<p>最近在使用 Cypress 作为前端项目的 E2E 测试，发布到 CI 环境时自动运行。</p>
-<p>运行时发现在 Pipeline 测试报告中有生成 mp4 格式的视频，这才想起来 Cypress 自带生成视频快照的功能，结合 Jenkins 收集报告产物，不就可以拿到视频快照了吗？</p>
-<p>哈哈，talk is cheap, show my code!</p>
-<p>下面是 jenkins 配置</p>
-<figure class="highlight groovy"><figcaption><span>Jenkinsfile</span></figcaption><table><tr><td class="code"><pre><span class="line">pipeline &#123;</span><br><span class="line">  agent any</span><br><span class="line"></span><br><span class="line">  environment &#123;</span><br><span class="line">    CHROME_BIN = <span class="string">&#x27;/bin/google-chrome&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  stages &#123;</span><br><span class="line">    stage(<span class="string">&#x27;Environment&#x27;</span>) &#123;</span><br><span class="line">      steps &#123;</span><br><span class="line">        sh <span class="string">&#x27;uname -a&#x27;</span></span><br><span class="line">        sh <span class="string">&#x27;apt-get update&#x27;</span></span><br><span class="line">        sh <span class="string">&#x27;apt-get install -y xvfb libgtk-3-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 ttf-wqy-zenhei&#x27;</span></span><br><span class="line">        sh <span class="string">&#x27;fc-cache -v&#x27;</span></span><br><span class="line">        sh <span class="string">&#x27;yarn install&#x27;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    stage(<span class="string">&#x27;Test&#x27;</span>) &#123;</span><br><span class="line">      steps &#123;</span><br><span class="line">        sh <span class="string">&#x27;yarn test:e2e --headless&#x27;</span></span><br><span class="line">        junit <span class="string">&#x27;reporter/output.xml&#x27;</span></span><br><span class="line">        archiveArtifacts <span class="string">&#x27;tests/e2e/videos/*.mp4&#x27;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>其中 <code>ttf-wqy-zenhei</code> 是用来解决 Ubuntu 系统中没有中文字体等问题，否则生成的视频报告中的中文都为方框乱码。</p>
-<blockquote>
-<p>如果是在 CentOS 中，执行 <code>yum -y groupinstall chinese-support</code> 解决中文问题</p>
-</blockquote>
-<blockquote>
-<p>如果不知道 Jenkins 所属运行环境，使用 <code>uname -a</code> 查看系统信息</p>
-</blockquote>
-<p><code>archiveArtifacts</code> 用来收集报告产物</p>
-<p><code>junit</code> 用来收集测试报告，但 Cypress 默认是不生成报告的，需要在 <code>cypress.json</code> 中增加以下内容</p>
-<figure class="highlight json"><figcaption><span>cypress.json</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;reporter&quot;</span>: <span class="string">&quot;junit&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;reporterOptions&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;mochaFile&quot;</span>: <span class="string">&quot;reporter/output.xml&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;toConsole&quot;</span>: <span class="literal">true</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+    <title>在 Hexo 中方便的使用插图</title>
+    <url>/2016/hexo-image-plugin/</url>
+    <content><![CDATA[<h2 id="如何在-Hexo-中使用插图"><a href="#如何在-Hexo-中使用插图" class="headerlink" title="如何在 Hexo 中使用插图"></a>如何在 Hexo 中使用插图</h2><p>我们编辑文章时或有或无的需要佐上那么几张图片来表达自己的想法,  Hexo 中编辑文章的方式是直接写 Markdown 文件, 又没有直接上传图片的接口, 以下是博主从网上收集来的一些 Hexo 中引用图片的办法合集.</p>
 <a id="more"></a>
 
-<p><strong>效果图</strong></p>
-<p><img src="https://static.mutoe.com/2019/generate-cypress-video-report-in-jenkins/output-screenshot.png" alt="output"></p>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
-<li><a href="https://or2.in/2016/05/31/Cutycapt-webSnapshot/">Linux+Cutycapt+Xvfb 实现网页快照</a></li>
+<h3 id="办法1-直接使用-Markdown-提供的引用方法"><a href="#办法1-直接使用-Markdown-提供的引用方法" class="headerlink" title="办法1 直接使用 Markdown 提供的引用方法"></a>办法1 直接使用 Markdown 提供的引用方法</h3><p>在 <code>./source/images/</code> 目录下放置图片, 在 Markdown 中这样写</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">&#123;% asset<span class="emphasis">_img /images/example.png example %&#125;</span></span><br></pre></td></tr></table></figure>
+<p>这种方法很方便, 配合 livereload 或 browsersync 插件无论是在本地还是在线上都能看到效果, 但是如果您是用的 Markdown 编辑器, 这似乎就有些难受了, 因为在 Markdown 编辑器中是无法识别这样的图片路径的.</p>
+<p>所以对图片的支持程度较差, 您放在 source_dir 下的图片引用后不会正确的显示在本地调试环境或线上, 二者只能取其一, 感觉很难受.</p>
+<h3 id="办法2-使用在线图片存储服务"><a href="#办法2-使用在线图片存储服务" class="headerlink" title="办法2 使用在线图片存储服务."></a>办法2 使用在线图片存储服务.</h3><p>引用图片时, 将图片先上传到一个另外的服务器上, 得到该图片的在线地址, 然后在 Markdown 中引用.</p>
+<p>国内外用户/服务商有很多提供类似图床或对象存储的服务, 即外链.</p>
+<ul>
+<li><a href="http://pic.gimhoy.com/">Gimhoy图床</a></li>
+<li><a href="http://yotuku.cn/">极简图床</a></li>
+<li><a href="http://www.qiniu.com/">七牛</a></li>
+<li><del><a href="http://weibotuchuang.sinaapp.com/bookmark.html">微博是个好图床</a> ( 2016.12.16 已挂 )</del></li>
 </ul>
-]]></content>
-      <categories>
-        <category>心得</category>
-      </categories>
-      <tags>
-        <tag>Cypress</tag>
-        <tag>CI</tag>
-        <tag>Jenkins</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>将 GitHub Pages 绑定到自己的域名</title>
-    <url>/2016/github-pages-custom-domain/</url>
-    <content><![CDATA[<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ul>
-<li>一个域名</li>
-<li>一个创建好 GitHub Pages 的项目</li>
+<p>这些在线图片存储服务使用便捷, 还自带 CDN 加速功能, 但缺点也很明显了, 图片存在别人服务器里面说不定哪天图就挂了, 总觉得不太放心.</p>
+<h3 id="办法3-使用-Hexo-asset-image-插件"><a href="#办法3-使用-Hexo-asset-image-插件" class="headerlink" title="办法3 使用 Hexo-asset-image 插件"></a>办法3 使用 Hexo-asset-image 插件</h3><p><strong>2017年4月1日 在这个插件更新前 (当前版本 v0.0.3) , 不推荐使用这个插件.
+原因是使用该插件后导致编译出的 html 文件中文字符会被转化为 unicode 编码, 不利于站内搜索和 SEO 优化.
+你可以直接跳到办法4</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+<p><em>非官方插件, 该插件由 CodeFalling 维护, 底部有项目地址</em></p>
+<p>安装该插件后在您项目根目录的 <code>./_config.yml</code> 中寻找到下面这一行, 将 <code>post_asset_folder</code> 的值设置为 <code>true</code>.</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>该设置会在您使用 <code>hexo new &quot;new post&quot;</code> 时在文章所在目录下生成一个同名文件夹, 您只需将图片放入该文件夹, 然后在需要放置图片的位置写入以下代码即可解决 办法1 出现的问题.</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">&#123;% asset<span class="emphasis">_img example.png example %&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="办法4-使用官方提供的办法"><a href="#办法4-使用官方提供的办法" class="headerlink" title="办法4 使用官方提供的办法"></a>办法4 使用官方提供的办法</h3><p>2017年4月1日更新</p>
+<p>该方法类似办法3, 只是使用图片的方法由原生的 <code>![]()</code> 改为 Hexo 标签插件.</p>
+<p>首先在您项目根目录的 <code>./_config.yml</code> 中寻找到下面这一行, 将 <code>post_asset_folder</code> 的值设置为 <code>true</code>. 原因办法3中已经介绍, 这里不再阐述.</p>
+<p>然后在需要引用图片的地方写入以下代码即可</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% asset_img example.jpg this is title %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果你之前使用了 <code>hexo-asset-image</code> 插件的办法, 你可以使用我写的正则表达式一键替换.</p>
+<p>查找</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">!\[([\S ]+)\]\((\S+)\)</span><br></pre></td></tr></table></figure>
+<p>替换为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% asset_img $2 $1 %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>配合我的另一篇文章 <a href="//blog.mutoe.com/2016/hexo-post-livereload-edit/">实时预览</a> , 写文章简直美滋滋.</p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>三种解决办法各有优劣, 博主做个简单的小结.</p>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1 直接使用 Markdown 引用方法</td>
+<td>图片资源统一存放, 便于管理</td>
+<td>实时预览时排版效果不好</td>
+</tr>
+<tr>
+<td>2 使用在线图片存储服务</td>
+<td>方便移植, 不占用本地空间</td>
+<td>使用不稳定, 不便于管理</td>
+</tr>
+<tr>
+<td>3 使用 Hexo-asset-image 插件</td>
+<td>文件结构更有条理</td>
+<td>对中文支持不友好</td>
+</tr>
+<tr>
+<td>4 使用官方提供的办法</td>
+<td>官方支持</td>
+<td>不适用原生 md 语法</td>
+</tr>
+</tbody></table>
+<p>您可以根据自己的实际情况来进行选择, 不能说哪个办法是最好的, 但肯定有一个最适合您的.</p>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><ul>
+<li><a href="http://codefalling.com/2015/12/19/no-pains-with-hexo-local-image/">在 Hexo 中无痛使用本地图片</a> – codefalling ( 原文似乎挂了 <a href="http://www.tuicool.com/articles/umEBVfI">推酷快照</a> )</li>
+<li><a href="https://github.com/CodeFalling/hexo-asset-image">https://github.com/CodeFalling/hexo-asset-image</a></li>
+<li><a href="https://github.com/CodeFalling/hexo-asset-image/issues/12">CodeFalling/hexo-asset-image#12 中文编码问题</a></li>
+<li><a href="https://hexo.io/zh-cn/docs/asset-folders.html">资源文件夹 | hexo.io</a></li>
 </ul>
-<h3 id="1-解析域名"><a href="#1-解析域名" class="headerlink" title="1 解析域名"></a>1 解析域名</h3><p>登录到你购买域名的服务商, 找到解析入口, 这里我以万网提供的解析为例</p>
-<p><img src="//static.mutoe.com/2016/github-pages-custom-domain/analysis.png" alt="analysis"></p>
-<p>添加一条 CNAME 记录, 将您的 www 或自己定义的子域名解析到您的 GitHub Pages 上.</p>
-<p><img src="//static.mutoe.com/2016/github-pages-custom-domain/cname.png" alt="cname"></p>
-<blockquote>
-<p>如果您打算直接用 <code>www.xxx.com</code> 或 <code>xxx.com</code> 作为您的博客地址, 那么就分别创建主机记录为 www 和 @ 的记录指向到你的 GitHub Pages 上.</p>
-</blockquote>
-<a id="more"></a>
-
-<h3 id="2-配置-GitHub-Pages-项目"><a href="#2-配置-GitHub-Pages-项目" class="headerlink" title="2 配置 GitHub Pages 项目"></a>2 配置 GitHub Pages 项目</h3><p>在你项目的 “Setting” 页面中找到 “GitHub Pages” 子栏目, 在 “Custom domain” 中填上你刚才设置好的解析地址.</p>
-
-
-<p>稍等片刻, 你就可以访问这个域名了.
-但是接下来还有一步要做的工作, 就是在这个项目下创建一个 CNAME 文件, 来保证以后生成的静态页面下都含有该文件, 避免出现无法解析的情况.</p>
-<h3 id="3-创建-CNAME-文件"><a href="#3-创建-CNAME-文件" class="headerlink" title="3 创建 CNAME 文件"></a>3 创建 CNAME 文件</h3><p>打开你本地保存项目的目录, 找到 <code>./source/</code> , 在该目录下创建一个文件, 文件名为 <code>CNAME</code>, 注意没有后缀, 文件内容就是你的域名.</p>
-
-
-<p>保存后使用 hexo 生成并发布就可以啦.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo g -d <span class="comment"># -d 参数用来在生成静态文件时同时发布</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>教程</category>
       </categories>
       <tags>
-        <tag>GitHub Pages</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1141,93 +1228,6 @@ Faster is lodash.filter 1000,lodash.filter 100</code></pre>
       <tags>
         <tag>Hexo</tag>
         <tag>GitHub Pages</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>在 Hexo 中方便的使用插图</title>
-    <url>/2016/hexo-image-plugin/</url>
-    <content><![CDATA[<h2 id="如何在-Hexo-中使用插图"><a href="#如何在-Hexo-中使用插图" class="headerlink" title="如何在 Hexo 中使用插图"></a>如何在 Hexo 中使用插图</h2><p>我们编辑文章时或有或无的需要佐上那么几张图片来表达自己的想法,  Hexo 中编辑文章的方式是直接写 Markdown 文件, 又没有直接上传图片的接口, 以下是博主从网上收集来的一些 Hexo 中引用图片的办法合集.</p>
-<a id="more"></a>
-
-<h3 id="办法1-直接使用-Markdown-提供的引用方法"><a href="#办法1-直接使用-Markdown-提供的引用方法" class="headerlink" title="办法1 直接使用 Markdown 提供的引用方法"></a>办法1 直接使用 Markdown 提供的引用方法</h3><p>在 <code>./source/images/</code> 目录下放置图片, 在 Markdown 中这样写</p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">&#123;% asset<span class="emphasis">_img /images/example.png example %&#125;</span></span><br></pre></td></tr></table></figure>
-<p>这种方法很方便, 配合 livereload 或 browsersync 插件无论是在本地还是在线上都能看到效果, 但是如果您是用的 Markdown 编辑器, 这似乎就有些难受了, 因为在 Markdown 编辑器中是无法识别这样的图片路径的.</p>
-<p>所以对图片的支持程度较差, 您放在 source_dir 下的图片引用后不会正确的显示在本地调试环境或线上, 二者只能取其一, 感觉很难受.</p>
-<h3 id="办法2-使用在线图片存储服务"><a href="#办法2-使用在线图片存储服务" class="headerlink" title="办法2 使用在线图片存储服务."></a>办法2 使用在线图片存储服务.</h3><p>引用图片时, 将图片先上传到一个另外的服务器上, 得到该图片的在线地址, 然后在 Markdown 中引用.</p>
-<p>国内外用户/服务商有很多提供类似图床或对象存储的服务, 即外链.</p>
-<ul>
-<li><a href="http://pic.gimhoy.com/">Gimhoy图床</a></li>
-<li><a href="http://yotuku.cn/">极简图床</a></li>
-<li><a href="http://www.qiniu.com/">七牛</a></li>
-<li><del><a href="http://weibotuchuang.sinaapp.com/bookmark.html">微博是个好图床</a> ( 2016.12.16 已挂 )</del></li>
-</ul>
-<p>这些在线图片存储服务使用便捷, 还自带 CDN 加速功能, 但缺点也很明显了, 图片存在别人服务器里面说不定哪天图就挂了, 总觉得不太放心.</p>
-<h3 id="办法3-使用-Hexo-asset-image-插件"><a href="#办法3-使用-Hexo-asset-image-插件" class="headerlink" title="办法3 使用 Hexo-asset-image 插件"></a>办法3 使用 Hexo-asset-image 插件</h3><p><strong>2017年4月1日 在这个插件更新前 (当前版本 v0.0.3) , 不推荐使用这个插件.
-原因是使用该插件后导致编译出的 html 文件中文字符会被转化为 unicode 编码, 不利于站内搜索和 SEO 优化.
-你可以直接跳到办法4</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
-<p><em>非官方插件, 该插件由 CodeFalling 维护, 底部有项目地址</em></p>
-<p>安装该插件后在您项目根目录的 <code>./_config.yml</code> 中寻找到下面这一行, 将 <code>post_asset_folder</code> 的值设置为 <code>true</code>.</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p>该设置会在您使用 <code>hexo new &quot;new post&quot;</code> 时在文章所在目录下生成一个同名文件夹, 您只需将图片放入该文件夹, 然后在需要放置图片的位置写入以下代码即可解决 办法1 出现的问题.</p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">&#123;% asset<span class="emphasis">_img example.png example %&#125;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="办法4-使用官方提供的办法"><a href="#办法4-使用官方提供的办法" class="headerlink" title="办法4 使用官方提供的办法"></a>办法4 使用官方提供的办法</h3><p>2017年4月1日更新</p>
-<p>该方法类似办法3, 只是使用图片的方法由原生的 <code>![]()</code> 改为 Hexo 标签插件.</p>
-<p>首先在您项目根目录的 <code>./_config.yml</code> 中寻找到下面这一行, 将 <code>post_asset_folder</code> 的值设置为 <code>true</code>. 原因办法3中已经介绍, 这里不再阐述.</p>
-<p>然后在需要引用图片的地方写入以下代码即可</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% asset_img example.jpg this is title %&#125;</span><br></pre></td></tr></table></figure>
-
-<p>如果你之前使用了 <code>hexo-asset-image</code> 插件的办法, 你可以使用我写的正则表达式一键替换.</p>
-<p>查找</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">!\[([\S ]+)\]\((\S+)\)</span><br></pre></td></tr></table></figure>
-<p>替换为</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% asset_img $2 $1 %&#125;</span><br></pre></td></tr></table></figure>
-
-<p>配合我的另一篇文章 <a href="//blog.mutoe.com/2016/hexo-post-livereload-edit/">实时预览</a> , 写文章简直美滋滋.</p>
-<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>三种解决办法各有优劣, 博主做个简单的小结.</p>
-<table>
-<thead>
-<tr>
-<th>-</th>
-<th>优点</th>
-<th>缺点</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1 直接使用 Markdown 引用方法</td>
-<td>图片资源统一存放, 便于管理</td>
-<td>实时预览时排版效果不好</td>
-</tr>
-<tr>
-<td>2 使用在线图片存储服务</td>
-<td>方便移植, 不占用本地空间</td>
-<td>使用不稳定, 不便于管理</td>
-</tr>
-<tr>
-<td>3 使用 Hexo-asset-image 插件</td>
-<td>文件结构更有条理</td>
-<td>对中文支持不友好</td>
-</tr>
-<tr>
-<td>4 使用官方提供的办法</td>
-<td>官方支持</td>
-<td>不适用原生 md 语法</td>
-</tr>
-</tbody></table>
-<p>您可以根据自己的实际情况来进行选择, 不能说哪个办法是最好的, 但肯定有一个最适合您的.</p>
-<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><ul>
-<li><a href="http://codefalling.com/2015/12/19/no-pains-with-hexo-local-image/">在 Hexo 中无痛使用本地图片</a> – codefalling ( 原文似乎挂了 <a href="http://www.tuicool.com/articles/umEBVfI">推酷快照</a> )</li>
-<li><a href="https://github.com/CodeFalling/hexo-asset-image">https://github.com/CodeFalling/hexo-asset-image</a></li>
-<li><a href="https://github.com/CodeFalling/hexo-asset-image/issues/12">CodeFalling/hexo-asset-image#12 中文编码问题</a></li>
-<li><a href="https://hexo.io/zh-cn/docs/asset-folders.html">资源文件夹 | hexo.io</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1770,8 +1770,8 @@ Faster is lodash.filter 1000,lodash.filter 100</code></pre>
         <category>心得</category>
       </categories>
       <tags>
-        <tag>JavaScript</tag>
         <tag>TypeScript</tag>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
@@ -2127,8 +2127,8 @@ Faster is lodash.filter 1000,lodash.filter 100</code></pre>
         <category>心得</category>
       </categories>
       <tags>
-        <tag>Vue</tag>
         <tag>TypeScript</tag>
+        <tag>Vue</tag>
       </tags>
   </entry>
   <entry>
@@ -2216,6 +2216,97 @@ Faster is lodash.filter 1000,lodash.filter 100</code></pre>
       <tags>
         <tag>nodejs</tag>
         <tag>yum</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>为什么要上 TypeScript</title>
+    <url>/2019/why-typescreipt/</url>
+    <content><![CDATA[<p>“TypeScript 又是什么东西啊, 怎么又在出新语言, 求不要再出了, 学不动了!!”</p>
+<h2 id="场景1-–-检查类型"><a href="#场景1-–-检查类型" class="headerlink" title="场景1 – 检查类型"></a>场景1 – 检查类型</h2><p>开心的撸代码中, 突然接到老大消息: xxx离职了, 现在你来接手他维护的项目.😳</p>
+<p>拿到代码后, 看到了这段东西</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/** 根据用户id获取用户信息 */</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">getUsers</span>(<span class="params">id</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> users = <span class="keyword">await</span> fetchUsers(id)</span><br><span class="line">  <span class="keyword">return</span> users</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个 <code>id</code> 是什么? 是  <code>1</code> 还是 <code>&quot;1&quot;</code> 还是 <code>[1,2,3]</code> 还是 <code>&quot;1,2,3&quot;</code> ???</p>
+<p>这个 <code>users</code> 又是什么? 是普通权限用户? 还是管理员看到的用户?</p>
+<p>全局搜索了一下调用该方法的地方, 发现这是个“万能”的方法, 传入 id 为 <code>1</code> 时会返回 1 号用户的不含私密信息的对象</p>
+<p>传入 <code>[1,2,3]</code> 或 <code>&quot;1,2,3&quot;</code> 时会获取一个数组 </p>
+<p><img src="//static.mutoe.com/xianzhuo.jpg" alt="[掀桌]"></p>
+<hr>
+<p>如果上了ts</p>
+<p><img src="//static.mutoe.com/2019/why-typescript/example-1-ts.gif"></p>
+<a id="more"></a>
+
+
+<h2 id="场景2-–-查函数使用方法"><a href="#场景2-–-查函数使用方法" class="headerlink" title="场景2 – 查函数使用方法"></a>场景2 – 查函数使用方法</h2><p>开心的撸代码中, 突然接到老大消息: xxx离职了, 现在你来接手他维护的项目.😳</p>
+<p>拿到代码后, 看到了这段东西</p>
+<p><img src="//static.mutoe.com/2019/why-typescript/example-2-js.png"></p>
+<p><img src="//static.mutoe.com/xianzhuo.jpg" alt="[掀桌]"></p>
+<hr>
+<p>如果上了ts</p>
+<p><img src="//static.mutoe.com/2019/why-typescript/example-2-ts.gif"></p>
+<h2 id="场景3-–-重构变量"><a href="#场景3-–-重构变量" class="headerlink" title="场景3 – 重构变量"></a>场景3 – 重构变量</h2><p>开心的撸代码中, 突然接到老大消息: xxx离职了, 现在你来接手他维护的项目.😳</p>
+<p>拿到代码后, 看到了这段东西</p>
+<p><img src="//static.mutoe.com/2019/why-typescript/example-3-js.png"></p>
+<p>现在后端要将 <code>topic</code> 返回的 <code>name</code> 修改成 <code>title</code></p>
+<p><img src="//static.mutoe.com/2019/why-typescript/example-3-js-1.gif"></p>
+<p><img src="//static.mutoe.com/xianzhuo.jpg" alt="[掀桌]"></p>
+<hr>
+<p>如果上了ts</p>
+<p><img src="//static.mutoe.com/2019/why-typescript/example-3-ts.gif"></p>
+<h2 id="快上-TypeScript-吧"><a href="#快上-TypeScript-吧" class="headerlink" title="快上 TypeScript 吧"></a>快上 TypeScript 吧</h2><p>老大: “可以呀, 别人改这些都要半天你只需要几分钟, 升职加薪就是你啦!”</p>
+<p>哇哈哈哈哈! 真香!</p>
+]]></content>
+      <categories>
+        <category>心得</category>
+      </categories>
+      <tags>
+        <tag>TypeScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>为什么有些网站要求使用 chrome 浏览器</title>
+    <url>/2017/with-chrome-to-browse-the-web/</url>
+    <content><![CDATA[<p><img src="//static.mutoe.com/2017/with-chrome-to-browse-the-web/fuck-ie.jpg" alt="fuck-ie"></p>
+<p>你是不是经常浏览网页时遇到以上类似的画面, 叫你换个浏览器, 本开开开心心的浏览网页非要换浏览器, 让人特别不爽.</p>
+<p>下面我来科普一下为什么网页开发者会这么做, 在普及这个知识前, 我先解读一下为什么 IE 浏览器在中国市场占有量这么大.</p>
+<h2 id="IE6-“网上冲浪”"><a href="#IE6-“网上冲浪”" class="headerlink" title="IE6 “网上冲浪”"></a>IE6 “网上冲浪”</h2><p>在 10 多年前的互联网时代, 人们都在用家喻户晓的 XP 系统, 那时系统自带的浏览器是 Internet Explorer 6.0 也就是我们俗称的 IE6, 那个时代人们的电脑还都是 256M 内存, 好一点的也就 512M, 玩的游戏还是魔兽红警 CS 和传奇. 在 IE 一统江山的时代, 很少有人觉得 IE 有什么不对劲.</p>
+<p>今天 IE 被诟病得最多的速度和稳定性上面, 在那个时代都好像不是那么引人关注, 并不是说那个时代浏览器的速度和稳定性不重要, 而是因为没有可供对比的参照物.</p>
+<p>然而过了两年左右, 中国网民成爆发式增长, 中国用户的浏览环境也普遍是 WinXP + IE6, 那时候也有 chrome 和 firefox 浏览器, 但是作为一个普通的网民又有谁肯花费精力去习惯另外一个浏览器呢.</p>
+<a id="more"></a>
+
+<p>就这样又持续了两三年左右, IE6 浏览器再也承受不了互联网庞大的数据业务量和华丽丽的页面渲染了, 网民们经常浏览网页就会莫名卡死 ( 有七八年网龄的同学应该亲身经历过 ).本人也是在这个终于抛弃了 IE 浏览器.</p>
+<p>当时市场上有很多形形色色的浏览器, 比如火狐、世界之窗、搜狗浏览器和遨游浏览器, 这些浏览器用起来都比 IE 体验要好, 渐渐的 IE 在我的电脑里出现的次数越来越少了.</p>
+<h3 id="第一次接触-chrome-小插曲"><a href="#第一次接触-chrome-小插曲" class="headerlink" title="第一次接触 chrome 小插曲"></a>第一次接触 chrome 小插曲</h3><p><img src="//static.mutoe.com/2017/with-chrome-to-browse-the-web/chrome.png" alt="chrome"></p>
+<p>第一次叫我安装 chrome 的时候, 我是拒绝的, 我是拒绝的!!! 他居然无声无息的安装在了不知道我电脑的哪个角落里 ( 用过 chrome 的应该都知道它的静默安装 ), 后来查找发现居然安装在我的 C 盘了, 这种情况怎么能忍?!</p>
+<p>打开这个叫做 chrome 的浏览器, 面对一个简洁得甚至可以说简陋的界面, 实在有点无从下手的感觉.</p>
+<p>简洁到什么程度呢, 没有菜单栏 ( 只有一个书签和扳手的按钮, 后来的版本就只剩下扳手了 ), 没有状态区, 没有标题栏 ( 也就是说, 在 chrome 浏览器上面, 你连它自己的名称 “chrome” 这几个字都找不到 ), 因为谷歌认为标题栏浪费空间, 干脆不要, 取而代之的是实用的标签栏.</p>
+<p> 工具按钮也只有三个: 前进、后退、刷新 / 停止 ( 需要的话, 还能再加一个主页按钮 ), 再加上地址栏, 这就是全部… 在那时习惯了IE浏览器后, 面对这种极简风格的设计, 实在觉得这浏览器差劲的要死. 关掉浏览器就卸载了.</p>
+<p>到了 2011 年, 随着微软发布 IE9 浏览器和 win7 进入中国市场, 那些没有转移浏览习惯的用户终于能用上一个不再那么卡的 “新” 浏览器了 – IE9.</p>
+<p>其实 IE9 确实解决了当时微软 IE 浏览器的尴尬, 但是因为 IE9 宣布不支持 XP 系统导致还是有许多顽固不化的用户还再使用 XP + IE6, 可以理解, 毕竟 256M 的老机器跑 WIN7 确实有点牵强.</p>
+<p>2014 年 4 月, 微软宣布停止对 windows XP 支持和提供服务, 这意味着 XP 系统此后再也不会有安全补丁了, XP 系统也意味着寿终正寝. 2001 年 10 月出生的 WindowsXP 系统战斗了 12 年零 6 个月, 成为人类历史上服务时间最长的操作系统.</p>
+<p>换句话说, 微软终于舍弃了 IE6 这块庞大的鸡肋, 随着浏览器市场的解放, 人们终于迎来了 HTML5 时代.</p>
+<h2 id="HTML5-简洁-自由"><a href="#HTML5-简洁-自由" class="headerlink" title="HTML5 简洁 自由"></a>HTML5 简洁 自由</h2><p>同年 10 月, 万维网联盟宣布发布 HTML5 标准规范, 第一次听说 HTML5 是 QQ 空间发布的新版 QQ 空间, 支持 HTML5 技术, 记不太清是什么时候了, 那时候我还不是一个程序猿, 应该是在此之前, 第一次进入新版 QQ 空间的时候眼前一亮</p>
+<p><img src="//static.mutoe.com/2017/with-chrome-to-browse-the-web/qzone.jpg" alt="qzone"></p>
+<p>有一种焕然一新的感觉, 感觉很清爽, 回想到第一次接触 chrome 浏览器, 那些所谓不适应没有菜单栏, 状态栏的, 菜单栏的按钮占地这么大, 平时又点过几次呢? 状态栏除了在网页卡住的时候会看一下, 又有什么时候会去关注呢? 真是讽刺.</p>
+<p>说了这么多, 现在, 回到开始的话题, 稳定性. 印象中, 我用 firefox 浏览器几乎没有怎么崩溃过, 倒是会经常遇到一些网页要求使用 IE 浏览器访问 ( 某行网上银行系统 ), 当时特别不理解, IE 就要淘汰了的浏览器怎么还有有开发者支持使用, 现在明白了原来是银行支付系统因为安全性使用了 ActiveX 技术, 这种技术是微软的专利, 而当时银行支付系统的开发者没有那么多经历维护经常更新的 chrome 和 firefox 浏览器, 只能舍弃小众用户 ( 现在你已经不用担心了, 我们已经进入了 HTML5 时代 ).</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>言而总之, 分两个层面来说我们的问题, 为什么有些网站要求使用 chrome 浏览器来访问呢</p>
+<h3 id="用户层面"><a href="#用户层面" class="headerlink" title="用户层面"></a>用户层面</h3><ul>
+<li>稳定性高, 浏览网页很少会卡死;</li>
+<li>界面清爽, 没有那么多无关浏览网页的杂项;</li>
+<li>速度快, 在看到一些华丽的页面不会卡顿, 网页渲染速度也很快;</li>
+</ul>
+<h3 id="技术层面"><a href="#技术层面" class="headerlink" title="技术层面"></a>技术层面</h3><ul>
+<li>由于 IE 对网页渲染方式不同, 如果要兼容低版本 IE 浏览器会使网页开发者增加一倍以上的工作量;</li>
+<li>HTML5 技术使网页规范化, 能够敏捷快速的开发出华丽优美的页面;</li>
+<li>chrome 等 webkit 内核的浏览器解析脚本的速度远比 IE 内核的浏览器要快, 能够让页面更加生动而不必考虑太多性能的问题;</li>
+</ul>
+<p>了解了这些, 有时我们用 360 或者搜狗浏览器访问网页的时候也会提示我们更换为 chrome 浏览器, 其实大可不必, <strong>现在的搜狗浏览器和 360 浏览器都自带双内核</strong>, 当你遇到这个问题时只需要点击地址栏内右侧的兼容切换成极速即可, 浏览器会自动使用 webkit 内核重新将页面渲染一次, 也就不会出现要求更换浏览器的页面了.</p>
+]]></content>
+      <categories>
+        <category>科普</category>
+      </categories>
+      <tags>
+        <tag>Browser</tag>
       </tags>
   </entry>
   <entry>
@@ -2322,101 +2413,10 @@ Faster is lodash.filter 1000,lodash.filter 100</code></pre>
         <category>心得</category>
       </categories>
       <tags>
-        <tag>Vue</tag>
         <tag>ESLint</tag>
+        <tag>Vue</tag>
         <tag>Koa</tag>
         <tag>pm2</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>为什么要上 TypeScript</title>
-    <url>/2019/why-typescreipt/</url>
-    <content><![CDATA[<p>“TypeScript 又是什么东西啊, 怎么又在出新语言, 求不要再出了, 学不动了!!”</p>
-<h2 id="场景1-–-检查类型"><a href="#场景1-–-检查类型" class="headerlink" title="场景1 – 检查类型"></a>场景1 – 检查类型</h2><p>开心的撸代码中, 突然接到老大消息: xxx离职了, 现在你来接手他维护的项目.😳</p>
-<p>拿到代码后, 看到了这段东西</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/** 根据用户id获取用户信息 */</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">getUsers</span>(<span class="params">id</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> users = <span class="keyword">await</span> fetchUsers(id)</span><br><span class="line">  <span class="keyword">return</span> users</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这个 <code>id</code> 是什么? 是  <code>1</code> 还是 <code>&quot;1&quot;</code> 还是 <code>[1,2,3]</code> 还是 <code>&quot;1,2,3&quot;</code> ???</p>
-<p>这个 <code>users</code> 又是什么? 是普通权限用户? 还是管理员看到的用户?</p>
-<p>全局搜索了一下调用该方法的地方, 发现这是个“万能”的方法, 传入 id 为 <code>1</code> 时会返回 1 号用户的不含私密信息的对象</p>
-<p>传入 <code>[1,2,3]</code> 或 <code>&quot;1,2,3&quot;</code> 时会获取一个数组 </p>
-<p><img src="//static.mutoe.com/xianzhuo.jpg" alt="[掀桌]"></p>
-<hr>
-<p>如果上了ts</p>
-<p><img src="//static.mutoe.com/2019/why-typescript/example-1-ts.gif"></p>
-<a id="more"></a>
-
-
-<h2 id="场景2-–-查函数使用方法"><a href="#场景2-–-查函数使用方法" class="headerlink" title="场景2 – 查函数使用方法"></a>场景2 – 查函数使用方法</h2><p>开心的撸代码中, 突然接到老大消息: xxx离职了, 现在你来接手他维护的项目.😳</p>
-<p>拿到代码后, 看到了这段东西</p>
-<p><img src="//static.mutoe.com/2019/why-typescript/example-2-js.png"></p>
-<p><img src="//static.mutoe.com/xianzhuo.jpg" alt="[掀桌]"></p>
-<hr>
-<p>如果上了ts</p>
-<p><img src="//static.mutoe.com/2019/why-typescript/example-2-ts.gif"></p>
-<h2 id="场景3-–-重构变量"><a href="#场景3-–-重构变量" class="headerlink" title="场景3 – 重构变量"></a>场景3 – 重构变量</h2><p>开心的撸代码中, 突然接到老大消息: xxx离职了, 现在你来接手他维护的项目.😳</p>
-<p>拿到代码后, 看到了这段东西</p>
-<p><img src="//static.mutoe.com/2019/why-typescript/example-3-js.png"></p>
-<p>现在后端要将 <code>topic</code> 返回的 <code>name</code> 修改成 <code>title</code></p>
-<p><img src="//static.mutoe.com/2019/why-typescript/example-3-js-1.gif"></p>
-<p><img src="//static.mutoe.com/xianzhuo.jpg" alt="[掀桌]"></p>
-<hr>
-<p>如果上了ts</p>
-<p><img src="//static.mutoe.com/2019/why-typescript/example-3-ts.gif"></p>
-<h2 id="快上-TypeScript-吧"><a href="#快上-TypeScript-吧" class="headerlink" title="快上 TypeScript 吧"></a>快上 TypeScript 吧</h2><p>老大: “可以呀, 别人改这些都要半天你只需要几分钟, 升职加薪就是你啦!”</p>
-<p>哇哈哈哈哈! 真香!</p>
-]]></content>
-      <categories>
-        <category>心得</category>
-      </categories>
-      <tags>
-        <tag>TypeScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>为什么有些网站要求使用 chrome 浏览器</title>
-    <url>/2017/with-chrome-to-browse-the-web/</url>
-    <content><![CDATA[<p><img src="//static.mutoe.com/2017/with-chrome-to-browse-the-web/fuck-ie.jpg" alt="fuck-ie"></p>
-<p>你是不是经常浏览网页时遇到以上类似的画面, 叫你换个浏览器, 本开开开心心的浏览网页非要换浏览器, 让人特别不爽.</p>
-<p>下面我来科普一下为什么网页开发者会这么做, 在普及这个知识前, 我先解读一下为什么 IE 浏览器在中国市场占有量这么大.</p>
-<h2 id="IE6-“网上冲浪”"><a href="#IE6-“网上冲浪”" class="headerlink" title="IE6 “网上冲浪”"></a>IE6 “网上冲浪”</h2><p>在 10 多年前的互联网时代, 人们都在用家喻户晓的 XP 系统, 那时系统自带的浏览器是 Internet Explorer 6.0 也就是我们俗称的 IE6, 那个时代人们的电脑还都是 256M 内存, 好一点的也就 512M, 玩的游戏还是魔兽红警 CS 和传奇. 在 IE 一统江山的时代, 很少有人觉得 IE 有什么不对劲.</p>
-<p>今天 IE 被诟病得最多的速度和稳定性上面, 在那个时代都好像不是那么引人关注, 并不是说那个时代浏览器的速度和稳定性不重要, 而是因为没有可供对比的参照物.</p>
-<p>然而过了两年左右, 中国网民成爆发式增长, 中国用户的浏览环境也普遍是 WinXP + IE6, 那时候也有 chrome 和 firefox 浏览器, 但是作为一个普通的网民又有谁肯花费精力去习惯另外一个浏览器呢.</p>
-<a id="more"></a>
-
-<p>就这样又持续了两三年左右, IE6 浏览器再也承受不了互联网庞大的数据业务量和华丽丽的页面渲染了, 网民们经常浏览网页就会莫名卡死 ( 有七八年网龄的同学应该亲身经历过 ).本人也是在这个终于抛弃了 IE 浏览器.</p>
-<p>当时市场上有很多形形色色的浏览器, 比如火狐、世界之窗、搜狗浏览器和遨游浏览器, 这些浏览器用起来都比 IE 体验要好, 渐渐的 IE 在我的电脑里出现的次数越来越少了.</p>
-<h3 id="第一次接触-chrome-小插曲"><a href="#第一次接触-chrome-小插曲" class="headerlink" title="第一次接触 chrome 小插曲"></a>第一次接触 chrome 小插曲</h3><p><img src="//static.mutoe.com/2017/with-chrome-to-browse-the-web/chrome.png" alt="chrome"></p>
-<p>第一次叫我安装 chrome 的时候, 我是拒绝的, 我是拒绝的!!! 他居然无声无息的安装在了不知道我电脑的哪个角落里 ( 用过 chrome 的应该都知道它的静默安装 ), 后来查找发现居然安装在我的 C 盘了, 这种情况怎么能忍?!</p>
-<p>打开这个叫做 chrome 的浏览器, 面对一个简洁得甚至可以说简陋的界面, 实在有点无从下手的感觉.</p>
-<p>简洁到什么程度呢, 没有菜单栏 ( 只有一个书签和扳手的按钮, 后来的版本就只剩下扳手了 ), 没有状态区, 没有标题栏 ( 也就是说, 在 chrome 浏览器上面, 你连它自己的名称 “chrome” 这几个字都找不到 ), 因为谷歌认为标题栏浪费空间, 干脆不要, 取而代之的是实用的标签栏.</p>
-<p> 工具按钮也只有三个: 前进、后退、刷新 / 停止 ( 需要的话, 还能再加一个主页按钮 ), 再加上地址栏, 这就是全部… 在那时习惯了IE浏览器后, 面对这种极简风格的设计, 实在觉得这浏览器差劲的要死. 关掉浏览器就卸载了.</p>
-<p>到了 2011 年, 随着微软发布 IE9 浏览器和 win7 进入中国市场, 那些没有转移浏览习惯的用户终于能用上一个不再那么卡的 “新” 浏览器了 – IE9.</p>
-<p>其实 IE9 确实解决了当时微软 IE 浏览器的尴尬, 但是因为 IE9 宣布不支持 XP 系统导致还是有许多顽固不化的用户还再使用 XP + IE6, 可以理解, 毕竟 256M 的老机器跑 WIN7 确实有点牵强.</p>
-<p>2014 年 4 月, 微软宣布停止对 windows XP 支持和提供服务, 这意味着 XP 系统此后再也不会有安全补丁了, XP 系统也意味着寿终正寝. 2001 年 10 月出生的 WindowsXP 系统战斗了 12 年零 6 个月, 成为人类历史上服务时间最长的操作系统.</p>
-<p>换句话说, 微软终于舍弃了 IE6 这块庞大的鸡肋, 随着浏览器市场的解放, 人们终于迎来了 HTML5 时代.</p>
-<h2 id="HTML5-简洁-自由"><a href="#HTML5-简洁-自由" class="headerlink" title="HTML5 简洁 自由"></a>HTML5 简洁 自由</h2><p>同年 10 月, 万维网联盟宣布发布 HTML5 标准规范, 第一次听说 HTML5 是 QQ 空间发布的新版 QQ 空间, 支持 HTML5 技术, 记不太清是什么时候了, 那时候我还不是一个程序猿, 应该是在此之前, 第一次进入新版 QQ 空间的时候眼前一亮</p>
-<p><img src="//static.mutoe.com/2017/with-chrome-to-browse-the-web/qzone.jpg" alt="qzone"></p>
-<p>有一种焕然一新的感觉, 感觉很清爽, 回想到第一次接触 chrome 浏览器, 那些所谓不适应没有菜单栏, 状态栏的, 菜单栏的按钮占地这么大, 平时又点过几次呢? 状态栏除了在网页卡住的时候会看一下, 又有什么时候会去关注呢? 真是讽刺.</p>
-<p>说了这么多, 现在, 回到开始的话题, 稳定性. 印象中, 我用 firefox 浏览器几乎没有怎么崩溃过, 倒是会经常遇到一些网页要求使用 IE 浏览器访问 ( 某行网上银行系统 ), 当时特别不理解, IE 就要淘汰了的浏览器怎么还有有开发者支持使用, 现在明白了原来是银行支付系统因为安全性使用了 ActiveX 技术, 这种技术是微软的专利, 而当时银行支付系统的开发者没有那么多经历维护经常更新的 chrome 和 firefox 浏览器, 只能舍弃小众用户 ( 现在你已经不用担心了, 我们已经进入了 HTML5 时代 ).</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>言而总之, 分两个层面来说我们的问题, 为什么有些网站要求使用 chrome 浏览器来访问呢</p>
-<h3 id="用户层面"><a href="#用户层面" class="headerlink" title="用户层面"></a>用户层面</h3><ul>
-<li>稳定性高, 浏览网页很少会卡死;</li>
-<li>界面清爽, 没有那么多无关浏览网页的杂项;</li>
-<li>速度快, 在看到一些华丽的页面不会卡顿, 网页渲染速度也很快;</li>
-</ul>
-<h3 id="技术层面"><a href="#技术层面" class="headerlink" title="技术层面"></a>技术层面</h3><ul>
-<li>由于 IE 对网页渲染方式不同, 如果要兼容低版本 IE 浏览器会使网页开发者增加一倍以上的工作量;</li>
-<li>HTML5 技术使网页规范化, 能够敏捷快速的开发出华丽优美的页面;</li>
-<li>chrome 等 webkit 内核的浏览器解析脚本的速度远比 IE 内核的浏览器要快, 能够让页面更加生动而不必考虑太多性能的问题;</li>
-</ul>
-<p>了解了这些, 有时我们用 360 或者搜狗浏览器访问网页的时候也会提示我们更换为 chrome 浏览器, 其实大可不必, <strong>现在的搜狗浏览器和 360 浏览器都自带双内核</strong>, 当你遇到这个问题时只需要点击地址栏内右侧的兼容切换成极速即可, 浏览器会自动使用 webkit 内核重新将页面渲染一次, 也就不会出现要求更换浏览器的页面了.</p>
-]]></content>
-      <categories>
-        <category>科普</category>
-      </categories>
-      <tags>
-        <tag>Browser</tag>
       </tags>
   </entry>
   <entry>
@@ -2870,6 +2870,635 @@ $$</p>
       </categories>
       <tags>
         <tag>Dynamic Programming</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>linux 学习笔记</title>
+    <url>/2017/linux-study-notes/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这里是一篇个人学习使用 Linux 操作系统时遇到的一些常见问题以及资料的集合. 用来在日后的操作中做一个 QA 索引. 如果它也能帮到你就再好不过了.</p>
+<a id="more"></a>
+
+<h1 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h1><h2 id="别名"><a href="#别名" class="headerlink" title="别名"></a>别名</h2><p>在使用 yum 安装 remi 源的 php7 时，需要执行 <code>yum install php70</code>，安装完成后执行 php cli 的命令为 <code>php70 -v</code>，比较不方便，这时可以使用 alias 给 <code>php70</code> 设置一个别名。</p>
+<p>执行以下命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> php=`php70`</span><br></pre></td></tr></table></figure>
+
+<p>注意等号前后不可以有空格，否则会报错。</p>
+<h1 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h1><h2 id="挂起与恢复"><a href="#挂起与恢复" class="headerlink" title="挂起与恢复"></a>挂起与恢复</h2><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ctrl-c</td>
+<td align="left">发送中断信号强制中断前台进程</td>
+</tr>
+<tr>
+<td>ctrl-z</td>
+<td align="left">发送挂起信号挂起一个前台进程，挂起后使用 <code>fg</code> / <code>bg</code> 恢复进程</td>
+</tr>
+<tr>
+<td>ctrl-d</td>
+<td align="left">模拟输入 <code>.exit</code> 退出当前进程</td>
+</tr>
+</tbody></table>
+<h2 id="开机启动"><a href="#开机启动" class="headerlink" title="开机启动"></a>开机启动</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>chkconfig [service]</code></td>
+<td align="left">查看某个 service 是否在开机启动状态</td>
+</tr>
+<tr>
+<td><code>chkconfig [service] on</code></td>
+<td align="left">允许开机启动某个 service</td>
+</tr>
+<tr>
+<td><code>chkconfig [service] off</code></td>
+<td align="left">禁止开机启动某个 service</td>
+</tr>
+</tbody></table>
+<h1 id="安全"><a href="#安全" class="headerlink" title="安全"></a>安全</h1><h2 id="创建新用户"><a href="#创建新用户" class="headerlink" title="创建新用户"></a>创建新用户</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>adduser</code></td>
+<td align="left">自动创建新用户</td>
+</tr>
+<tr>
+<td><code>useradd</code></td>
+<td align="left">需要使用参数选项创建新用户</td>
+</tr>
+</tbody></table>
+<h3 id="adduser-自动创建新用户"><a href="#adduser-自动创建新用户" class="headerlink" title="adduser 自动创建新用户"></a><code>adduser</code> 自动创建新用户</h3><p>会自动为创建的用户指定主目录、系统 shell 版本，会在创建时输入用户密码。</p>
+<h3 id="useradd-自定义创建新用户"><a href="#useradd-自定义创建新用户" class="headerlink" title="useradd 自定义创建新用户"></a><code>useradd</code> 自定义创建新用户</h3><p>需要使用参数选项指定上述基本设置，如果不使用任何参数，则创建的用户无密码、无主目录、没有指定 shell 版本。</p>
+<ul>
+<li><code>-d [path]</code> 为其设置主目录.</li>
+<li><code>-g [gid|groupname]</code> 为其指定一个主用户组. 可以接组 ID 或组名称</li>
+<li><code>-G [gid|groupname,...]</code> 为其指定一个附加用户组. 可以用逗号分隔开(不要加空格).</li>
+<li><code>-m</code> 如果主目录不存在则创建; 存在则不再创建, 并且这个目录不属于新用户.</li>
+<li><code>-M</code> 不创建主目录.</li>
+<li><code>-N</code> 不为用户创建一个同名的用户组.</li>
+<li><code>-s [shell]</code> 指定用户登陆的 shell 版本</li>
+<li><code>-u [uid]</code> 指定用户 uid</li>
+</ul>
+<p>example.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo user add -d <span class="string">&quot;/home/xxx&quot;</span> -m -s <span class="string">&quot;/bin/bash&quot;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>useradd</code> 命令是有默认值的, 其值与 <code>/etc/default/useradd</code> 中的内容相同.</p>
+</blockquote>
+<h2 id="将用户添加进一个用户组中"><a href="#将用户添加进一个用户组中" class="headerlink" title="将用户添加进一个用户组中"></a>将用户添加进一个用户组中</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>groupadd</code></td>
+<td align="left">创建一个用户组</td>
+</tr>
+<tr>
+<td><code>usermod</code></td>
+<td align="left">更改用户信息</td>
+</tr>
+</tbody></table>
+<h3 id="usermod-创建一个用户组"><a href="#usermod-创建一个用户组" class="headerlink" title="usermod 创建一个用户组"></a><code>usermod</code> 创建一个用户组</h3><p>参考 <code>useradd</code></p>
+<ul>
+<li><code>-a</code> 配合 <code>-G</code> 使用, 附加用户组.</li>
+<li><code>-l [username]</code> 修改用户名.</li>
+<li><code>-L</code> 锁定用户密码, 使密码无效.</li>
+<li><code>-U</code> 解除密码锁定.</li>
+</ul>
+<h2 id="为普通用户添加-root-权限"><a href="#为普通用户添加-root-权限" class="headerlink" title="为普通用户添加 root 权限"></a>为普通用户添加 root 权限</h2><h3 id="1-切换到-root-用户下"><a href="#1-切换到-root-用户下" class="headerlink" title="1. 切换到 root 用户下"></a>1. 切换到 root 用户下</h3><h3 id="2-添加-sudo-文件的写权限"><a href="#2-添加-sudo-文件的写权限" class="headerlink" title="2. 添加 sudo 文件的写权限"></a>2. 添加 sudo 文件的写权限</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod u+w /etc/sudoers</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-编辑-sudoers-文件"><a href="#3-编辑-sudoers-文件" class="headerlink" title="3. 编辑 sudoers 文件"></a>3. 编辑 sudoers 文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/sudoers</span><br></pre></td></tr></table></figure>
+
+<p>找到这行 <code>root ALL=(ALL) ALL</code>, 在它下面添加一行, 将 root 替换为你的用户名</p>
+<blockquote>
+<p>你可以 sudoers 添加下面四行中任意一条</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">youuser            ALL&#x3D;(ALL)                ALL</span><br><span class="line">%youuser           ALL&#x3D;(ALL)                ALL</span><br><span class="line">youuser            ALL&#x3D;(ALL)                NOPASSWD: ALL</span><br><span class="line">%youuser           ALL&#x3D;(ALL)                NOPASSWD: ALL</span><br></pre></td></tr></table></figure>
+
+<p>第一行:允许用户 youuser 执行 sudo 命令(需要输入密码).<br>第二行:允许用户组 youuser 里面的用户执行 sudo 命令(需要输入密码).<br>第三行:允许用户 youuser 执行 sudo 命令,并且在执行的时候不输入密码.<br>第四行:允许用户组 youuser 里面的用户执行 sudo 命令,并且在执行的时候不输入密码.</p>
+</blockquote>
+<h3 id="4-撤销-sudo-文件的写权限"><a href="#4-撤销-sudo-文件的写权限" class="headerlink" title="4. 撤销 sudo 文件的写权限"></a>4. 撤销 sudo 文件的写权限</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod u-w /etc/sudoers</span><br></pre></td></tr></table></figure>
+
+<h2 id="允许用户使用密钥登陆"><a href="#允许用户使用密钥登陆" class="headerlink" title="允许用户使用密钥登陆"></a>允许用户使用密钥登陆</h2><h3 id="新密钥对登陆"><a href="#新密钥对登陆" class="headerlink" title="新密钥对登陆"></a>新密钥对登陆</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">su username <span class="comment"># 切换到普通用户</span></span><br><span class="line"><span class="built_in">cd</span> ~ <span class="comment"># 进入 home 目录</span></span><br><span class="line">ssh-keygen -r rsa <span class="comment"># 创建密钥对, 一路回车即可</span></span><br><span class="line"><span class="built_in">cd</span> .ssh <span class="comment"># 进入 .ssh 目录</span></span><br><span class="line">mv id_rsa.pub authorized_keys <span class="comment"># 将公钥重命名</span></span><br></pre></td></tr></table></figure>
+
+<p>然后将 id_rsa 下载到主机, 并且使用它登陆即可</p>
+<h3 id="使用已有密钥对"><a href="#使用已有密钥对" class="headerlink" title="使用已有密钥对"></a>使用已有密钥对</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">su username</span><br><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">mkdir -m 700 .ssh <span class="comment"># 创建 .ssh 目录</span></span><br><span class="line"><span class="built_in">cd</span> .ssh</span><br><span class="line"><span class="comment"># 将 id_rsa.pub 放入此目录</span></span><br><span class="line">mv id_rsa.pub authorized_keys</span><br><span class="line">chmod 644 authorized_keys</span><br></pre></td></tr></table></figure>
+
+<h1 id="文件与目录"><a href="#文件与目录" class="headerlink" title="文件与目录"></a>文件与目录</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><h3 id="mkdir-创建目录"><a href="#mkdir-创建目录" class="headerlink" title="mkdir 创建目录"></a><code>mkdir</code> 创建目录</h3><ul>
+<li><code>-m [prop]</code> 目标属性, 目录权限.</li>
+<li><code>-p</code> 递归创建, 如果目标目录上级目录不存在, 则创建.</li>
+</ul>
+<h3 id="setfacl-getfacl-为文件或目录添加多个用户-组"><a href="#setfacl-getfacl-为文件或目录添加多个用户-组" class="headerlink" title="setfacl getfacl 为文件或目录添加多个用户(组)"></a><code>setfacl</code> <code>getfacl</code> 为文件或目录添加多个用户(组)</h3><ul>
+<li><code>setfacl -m g:group:rwx path</code> 为 path 添加 group 用户组</li>
+<li><code>setfacl -m u:user:rwx path</code> 为 path 添加 user 用户</li>
+<li><code>setfacl -x g:group path</code> 为 path 移除 group 用户组</li>
+<li><code>setfacl -x u:user path</code> 为 path 移除 user 用户</li>
+<li><code>getfacl path</code> 查看 path 的所有权限</li>
+</ul>
+<h2 id="文件内容查阅"><a href="#文件内容查阅" class="headerlink" title="文件内容查阅"></a>文件内容查阅</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>cat</code></td>
+<td align="left">由第一行开始显示文件内容</td>
+</tr>
+<tr>
+<td><code>tac</code></td>
+<td align="left">由最后一行开始显示文件内容</td>
+</tr>
+<tr>
+<td><code>nl</code></td>
+<td align="left">输出行号显示</td>
+</tr>
+<tr>
+<td><code>more</code></td>
+<td align="left">逐页显示内容</td>
+</tr>
+<tr>
+<td><code>less</code></td>
+<td align="left">逐页显示内容还可以向上翻页</td>
+</tr>
+<tr>
+<td><code>head</code></td>
+<td align="left">输出头部若干行</td>
+</tr>
+<tr>
+<td><code>tail</code></td>
+<td align="left">输出尾部若干行</td>
+</tr>
+<tr>
+<td><code>od</code></td>
+<td align="left">以二进制输出文件内容</td>
+</tr>
+</tbody></table>
+<h3 id="cat-由第一行开始显示文件内容"><a href="#cat-由第一行开始显示文件内容" class="headerlink" title="cat 由第一行开始显示文件内容"></a><code>cat</code> 由第一行开始显示文件内容</h3><ul>
+<li><code>-n</code> 列出行号，包括空行</li>
+</ul>
+<h3 id="less-分页显示文件内容"><a href="#less-分页显示文件内容" class="headerlink" title="less 分页显示文件内容"></a><code>less</code> 分页显示文件内容</h3><table>
+<thead>
+<tr>
+<th>按键</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>space</td>
+<td align="left">向下翻一页</td>
+</tr>
+<tr>
+<td>pagedown</td>
+<td align="left">向下翻一页</td>
+</tr>
+<tr>
+<td>pageup</td>
+<td align="left">向上翻一页</td>
+</tr>
+<tr>
+<td>/[字符串]</td>
+<td align="left">向下查询 [字符串]</td>
+</tr>
+<tr>
+<td>?[字符串]</td>
+<td align="left">向上查询 [字符串]</td>
+</tr>
+<tr>
+<td>n</td>
+<td align="left">向下重复一次查询</td>
+</tr>
+<tr>
+<td>N</td>
+<td align="left">向上重复一次查询</td>
+</tr>
+<tr>
+<td>q</td>
+<td align="left">离开 less</td>
+</tr>
+</tbody></table>
+<h3 id="tail-显示文件尾部内容"><a href="#tail-显示文件尾部内容" class="headerlink" title="tail 显示文件尾部内容"></a><code>tail</code> 显示文件尾部内容</h3><ul>
+<li><code>-n</code> 接数字，显示多少行</li>
+<li><code>-f</code> 持续检测文件尾部变动，按下 ctrl-c 结束检测</li>
+</ul>
+<h2 id="编辑文件"><a href="#编辑文件" class="headerlink" title="编辑文件"></a>编辑文件</h2><h3 id="非交互式写入"><a href="#非交互式写入" class="headerlink" title="非交互式写入"></a>非交互式写入</h3><p>将字符串写入文件（清空原有内容）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;foo&quot;</span> &gt; file.txt</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">cat &gt; file.txt &lt;&lt; <span class="string">EOF</span></span><br><span class="line"><span class="string">foo</span></span><br><span class="line"><span class="string">bar</span></span><br><span class="line"><span class="string">EOF</span></span><br></pre></td></tr></table></figure>
+
+<p>追加在文件尾部</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;foo&quot;</span> &gt;&gt; file.txt</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">cat &gt;&gt; file.txt &lt;&lt; <span class="string">EOF</span></span><br><span class="line"><span class="string">foo</span></span><br><span class="line"><span class="string">bar</span></span><br><span class="line"><span class="string">EOF</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="sed-非交互式编辑"><a href="#sed-非交互式编辑" class="headerlink" title="sed 非交互式编辑"></a><code>sed</code> 非交互式编辑</h3><p>处理前置命令的输出结果</p>
+<p><code>(std-out) | sed [options]</code>command``</p>
+<p>处理文件</p>
+<p><code>sed [-n] [-i]</code>条件 命令<code>file</code></p>
+<ul>
+<li><code>-n</code> 忽略没有修改的输出</li>
+<li><code>-i</code> 直接修改源文件</li>
+<li><code>-r</code> 支持拓展正则表达式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>作用</th>
+<th>例子</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>行号 命令</td>
+<td>对指定行号的行进行操作</td>
+<td><code>3p</code></td>
+<td>打印第 3 行</td>
+</tr>
+<tr>
+<td>起始行号,终止行号 命令</td>
+<td>对范围中的几行进行操作</td>
+<td><code>2,6d</code></td>
+<td>删除第 2 行到第 6 行</td>
+</tr>
+<tr>
+<td>行号 1 命令 ; 行号 2 命令; ……</td>
+<td>对多行进行操作，没有行号先后区分</td>
+<td><code>1p;2d</code></td>
+<td>打印第 1 行然后删除第 2 行</td>
+</tr>
+<tr>
+<td>起始行号,+附加的行数 命令</td>
+<td>从起始行号开始，再加指定行数，这写范围内的所有行进行操作</td>
+<td><code>1,+3p</code></td>
+<td>打印 1 到 4 行的内容</td>
+</tr>
+<tr>
+<td>起始行号~步长 命令</td>
+<td>从起始行号开始，每隔一个步长的每个行进行操作</td>
+<td><code>1~2p</code></td>
+<td>打印奇数行的内容</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>2~2p</code></td>
+<td>打印偶数行的内容</td>
+</tr>
+<tr>
+<td>/正则表达式/命令</td>
+<td>对匹配正则表达式的行进行操作，注意格式要求</td>
+<td><code>/^root&#124;^ftp/d<code></td>
+<td>删除文件中包以 root 或者 ftp 开头的行</td>
+</tr>
+<tr>
+<td>$命令</td>
+<td>对最后一行进行操作</td>
+<td><code>$!d</code></td>
+<td>最后一行保留，其他全部干掉</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+<th>用法和例子</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>i</td>
+<td>插入文本</td>
+<td>条件 i 内容</td>
+<td>在指定的行之前插入文本</td>
+</tr>
+<tr>
+<td>a</td>
+<td>追加文本</td>
+<td>条件 a 内容</td>
+<td>在指定的行之后追加文本</td>
+</tr>
+<tr>
+<td>c</td>
+<td>替换行</td>
+<td>条件 c 内容</td>
+<td>把指定行的内容替换，整行都替换掉</td>
+</tr>
+<tr>
+<td>p</td>
+<td>打印</td>
+<td>条件 p</td>
+<td>打印符合条件的内容，注意如果没有-n，sed 默认打印所有</td>
+</tr>
+<tr>
+<td>!p</td>
+<td>打印其他</td>
+<td>条件!p</td>
+<td>不打印符合条件的内容，打印其他的所有</td>
+</tr>
+<tr>
+<td>=</td>
+<td>打印行号</td>
+<td><code>$=</code></td>
+<td>输出文件一共多少行，<code>$</code>代表最后一行，<code>=</code>代表输出行号</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>/^root/=</code></td>
+<td>输出以 root 开头的行号</td>
+</tr>
+<tr>
+<td>d</td>
+<td>删除</td>
+<td>条件 d</td>
+<td>删除符合条件的内容</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>$d</code></td>
+<td>删除最后一行</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>/^$/d</code></td>
+<td>删除所有空行 ，这是正则与之结合的结果</td>
+</tr>
+<tr>
+<td>!d</td>
+<td>保留其他</td>
+<td>条件!d</td>
+<td>符合条件的不删除，其余删除</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>/^root/!d</code></td>
+<td>以 root 开头的保留，其余全部删除</td>
+</tr>
+<tr>
+<td>s</td>
+<td>替换</td>
+<td>条件 s/被替换内容/替换成什么/第几个</td>
+<td>把文件中的每个符合条件的行的第几个匹配替换要求的内容进行替换，如果没有这么多个被替换内容就不替换，不写默认第一个</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>条件 s/被替换内容/替换成什么/g</td>
+<td>把文件中的每个符合条件的行的所有匹配替换要求的内容进行替换</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>条件 s/被替换内容/替换成什么/第几个 p</td>
+<td>把文件中的每个符合条件的行的第几个匹配替换要求的内容进行替换，然后显示，如果前面有-n，那么就可以完成替换后只显示替换的部分信息</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>条件 s#被替换内容#替换成什么#</td>
+<td>s 后面紧跟的符号就是控制替换符号，可以是任意字符，包括空格，字符，数字，但是不建议使用</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>2s/student//2p</code></td>
+<td>把文件中第二行中第二个 student 替换成空,然后现实替换的内容，可以用作删除</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>1,5s/^a/#a</code></td>
+<td>在 1 到 5 行每个以 a 开头的行的前面加上注释</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>6,10s/^#//</code></td>
+<td>把 6 到 10 行中的注释的注释标示去掉，让其成为配置</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>99s9\98\97\99\95\98\99gp</code></td>
+<td>这里面替换控制符号是 9，他就算把 99 行所有的 98979 替换成 95989 然后输出</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>1s#^.\&#123;&#39;$n&#39;\&#125;..∗..\&#123;&#39;$m&#39;\&#125;$#\1\4\3\2\5#</code></td>
+<td>把第 n 个和倒数第 m 个字符对调</td>
+</tr>
+<tr>
+<td>r</td>
+<td>导入文件</td>
+<td><code>条件 r 文件 2</code></td>
+<td>把文件 2（条件指令中的文件）中的内容添加文件 1（sed 命令后操作的文件）中到满足条件的行下</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>sed -n &quot;2 r a.txt&quot; b.txt</code></td>
+<td>把 a.txt 的内容添加到 b.txt 的第二行下</td>
+</tr>
+<tr>
+<td>w</td>
+<td>导出文件</td>
+<td>条件 w 文件 2</td>
+<td>把文件 1（sed 命令后操作的文件）中到满足条件的行另存到文件 2 中</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>sed -n &quot;w a.txt&quot; b.txt</code></td>
+<td>把 b.txt 的所有内容保存到 a.txt 中</td>
+</tr>
+<tr>
+<td>H</td>
+<td>追加复制</td>
+<td>条件 H</td>
+<td>把符合条件的行的内容写入复制版中</td>
+</tr>
+<tr>
+<td>h</td>
+<td>覆盖复制</td>
+<td>条件 h</td>
+<td>把符合条件的行的内容覆盖写入复制版中</td>
+</tr>
+<tr>
+<td>G</td>
+<td>追加粘贴</td>
+<td>条件 G</td>
+<td>把复制版中的内容追加到符合条件的行后面，注意也没有回车</td>
+</tr>
+<tr>
+<td>g</td>
+<td>覆盖粘贴</td>
+<td>条件 g</td>
+<td>把复制版中的内容覆盖到符合条件的行后面，注意也没有回车</td>
+</tr>
+</tbody></table>
+<p>注意</p>
+<ul>
+<li>在 sed 中的空格没有太过严格的要求，条件与命令间有没有空格都可以，不影响使用，</li>
+<li>如果想让输出有该行在源文件的位置，可以用 <code>cat -n 文件 | sed [选项] 条件 命令</code><br>但是这时候如果用正则匹配，开头匹配就不能用了，因为内容有了改变，原本再文件中开头的数据前面都有了行号，他们就不是在行首了</li>
+<li>删除某一行或多行用命令 <code>条件 d</code> ，如果删除某一行或多行中的某一些字段用 <code>条件 s/目标字段//</code><br>替换某一行的内容用<code>条件 c 内容</code> , 如果替换某一行中的某个字段用<code>条件 s/被替换的部分/替换成什么/</code></li>
+<li>s 后面紧跟的符号就是控制替换符号，可以是任意字符，包括空格，字符，数字，但是不建议使用</li>
+<li>在 sed 的 s 替换中替换成什么，这个部分，符号基本都没有特殊含义，除了 \ 和被选定作为控制替换符号 ， 如果要向替换成 \ 就要打 \ 如果向换成 \ 就打 \\ 依次类推 ， 如果要替换成控制替换符号如 / 就要打 /<br>例如： sed -n <code>s/[A−Z]/\/\\\1:&quot;</code>/gp` 文件 其作用就是把全文所有的大写字母 变成 /\大写字母:” 然后打印出来</li>
+<li>一般 sed 中用 ``限定起来如果要用变量可以把中间的条件命令分开来<code>……</code>$变量<code>……</code> 这样就可以了</li>
+</ul>
+<!-- ## 权限控制
+
+`chmod`
+`chown`
+`chgrp`
+`setfacl`
+`getfacl` -->
+
+<h1 id="SHELL"><a href="#SHELL" class="headerlink" title="SHELL"></a>SHELL</h1><h2 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>printenv</code></td>
+<td align="left">打印所有环境变量</td>
+</tr>
+</tbody></table>
+<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>echo</code></td>
+<td align="left">输出</td>
+</tr>
+</tbody></table>
+<h3 id="echo"><a href="#echo" class="headerlink" title="echo"></a><code>echo</code></h3><h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><h3 id="输入参数"><a href="#输入参数" class="headerlink" title="输入参数"></a>输入参数</h3><p>读取参数时，使用 <code>$0</code>..<code>$9</code> <code>$&#123;10&#125;</code> 等获取参数</p>
+<p>其中 <code>$0</code> 是程序名称</p>
+<figure class="highlight bash"><figcaption><span>add.sh</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># !/bin/bash</span></span><br><span class="line"></span><br><span class="line">name=`basename <span class="variable">$0</span>`</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;the cmd is <span class="variable">$0</span>&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;the cmd basename is <span class="variable">$name</span>&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;The #1 param is <span class="variable">$1</span>&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;The #2 param is <span class="variable">$2</span>&quot;</span></span><br><span class="line"></span><br><span class="line">SUM=$[ <span class="variable">$1</span> + <span class="variable">$2</span> ]</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;The result is <span class="variable">$SUM</span>&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>输出</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">➜  ~ chmod +x add.sh</span><br><span class="line">➜  ~ .&#x2F;add.sh 1 2</span><br><span class="line">the cmd is .&#x2F;add.sh</span><br><span class="line">the cmd basename is add.sh</span><br><span class="line">The #1 param is 1</span><br><span class="line">The #2 param is 2</span><br><span class="line">The result is 3</span><br></pre></td></tr></table></figure>
+
+<h3 id="特殊变量"><a href="#特殊变量" class="headerlink" title="特殊变量"></a>特殊变量</h3><p>还有几个特殊的变量可供使用</p>
+<ul>
+<li><code>echo $#</code> 输出参数的个数</li>
+<li><code>echo $*</code> 输出参数变量</li>
+<li><code>echo $@</code> 输出参数列表（可用 for in 遍历）</li>
+</ul>
+<p>下面的例子来判断变量参数是否符合要求</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># !/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ <span class="variable">$#</span> -lt 2 ] <span class="comment"># $#获取输入个数，选项-lt表示less than</span></span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;please input at least 2 param&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="shift-移动参数位置"><a href="#shift-移动参数位置" class="headerlink" title="shift 移动参数位置"></a><code>shift</code> 移动参数位置</h3><p>使用 <code>shift</code> 命令将参数队列的第一个参数移出 所有参数位置向前移动</p>
+<figure class="highlight bash"><figcaption><span>sum.sh</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># !/bin/bash</span></span><br><span class="line"></span><br><span class="line">result=0</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> [ -n <span class="string">&quot;<span class="variable">$1</span>&quot;</span> ]               <span class="comment"># 通过循环，每次读取$1位置参数</span></span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">  result=$[ <span class="variable">$result</span> + <span class="variable">$1</span> ]    <span class="comment"># $1位置参数与原参数和累加</span></span><br><span class="line">  <span class="built_in">shift</span>                       <span class="comment"># 把$2位置参数向前移动到$1，原$1位置参数不可用</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;sum of result is <span class="variable">$result</span>&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="read-读取键盘输入"><a href="#read-读取键盘输入" class="headerlink" title="read 读取键盘输入"></a><code>read</code> 读取键盘输入</h3><p><code>read [-s] [-t timeout] [-n num] [-p prompt] [variables...]</code></p>
+<ul>
+<li><code>-p prompt</code> 提示语句</li>
+<li><code>-s</code> 静默输入(例如输入密码)</li>
+<li><code>-t timeout</code> 设置输入超时时间，如果超时则以非 0 状态退出</li>
+<li><code>-n num</code> 限制输入字数，如果设置为一则只需要按下一个字母，无需按回车键</li>
+<li><code>variabels</code> 变量名 可以制定多个， 如果不指定会将输入将存入<code>REPLY</code>变量中</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># !/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> -n <span class="string">&quot;Enter your name:&quot;</span>                 <span class="comment"># 参数-n的作用是不换行，echo默认换行</span></span><br><span class="line"><span class="built_in">read</span> name                                  <span class="comment"># 把输入放入变量name</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;hello <span class="variable">$name</span>,welcome to my program&quot;</span>   <span class="comment"># 显示输入信息</span></span><br><span class="line"><span class="built_in">exit</span> 0</span><br></pre></td></tr></table></figure>
+
+<p>交互式菜单</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;Please Select:</span></span><br><span class="line"><span class="string">1.Display System Information</span></span><br><span class="line"><span class="string">2.Display Disk Space</span></span><br><span class="line"><span class="string">3.Display Home Space Utilization</span></span><br><span class="line"><span class="string">0.Quit&quot;</span></span><br><span class="line"><span class="built_in">read</span> -p -n 1 <span class="string">&quot;Enter selection [0-3] &gt;&quot;</span> num</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [[ <span class="variable">$num</span> =~ ^[0-3]$ ]]; <span class="keyword">then</span></span><br><span class="line">   <span class="keyword">if</span> [[ <span class="variable">$num</span> == 0 ]]; <span class="keyword">then</span></span><br><span class="line">     <span class="built_in">echo</span> <span class="string">&quot;Program terminated&quot;</span></span><br><span class="line">     <span class="built_in">exit</span>;</span><br><span class="line">   <span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> [[ <span class="variable">$num</span> == 1 ]]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;Hostname :<span class="variable">$HOSTNAME</span>&quot;</span></span><br><span class="line">    uptime</span><br><span class="line">    <span class="built_in">exit</span></span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> [[ <span class="variable">$num</span> == 2 ]]; <span class="keyword">then</span></span><br><span class="line">    df -h</span><br><span class="line">    <span class="built_in">exit</span>;</span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> [[ <span class="variable">$num</span> == 3 ]]; <span class="keyword">then</span></span><br><span class="line">    <span class="keyword">if</span> [[ $(id -u) -eq 0 ]]; <span class="keyword">then</span></span><br><span class="line">      <span class="built_in">echo</span> <span class="string">&quot;Home Space Utilization(All Users)&quot;</span></span><br><span class="line">      du -sh /home/*</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">      <span class="built_in">echo</span> <span class="string">&quot;Home Space Utilization(<span class="variable">$USER</span>)&quot;</span></span><br><span class="line">      du -sh <span class="variable">$HOME</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"> <span class="built_in">echo</span> <span class="string">&quot;Invalid entry.&quot;</span> &gt;&amp;2</span><br><span class="line"> <span class="built_in">exit</span> 1</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="自动输入"><a href="#自动输入" class="headerlink" title="自动输入"></a>自动输入</h3><p>我们在写 shell 脚本时会遇到需要进行手动输入的命令，如 <code>sudo</code> <code>passwd</code> 等需要等待输入密码，在 shell 脚本中如何进行输入呢？</p>
+<p>以 <code>passwd username</code> 为例</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">passwd username &lt;&lt; <span class="string">EOF</span></span><br><span class="line"><span class="string">123456</span></span><br><span class="line"><span class="string">123456</span></span><br><span class="line"><span class="string">EOF</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h2><h3 id="并且-（AND）"><a href="#并且-（AND）" class="headerlink" title="并且 （AND）"></a>并且 （AND）</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">if [ c1 -a c2 ]; then</span><br><span class="line">...</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">if [ c1 ] &amp;&amp; [ c2 ]; then</span><br><span class="line">...</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+
+<h3 id="或-（OR）"><a href="#或-（OR）" class="headerlink" title="或 （OR）"></a>或 （OR）</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">if [ c1 -o c2 ]; then</span><br><span class="line">...</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">if [ c1 ] || [ c2 ]; then</span><br><span class="line">...</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+
+<!-- TODO
+## 循环
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">``` --&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 函数</span></span></span><br><span class="line"></span><br><span class="line">函数的定义格式如下</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>[function] funname [()] {
+  action;
+  [return int;]
+}</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&#96;&#96;&#96;shell</span><br><span class="line">function fn &#123;</span><br><span class="line">  echo &quot;hello world!&quot;</span><br><span class="line">  return 0</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">say_hi() &#123;</span><br><span class="line">  echo $1</span><br><span class="line">&#125;</span><br><span class="line">say_hi jack</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>$1</code> <code>$10</code> <code>$&#123;11&#125;</code></td>
+<td>第 <code>1</code>, <code>10</code>, <code>11</code> 个参数</td>
+</tr>
+<tr>
+<td><code>$#</code></td>
+<td>传递到脚本或函数的参数个数</td>
+</tr>
+<tr>
+<td><code>$*</code></td>
+<td>以一个单字符串显示所有向脚本传递的参数</td>
+</tr>
+<tr>
+<td><code>$@</code></td>
+<td>与 <code>$*</code> 相同，但是使用时加引号，并在引号中返回每个参数。</td>
+</tr>
+<tr>
+<td><code>$$</code></td>
+<td>脚本运行的当前进程 ID 号</td>
+</tr>
+<tr>
+<td><code>$!</code></td>
+<td>后台运行的最后一个进程的 ID 号</td>
+</tr>
+<tr>
+<td><code>$-</code></td>
+<td>显示 Shell 使用的当前选项，与 <code>set</code> 命令功能相同。</td>
+</tr>
+<tr>
+<td><code>$?</code></td>
+<td>显示最后命令的退出状态。<code>0</code> 表示没有错误，其他任何值表明有错误。</td>
+</tr>
+</tbody></table>
+<h2 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h2><h3 id="获取当前-Git-分支名"><a href="#获取当前-Git-分支名" class="headerlink" title="获取当前 Git 分支名"></a>获取当前 Git 分支名</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 获取当前 ref 名</span></span><br><span class="line">ref_name=$(git symbolic-ref -q HEAD) # =&gt; refs/heads/master</span><br><span class="line"><span class="meta">#</span><span class="bash"> 利用替换命令</span></span><br><span class="line">branch_name=$&#123;ref_name##refs/heads/&#125; # =&gt; master</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><blockquote>
+<ul>
+<li>《鸟哥的 Linux 私房菜》</li>
+<li><a href="https://so.csdn.net/so/search/s.do?q=Shell%E7%BC%96%E7%A8%8B%E4%B8%AD%E7%9A%84%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5%E5%A4%84%E7%90%86&t=blog&u=yjk13703623757">Shell 编程中的用户输入处理 - Locutus</a></li>
+<li><a href="https://blog.csdn.net/Yu1543376365/article/details/82717257">Linux 的 Shell 脚本——day5——sed 非交互文本编辑 - Lu-Yu</a></li>
+</ul>
+</blockquote>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -3733,635 +4362,6 @@ quickfix
       <tags>
         <tag>Linux</tag>
         <tag>Vim</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>linux 学习笔记</title>
-    <url>/2017/linux-study-notes/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这里是一篇个人学习使用 Linux 操作系统时遇到的一些常见问题以及资料的集合. 用来在日后的操作中做一个 QA 索引. 如果它也能帮到你就再好不过了.</p>
-<a id="more"></a>
-
-<h1 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h1><h2 id="别名"><a href="#别名" class="headerlink" title="别名"></a>别名</h2><p>在使用 yum 安装 remi 源的 php7 时，需要执行 <code>yum install php70</code>，安装完成后执行 php cli 的命令为 <code>php70 -v</code>，比较不方便，这时可以使用 alias 给 <code>php70</code> 设置一个别名。</p>
-<p>执行以下命令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> php=`php70`</span><br></pre></td></tr></table></figure>
-
-<p>注意等号前后不可以有空格，否则会报错。</p>
-<h1 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h1><h2 id="挂起与恢复"><a href="#挂起与恢复" class="headerlink" title="挂起与恢复"></a>挂起与恢复</h2><table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th align="left">作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>ctrl-c</td>
-<td align="left">发送中断信号强制中断前台进程</td>
-</tr>
-<tr>
-<td>ctrl-z</td>
-<td align="left">发送挂起信号挂起一个前台进程，挂起后使用 <code>fg</code> / <code>bg</code> 恢复进程</td>
-</tr>
-<tr>
-<td>ctrl-d</td>
-<td align="left">模拟输入 <code>.exit</code> 退出当前进程</td>
-</tr>
-</tbody></table>
-<h2 id="开机启动"><a href="#开机启动" class="headerlink" title="开机启动"></a>开机启动</h2><table>
-<thead>
-<tr>
-<th>命令</th>
-<th align="left">作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>chkconfig [service]</code></td>
-<td align="left">查看某个 service 是否在开机启动状态</td>
-</tr>
-<tr>
-<td><code>chkconfig [service] on</code></td>
-<td align="left">允许开机启动某个 service</td>
-</tr>
-<tr>
-<td><code>chkconfig [service] off</code></td>
-<td align="left">禁止开机启动某个 service</td>
-</tr>
-</tbody></table>
-<h1 id="安全"><a href="#安全" class="headerlink" title="安全"></a>安全</h1><h2 id="创建新用户"><a href="#创建新用户" class="headerlink" title="创建新用户"></a>创建新用户</h2><table>
-<thead>
-<tr>
-<th>命令</th>
-<th align="left">作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>adduser</code></td>
-<td align="left">自动创建新用户</td>
-</tr>
-<tr>
-<td><code>useradd</code></td>
-<td align="left">需要使用参数选项创建新用户</td>
-</tr>
-</tbody></table>
-<h3 id="adduser-自动创建新用户"><a href="#adduser-自动创建新用户" class="headerlink" title="adduser 自动创建新用户"></a><code>adduser</code> 自动创建新用户</h3><p>会自动为创建的用户指定主目录、系统 shell 版本，会在创建时输入用户密码。</p>
-<h3 id="useradd-自定义创建新用户"><a href="#useradd-自定义创建新用户" class="headerlink" title="useradd 自定义创建新用户"></a><code>useradd</code> 自定义创建新用户</h3><p>需要使用参数选项指定上述基本设置，如果不使用任何参数，则创建的用户无密码、无主目录、没有指定 shell 版本。</p>
-<ul>
-<li><code>-d [path]</code> 为其设置主目录.</li>
-<li><code>-g [gid|groupname]</code> 为其指定一个主用户组. 可以接组 ID 或组名称</li>
-<li><code>-G [gid|groupname,...]</code> 为其指定一个附加用户组. 可以用逗号分隔开(不要加空格).</li>
-<li><code>-m</code> 如果主目录不存在则创建; 存在则不再创建, 并且这个目录不属于新用户.</li>
-<li><code>-M</code> 不创建主目录.</li>
-<li><code>-N</code> 不为用户创建一个同名的用户组.</li>
-<li><code>-s [shell]</code> 指定用户登陆的 shell 版本</li>
-<li><code>-u [uid]</code> 指定用户 uid</li>
-</ul>
-<p>example.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo user add -d <span class="string">&quot;/home/xxx&quot;</span> -m -s <span class="string">&quot;/bin/bash&quot;</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><code>useradd</code> 命令是有默认值的, 其值与 <code>/etc/default/useradd</code> 中的内容相同.</p>
-</blockquote>
-<h2 id="将用户添加进一个用户组中"><a href="#将用户添加进一个用户组中" class="headerlink" title="将用户添加进一个用户组中"></a>将用户添加进一个用户组中</h2><table>
-<thead>
-<tr>
-<th>命令</th>
-<th align="left">作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>groupadd</code></td>
-<td align="left">创建一个用户组</td>
-</tr>
-<tr>
-<td><code>usermod</code></td>
-<td align="left">更改用户信息</td>
-</tr>
-</tbody></table>
-<h3 id="usermod-创建一个用户组"><a href="#usermod-创建一个用户组" class="headerlink" title="usermod 创建一个用户组"></a><code>usermod</code> 创建一个用户组</h3><p>参考 <code>useradd</code></p>
-<ul>
-<li><code>-a</code> 配合 <code>-G</code> 使用, 附加用户组.</li>
-<li><code>-l [username]</code> 修改用户名.</li>
-<li><code>-L</code> 锁定用户密码, 使密码无效.</li>
-<li><code>-U</code> 解除密码锁定.</li>
-</ul>
-<h2 id="为普通用户添加-root-权限"><a href="#为普通用户添加-root-权限" class="headerlink" title="为普通用户添加 root 权限"></a>为普通用户添加 root 权限</h2><h3 id="1-切换到-root-用户下"><a href="#1-切换到-root-用户下" class="headerlink" title="1. 切换到 root 用户下"></a>1. 切换到 root 用户下</h3><h3 id="2-添加-sudo-文件的写权限"><a href="#2-添加-sudo-文件的写权限" class="headerlink" title="2. 添加 sudo 文件的写权限"></a>2. 添加 sudo 文件的写权限</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod u+w /etc/sudoers</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-编辑-sudoers-文件"><a href="#3-编辑-sudoers-文件" class="headerlink" title="3. 编辑 sudoers 文件"></a>3. 编辑 sudoers 文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/sudoers</span><br></pre></td></tr></table></figure>
-
-<p>找到这行 <code>root ALL=(ALL) ALL</code>, 在它下面添加一行, 将 root 替换为你的用户名</p>
-<blockquote>
-<p>你可以 sudoers 添加下面四行中任意一条</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">youuser            ALL&#x3D;(ALL)                ALL</span><br><span class="line">%youuser           ALL&#x3D;(ALL)                ALL</span><br><span class="line">youuser            ALL&#x3D;(ALL)                NOPASSWD: ALL</span><br><span class="line">%youuser           ALL&#x3D;(ALL)                NOPASSWD: ALL</span><br></pre></td></tr></table></figure>
-
-<p>第一行:允许用户 youuser 执行 sudo 命令(需要输入密码).<br>第二行:允许用户组 youuser 里面的用户执行 sudo 命令(需要输入密码).<br>第三行:允许用户 youuser 执行 sudo 命令,并且在执行的时候不输入密码.<br>第四行:允许用户组 youuser 里面的用户执行 sudo 命令,并且在执行的时候不输入密码.</p>
-</blockquote>
-<h3 id="4-撤销-sudo-文件的写权限"><a href="#4-撤销-sudo-文件的写权限" class="headerlink" title="4. 撤销 sudo 文件的写权限"></a>4. 撤销 sudo 文件的写权限</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod u-w /etc/sudoers</span><br></pre></td></tr></table></figure>
-
-<h2 id="允许用户使用密钥登陆"><a href="#允许用户使用密钥登陆" class="headerlink" title="允许用户使用密钥登陆"></a>允许用户使用密钥登陆</h2><h3 id="新密钥对登陆"><a href="#新密钥对登陆" class="headerlink" title="新密钥对登陆"></a>新密钥对登陆</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">su username <span class="comment"># 切换到普通用户</span></span><br><span class="line"><span class="built_in">cd</span> ~ <span class="comment"># 进入 home 目录</span></span><br><span class="line">ssh-keygen -r rsa <span class="comment"># 创建密钥对, 一路回车即可</span></span><br><span class="line"><span class="built_in">cd</span> .ssh <span class="comment"># 进入 .ssh 目录</span></span><br><span class="line">mv id_rsa.pub authorized_keys <span class="comment"># 将公钥重命名</span></span><br></pre></td></tr></table></figure>
-
-<p>然后将 id_rsa 下载到主机, 并且使用它登陆即可</p>
-<h3 id="使用已有密钥对"><a href="#使用已有密钥对" class="headerlink" title="使用已有密钥对"></a>使用已有密钥对</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">su username</span><br><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">mkdir -m 700 .ssh <span class="comment"># 创建 .ssh 目录</span></span><br><span class="line"><span class="built_in">cd</span> .ssh</span><br><span class="line"><span class="comment"># 将 id_rsa.pub 放入此目录</span></span><br><span class="line">mv id_rsa.pub authorized_keys</span><br><span class="line">chmod 644 authorized_keys</span><br></pre></td></tr></table></figure>
-
-<h1 id="文件与目录"><a href="#文件与目录" class="headerlink" title="文件与目录"></a>文件与目录</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><h3 id="mkdir-创建目录"><a href="#mkdir-创建目录" class="headerlink" title="mkdir 创建目录"></a><code>mkdir</code> 创建目录</h3><ul>
-<li><code>-m [prop]</code> 目标属性, 目录权限.</li>
-<li><code>-p</code> 递归创建, 如果目标目录上级目录不存在, 则创建.</li>
-</ul>
-<h3 id="setfacl-getfacl-为文件或目录添加多个用户-组"><a href="#setfacl-getfacl-为文件或目录添加多个用户-组" class="headerlink" title="setfacl getfacl 为文件或目录添加多个用户(组)"></a><code>setfacl</code> <code>getfacl</code> 为文件或目录添加多个用户(组)</h3><ul>
-<li><code>setfacl -m g:group:rwx path</code> 为 path 添加 group 用户组</li>
-<li><code>setfacl -m u:user:rwx path</code> 为 path 添加 user 用户</li>
-<li><code>setfacl -x g:group path</code> 为 path 移除 group 用户组</li>
-<li><code>setfacl -x u:user path</code> 为 path 移除 user 用户</li>
-<li><code>getfacl path</code> 查看 path 的所有权限</li>
-</ul>
-<h2 id="文件内容查阅"><a href="#文件内容查阅" class="headerlink" title="文件内容查阅"></a>文件内容查阅</h2><table>
-<thead>
-<tr>
-<th>命令</th>
-<th align="left">作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>cat</code></td>
-<td align="left">由第一行开始显示文件内容</td>
-</tr>
-<tr>
-<td><code>tac</code></td>
-<td align="left">由最后一行开始显示文件内容</td>
-</tr>
-<tr>
-<td><code>nl</code></td>
-<td align="left">输出行号显示</td>
-</tr>
-<tr>
-<td><code>more</code></td>
-<td align="left">逐页显示内容</td>
-</tr>
-<tr>
-<td><code>less</code></td>
-<td align="left">逐页显示内容还可以向上翻页</td>
-</tr>
-<tr>
-<td><code>head</code></td>
-<td align="left">输出头部若干行</td>
-</tr>
-<tr>
-<td><code>tail</code></td>
-<td align="left">输出尾部若干行</td>
-</tr>
-<tr>
-<td><code>od</code></td>
-<td align="left">以二进制输出文件内容</td>
-</tr>
-</tbody></table>
-<h3 id="cat-由第一行开始显示文件内容"><a href="#cat-由第一行开始显示文件内容" class="headerlink" title="cat 由第一行开始显示文件内容"></a><code>cat</code> 由第一行开始显示文件内容</h3><ul>
-<li><code>-n</code> 列出行号，包括空行</li>
-</ul>
-<h3 id="less-分页显示文件内容"><a href="#less-分页显示文件内容" class="headerlink" title="less 分页显示文件内容"></a><code>less</code> 分页显示文件内容</h3><table>
-<thead>
-<tr>
-<th>按键</th>
-<th align="left">作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>space</td>
-<td align="left">向下翻一页</td>
-</tr>
-<tr>
-<td>pagedown</td>
-<td align="left">向下翻一页</td>
-</tr>
-<tr>
-<td>pageup</td>
-<td align="left">向上翻一页</td>
-</tr>
-<tr>
-<td>/[字符串]</td>
-<td align="left">向下查询 [字符串]</td>
-</tr>
-<tr>
-<td>?[字符串]</td>
-<td align="left">向上查询 [字符串]</td>
-</tr>
-<tr>
-<td>n</td>
-<td align="left">向下重复一次查询</td>
-</tr>
-<tr>
-<td>N</td>
-<td align="left">向上重复一次查询</td>
-</tr>
-<tr>
-<td>q</td>
-<td align="left">离开 less</td>
-</tr>
-</tbody></table>
-<h3 id="tail-显示文件尾部内容"><a href="#tail-显示文件尾部内容" class="headerlink" title="tail 显示文件尾部内容"></a><code>tail</code> 显示文件尾部内容</h3><ul>
-<li><code>-n</code> 接数字，显示多少行</li>
-<li><code>-f</code> 持续检测文件尾部变动，按下 ctrl-c 结束检测</li>
-</ul>
-<h2 id="编辑文件"><a href="#编辑文件" class="headerlink" title="编辑文件"></a>编辑文件</h2><h3 id="非交互式写入"><a href="#非交互式写入" class="headerlink" title="非交互式写入"></a>非交互式写入</h3><p>将字符串写入文件（清空原有内容）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;foo&quot;</span> &gt; file.txt</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">cat &gt; file.txt &lt;&lt; <span class="string">EOF</span></span><br><span class="line"><span class="string">foo</span></span><br><span class="line"><span class="string">bar</span></span><br><span class="line"><span class="string">EOF</span></span><br></pre></td></tr></table></figure>
-
-<p>追加在文件尾部</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;foo&quot;</span> &gt;&gt; file.txt</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">cat &gt;&gt; file.txt &lt;&lt; <span class="string">EOF</span></span><br><span class="line"><span class="string">foo</span></span><br><span class="line"><span class="string">bar</span></span><br><span class="line"><span class="string">EOF</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="sed-非交互式编辑"><a href="#sed-非交互式编辑" class="headerlink" title="sed 非交互式编辑"></a><code>sed</code> 非交互式编辑</h3><p>处理前置命令的输出结果</p>
-<p><code>(std-out) | sed [options]</code>command``</p>
-<p>处理文件</p>
-<p><code>sed [-n] [-i]</code>条件 命令<code>file</code></p>
-<ul>
-<li><code>-n</code> 忽略没有修改的输出</li>
-<li><code>-i</code> 直接修改源文件</li>
-<li><code>-r</code> 支持拓展正则表达式</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>条件</th>
-<th>作用</th>
-<th>例子</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>行号 命令</td>
-<td>对指定行号的行进行操作</td>
-<td><code>3p</code></td>
-<td>打印第 3 行</td>
-</tr>
-<tr>
-<td>起始行号,终止行号 命令</td>
-<td>对范围中的几行进行操作</td>
-<td><code>2,6d</code></td>
-<td>删除第 2 行到第 6 行</td>
-</tr>
-<tr>
-<td>行号 1 命令 ; 行号 2 命令; ……</td>
-<td>对多行进行操作，没有行号先后区分</td>
-<td><code>1p;2d</code></td>
-<td>打印第 1 行然后删除第 2 行</td>
-</tr>
-<tr>
-<td>起始行号,+附加的行数 命令</td>
-<td>从起始行号开始，再加指定行数，这写范围内的所有行进行操作</td>
-<td><code>1,+3p</code></td>
-<td>打印 1 到 4 行的内容</td>
-</tr>
-<tr>
-<td>起始行号~步长 命令</td>
-<td>从起始行号开始，每隔一个步长的每个行进行操作</td>
-<td><code>1~2p</code></td>
-<td>打印奇数行的内容</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>2~2p</code></td>
-<td>打印偶数行的内容</td>
-</tr>
-<tr>
-<td>/正则表达式/命令</td>
-<td>对匹配正则表达式的行进行操作，注意格式要求</td>
-<td><code>/^root&#124;^ftp/d<code></td>
-<td>删除文件中包以 root 或者 ftp 开头的行</td>
-</tr>
-<tr>
-<td>$命令</td>
-<td>对最后一行进行操作</td>
-<td><code>$!d</code></td>
-<td>最后一行保留，其他全部干掉</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>作用</th>
-<th>用法和例子</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>i</td>
-<td>插入文本</td>
-<td>条件 i 内容</td>
-<td>在指定的行之前插入文本</td>
-</tr>
-<tr>
-<td>a</td>
-<td>追加文本</td>
-<td>条件 a 内容</td>
-<td>在指定的行之后追加文本</td>
-</tr>
-<tr>
-<td>c</td>
-<td>替换行</td>
-<td>条件 c 内容</td>
-<td>把指定行的内容替换，整行都替换掉</td>
-</tr>
-<tr>
-<td>p</td>
-<td>打印</td>
-<td>条件 p</td>
-<td>打印符合条件的内容，注意如果没有-n，sed 默认打印所有</td>
-</tr>
-<tr>
-<td>!p</td>
-<td>打印其他</td>
-<td>条件!p</td>
-<td>不打印符合条件的内容，打印其他的所有</td>
-</tr>
-<tr>
-<td>=</td>
-<td>打印行号</td>
-<td><code>$=</code></td>
-<td>输出文件一共多少行，<code>$</code>代表最后一行，<code>=</code>代表输出行号</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>/^root/=</code></td>
-<td>输出以 root 开头的行号</td>
-</tr>
-<tr>
-<td>d</td>
-<td>删除</td>
-<td>条件 d</td>
-<td>删除符合条件的内容</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>$d</code></td>
-<td>删除最后一行</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>/^$/d</code></td>
-<td>删除所有空行 ，这是正则与之结合的结果</td>
-</tr>
-<tr>
-<td>!d</td>
-<td>保留其他</td>
-<td>条件!d</td>
-<td>符合条件的不删除，其余删除</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>/^root/!d</code></td>
-<td>以 root 开头的保留，其余全部删除</td>
-</tr>
-<tr>
-<td>s</td>
-<td>替换</td>
-<td>条件 s/被替换内容/替换成什么/第几个</td>
-<td>把文件中的每个符合条件的行的第几个匹配替换要求的内容进行替换，如果没有这么多个被替换内容就不替换，不写默认第一个</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>条件 s/被替换内容/替换成什么/g</td>
-<td>把文件中的每个符合条件的行的所有匹配替换要求的内容进行替换</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>条件 s/被替换内容/替换成什么/第几个 p</td>
-<td>把文件中的每个符合条件的行的第几个匹配替换要求的内容进行替换，然后显示，如果前面有-n，那么就可以完成替换后只显示替换的部分信息</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>条件 s#被替换内容#替换成什么#</td>
-<td>s 后面紧跟的符号就是控制替换符号，可以是任意字符，包括空格，字符，数字，但是不建议使用</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>2s/student//2p</code></td>
-<td>把文件中第二行中第二个 student 替换成空,然后现实替换的内容，可以用作删除</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>1,5s/^a/#a</code></td>
-<td>在 1 到 5 行每个以 a 开头的行的前面加上注释</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>6,10s/^#//</code></td>
-<td>把 6 到 10 行中的注释的注释标示去掉，让其成为配置</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>99s9\98\97\99\95\98\99gp</code></td>
-<td>这里面替换控制符号是 9，他就算把 99 行所有的 98979 替换成 95989 然后输出</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>1s#^.\&#123;&#39;$n&#39;\&#125;..∗..\&#123;&#39;$m&#39;\&#125;$#\1\4\3\2\5#</code></td>
-<td>把第 n 个和倒数第 m 个字符对调</td>
-</tr>
-<tr>
-<td>r</td>
-<td>导入文件</td>
-<td><code>条件 r 文件 2</code></td>
-<td>把文件 2（条件指令中的文件）中的内容添加文件 1（sed 命令后操作的文件）中到满足条件的行下</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>sed -n &quot;2 r a.txt&quot; b.txt</code></td>
-<td>把 a.txt 的内容添加到 b.txt 的第二行下</td>
-</tr>
-<tr>
-<td>w</td>
-<td>导出文件</td>
-<td>条件 w 文件 2</td>
-<td>把文件 1（sed 命令后操作的文件）中到满足条件的行另存到文件 2 中</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>sed -n &quot;w a.txt&quot; b.txt</code></td>
-<td>把 b.txt 的所有内容保存到 a.txt 中</td>
-</tr>
-<tr>
-<td>H</td>
-<td>追加复制</td>
-<td>条件 H</td>
-<td>把符合条件的行的内容写入复制版中</td>
-</tr>
-<tr>
-<td>h</td>
-<td>覆盖复制</td>
-<td>条件 h</td>
-<td>把符合条件的行的内容覆盖写入复制版中</td>
-</tr>
-<tr>
-<td>G</td>
-<td>追加粘贴</td>
-<td>条件 G</td>
-<td>把复制版中的内容追加到符合条件的行后面，注意也没有回车</td>
-</tr>
-<tr>
-<td>g</td>
-<td>覆盖粘贴</td>
-<td>条件 g</td>
-<td>把复制版中的内容覆盖到符合条件的行后面，注意也没有回车</td>
-</tr>
-</tbody></table>
-<p>注意</p>
-<ul>
-<li>在 sed 中的空格没有太过严格的要求，条件与命令间有没有空格都可以，不影响使用，</li>
-<li>如果想让输出有该行在源文件的位置，可以用 <code>cat -n 文件 | sed [选项] 条件 命令</code><br>但是这时候如果用正则匹配，开头匹配就不能用了，因为内容有了改变，原本再文件中开头的数据前面都有了行号，他们就不是在行首了</li>
-<li>删除某一行或多行用命令 <code>条件 d</code> ，如果删除某一行或多行中的某一些字段用 <code>条件 s/目标字段//</code><br>替换某一行的内容用<code>条件 c 内容</code> , 如果替换某一行中的某个字段用<code>条件 s/被替换的部分/替换成什么/</code></li>
-<li>s 后面紧跟的符号就是控制替换符号，可以是任意字符，包括空格，字符，数字，但是不建议使用</li>
-<li>在 sed 的 s 替换中替换成什么，这个部分，符号基本都没有特殊含义，除了 \ 和被选定作为控制替换符号 ， 如果要向替换成 \ 就要打 \ 如果向换成 \ 就打 \\ 依次类推 ， 如果要替换成控制替换符号如 / 就要打 /<br>例如： sed -n <code>s/[A−Z]/\/\\\1:&quot;</code>/gp` 文件 其作用就是把全文所有的大写字母 变成 /\大写字母:” 然后打印出来</li>
-<li>一般 sed 中用 ``限定起来如果要用变量可以把中间的条件命令分开来<code>……</code>$变量<code>……</code> 这样就可以了</li>
-</ul>
-<!-- ## 权限控制
-
-`chmod`
-`chown`
-`chgrp`
-`setfacl`
-`getfacl` -->
-
-<h1 id="SHELL"><a href="#SHELL" class="headerlink" title="SHELL"></a>SHELL</h1><h2 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h2><table>
-<thead>
-<tr>
-<th>命令</th>
-<th align="left">作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>printenv</code></td>
-<td align="left">打印所有环境变量</td>
-</tr>
-</tbody></table>
-<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><table>
-<thead>
-<tr>
-<th>命令</th>
-<th align="left">作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>echo</code></td>
-<td align="left">输出</td>
-</tr>
-</tbody></table>
-<h3 id="echo"><a href="#echo" class="headerlink" title="echo"></a><code>echo</code></h3><h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><h3 id="输入参数"><a href="#输入参数" class="headerlink" title="输入参数"></a>输入参数</h3><p>读取参数时，使用 <code>$0</code>..<code>$9</code> <code>$&#123;10&#125;</code> 等获取参数</p>
-<p>其中 <code>$0</code> 是程序名称</p>
-<figure class="highlight bash"><figcaption><span>add.sh</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># !/bin/bash</span></span><br><span class="line"></span><br><span class="line">name=`basename <span class="variable">$0</span>`</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;the cmd is <span class="variable">$0</span>&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;the cmd basename is <span class="variable">$name</span>&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;The #1 param is <span class="variable">$1</span>&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;The #2 param is <span class="variable">$2</span>&quot;</span></span><br><span class="line"></span><br><span class="line">SUM=$[ <span class="variable">$1</span> + <span class="variable">$2</span> ]</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;The result is <span class="variable">$SUM</span>&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>输出</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">➜  ~ chmod +x add.sh</span><br><span class="line">➜  ~ .&#x2F;add.sh 1 2</span><br><span class="line">the cmd is .&#x2F;add.sh</span><br><span class="line">the cmd basename is add.sh</span><br><span class="line">The #1 param is 1</span><br><span class="line">The #2 param is 2</span><br><span class="line">The result is 3</span><br></pre></td></tr></table></figure>
-
-<h3 id="特殊变量"><a href="#特殊变量" class="headerlink" title="特殊变量"></a>特殊变量</h3><p>还有几个特殊的变量可供使用</p>
-<ul>
-<li><code>echo $#</code> 输出参数的个数</li>
-<li><code>echo $*</code> 输出参数变量</li>
-<li><code>echo $@</code> 输出参数列表（可用 for in 遍历）</li>
-</ul>
-<p>下面的例子来判断变量参数是否符合要求</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># !/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ <span class="variable">$#</span> -lt 2 ] <span class="comment"># $#获取输入个数，选项-lt表示less than</span></span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;please input at least 2 param&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="shift-移动参数位置"><a href="#shift-移动参数位置" class="headerlink" title="shift 移动参数位置"></a><code>shift</code> 移动参数位置</h3><p>使用 <code>shift</code> 命令将参数队列的第一个参数移出 所有参数位置向前移动</p>
-<figure class="highlight bash"><figcaption><span>sum.sh</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># !/bin/bash</span></span><br><span class="line"></span><br><span class="line">result=0</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> [ -n <span class="string">&quot;<span class="variable">$1</span>&quot;</span> ]               <span class="comment"># 通过循环，每次读取$1位置参数</span></span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">  result=$[ <span class="variable">$result</span> + <span class="variable">$1</span> ]    <span class="comment"># $1位置参数与原参数和累加</span></span><br><span class="line">  <span class="built_in">shift</span>                       <span class="comment"># 把$2位置参数向前移动到$1，原$1位置参数不可用</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;sum of result is <span class="variable">$result</span>&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="read-读取键盘输入"><a href="#read-读取键盘输入" class="headerlink" title="read 读取键盘输入"></a><code>read</code> 读取键盘输入</h3><p><code>read [-s] [-t timeout] [-n num] [-p prompt] [variables...]</code></p>
-<ul>
-<li><code>-p prompt</code> 提示语句</li>
-<li><code>-s</code> 静默输入(例如输入密码)</li>
-<li><code>-t timeout</code> 设置输入超时时间，如果超时则以非 0 状态退出</li>
-<li><code>-n num</code> 限制输入字数，如果设置为一则只需要按下一个字母，无需按回车键</li>
-<li><code>variabels</code> 变量名 可以制定多个， 如果不指定会将输入将存入<code>REPLY</code>变量中</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># !/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> -n <span class="string">&quot;Enter your name:&quot;</span>                 <span class="comment"># 参数-n的作用是不换行，echo默认换行</span></span><br><span class="line"><span class="built_in">read</span> name                                  <span class="comment"># 把输入放入变量name</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;hello <span class="variable">$name</span>,welcome to my program&quot;</span>   <span class="comment"># 显示输入信息</span></span><br><span class="line"><span class="built_in">exit</span> 0</span><br></pre></td></tr></table></figure>
-
-<p>交互式菜单</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;Please Select:</span></span><br><span class="line"><span class="string">1.Display System Information</span></span><br><span class="line"><span class="string">2.Display Disk Space</span></span><br><span class="line"><span class="string">3.Display Home Space Utilization</span></span><br><span class="line"><span class="string">0.Quit&quot;</span></span><br><span class="line"><span class="built_in">read</span> -p -n 1 <span class="string">&quot;Enter selection [0-3] &gt;&quot;</span> num</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [[ <span class="variable">$num</span> =~ ^[0-3]$ ]]; <span class="keyword">then</span></span><br><span class="line">   <span class="keyword">if</span> [[ <span class="variable">$num</span> == 0 ]]; <span class="keyword">then</span></span><br><span class="line">     <span class="built_in">echo</span> <span class="string">&quot;Program terminated&quot;</span></span><br><span class="line">     <span class="built_in">exit</span>;</span><br><span class="line">   <span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> [[ <span class="variable">$num</span> == 1 ]]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;Hostname :<span class="variable">$HOSTNAME</span>&quot;</span></span><br><span class="line">    uptime</span><br><span class="line">    <span class="built_in">exit</span></span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> [[ <span class="variable">$num</span> == 2 ]]; <span class="keyword">then</span></span><br><span class="line">    df -h</span><br><span class="line">    <span class="built_in">exit</span>;</span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> [[ <span class="variable">$num</span> == 3 ]]; <span class="keyword">then</span></span><br><span class="line">    <span class="keyword">if</span> [[ $(id -u) -eq 0 ]]; <span class="keyword">then</span></span><br><span class="line">      <span class="built_in">echo</span> <span class="string">&quot;Home Space Utilization(All Users)&quot;</span></span><br><span class="line">      du -sh /home/*</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">      <span class="built_in">echo</span> <span class="string">&quot;Home Space Utilization(<span class="variable">$USER</span>)&quot;</span></span><br><span class="line">      du -sh <span class="variable">$HOME</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"> <span class="built_in">echo</span> <span class="string">&quot;Invalid entry.&quot;</span> &gt;&amp;2</span><br><span class="line"> <span class="built_in">exit</span> 1</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="自动输入"><a href="#自动输入" class="headerlink" title="自动输入"></a>自动输入</h3><p>我们在写 shell 脚本时会遇到需要进行手动输入的命令，如 <code>sudo</code> <code>passwd</code> 等需要等待输入密码，在 shell 脚本中如何进行输入呢？</p>
-<p>以 <code>passwd username</code> 为例</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">passwd username &lt;&lt; <span class="string">EOF</span></span><br><span class="line"><span class="string">123456</span></span><br><span class="line"><span class="string">123456</span></span><br><span class="line"><span class="string">EOF</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h2><h3 id="并且-（AND）"><a href="#并且-（AND）" class="headerlink" title="并且 （AND）"></a>并且 （AND）</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">if [ c1 -a c2 ]; then</span><br><span class="line">...</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">if [ c1 ] &amp;&amp; [ c2 ]; then</span><br><span class="line">...</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
-
-<h3 id="或-（OR）"><a href="#或-（OR）" class="headerlink" title="或 （OR）"></a>或 （OR）</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">if [ c1 -o c2 ]; then</span><br><span class="line">...</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">if [ c1 ] || [ c2 ]; then</span><br><span class="line">...</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
-
-<!-- TODO
-## 循环
-
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">``` --&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 函数</span></span></span><br><span class="line"></span><br><span class="line">函数的定义格式如下</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>[function] funname [()] {
-  action;
-  [return int;]
-}</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&#96;&#96;&#96;shell</span><br><span class="line">function fn &#123;</span><br><span class="line">  echo &quot;hello world!&quot;</span><br><span class="line">  return 0</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">say_hi() &#123;</span><br><span class="line">  echo $1</span><br><span class="line">&#125;</span><br><span class="line">say_hi jack</span><br></pre></td></tr></table></figure>
-
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>$1</code> <code>$10</code> <code>$&#123;11&#125;</code></td>
-<td>第 <code>1</code>, <code>10</code>, <code>11</code> 个参数</td>
-</tr>
-<tr>
-<td><code>$#</code></td>
-<td>传递到脚本或函数的参数个数</td>
-</tr>
-<tr>
-<td><code>$*</code></td>
-<td>以一个单字符串显示所有向脚本传递的参数</td>
-</tr>
-<tr>
-<td><code>$@</code></td>
-<td>与 <code>$*</code> 相同，但是使用时加引号，并在引号中返回每个参数。</td>
-</tr>
-<tr>
-<td><code>$$</code></td>
-<td>脚本运行的当前进程 ID 号</td>
-</tr>
-<tr>
-<td><code>$!</code></td>
-<td>后台运行的最后一个进程的 ID 号</td>
-</tr>
-<tr>
-<td><code>$-</code></td>
-<td>显示 Shell 使用的当前选项，与 <code>set</code> 命令功能相同。</td>
-</tr>
-<tr>
-<td><code>$?</code></td>
-<td>显示最后命令的退出状态。<code>0</code> 表示没有错误，其他任何值表明有错误。</td>
-</tr>
-</tbody></table>
-<h2 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h2><h3 id="获取当前-Git-分支名"><a href="#获取当前-Git-分支名" class="headerlink" title="获取当前 Git 分支名"></a>获取当前 Git 分支名</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 获取当前 ref 名</span></span><br><span class="line">ref_name=$(git symbolic-ref -q HEAD) # =&gt; refs/heads/master</span><br><span class="line"><span class="meta">#</span><span class="bash"> 利用替换命令</span></span><br><span class="line">branch_name=$&#123;ref_name##refs/heads/&#125; # =&gt; master</span><br></pre></td></tr></table></figure>
-
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><blockquote>
-<ul>
-<li>《鸟哥的 Linux 私房菜》</li>
-<li><a href="https://so.csdn.net/so/search/s.do?q=Shell%E7%BC%96%E7%A8%8B%E4%B8%AD%E7%9A%84%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5%E5%A4%84%E7%90%86&t=blog&u=yjk13703623757">Shell 编程中的用户输入处理 - Locutus</a></li>
-<li><a href="https://blog.csdn.net/Yu1543376365/article/details/82717257">Linux 的 Shell 脚本——day5——sed 非交互文本编辑 - Lu-Yu</a></li>
-</ul>
-</blockquote>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
