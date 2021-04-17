@@ -6,7 +6,7 @@
   <link href="https://blog.mutoe.com/atom.xml" rel="self"/>
   
   <link href="https://blog.mutoe.com/"/>
-  <updated>2020-05-04T04:16:42.000Z</updated>
+  <updated>2021-04-11T08:12:26.000Z</updated>
   <id>https://blog.mutoe.com/</id>
   
   <author>
@@ -15,6 +15,108 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>家庭网络折腾记</title>
+    <link href="https://blog.mutoe.com/2021/home-network-infra-notes/"/>
+    <id>https://blog.mutoe.com/2021/home-network-infra-notes/</id>
+    <published>2021-04-11T08:12:26.000Z</published>
+    <updated>2021-04-11T08:12:26.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近把家里的网络折腾了一下，整体用下来感觉还不错，这里记录下来分享给大家，大家一起学习交流~&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://static.mutoe.com/2021/home-network-infra-notes/infra.png&quot; alt=&quot;Infrastructure&quot;&gt;&lt;/p&gt;
+&lt;p&gt;痛点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;科学上网。现在家里的网络总是觉得有些不尽人意，本人最大的爱好就是周末宅在家里搞搞开源、打打游戏。遇到问题了 Google / StackOverflow 效率是比 Baidu 高，而每个设备自己科学上网比较繁琐，需要各自管理白名单，太麻烦…&lt;/li&gt;
+&lt;li&gt;NAS 访问慢。和爱人出去玩偶尔会拍一些照片和 Vlog，这些都是美好珍贵的记忆，目前存在自己的私有云上，想看了拿出来看看，照片列表加载缓慢，视频进度拖拉卡顿…&lt;/li&gt;
+&lt;li&gt;WIFI 信号。之前路由器是放在客厅，信号到卧室床头比较曲折，有时关门后甚至断网，网络体验极差…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;折腾后：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;全屋设备科学上网。在软路由里根据 IP 地址分流，国外 IP 走代理，国内直连。终端无需单独开软件，无需在意是否国内外网站。&lt;/li&gt;
+&lt;li&gt;广告过滤。同上。&lt;/li&gt;
+&lt;li&gt;内网全千兆访问。访问 NAS 资源、各设备之间文件互传速度大幅提升，堪比本地访问。&lt;/li&gt;
+&lt;li&gt;Docker。开发时如果需要容器资源，内外网都可使用路由器的 Docker，节约开发机资源，目前资源是 4C8G。&lt;/li&gt;
+&lt;li&gt;数据安全。之前 NAS 是直接暴露在公网的，且没有开启 HTTP，现在公网访问内网设备需要 VPN，访问 NAS 强制 HTTPS。&lt;/li&gt;
+&lt;li&gt;扩大 WIFI 信号覆盖。未来搬去新家后智能设备增多，WIFI6 是必不可少的。出于成本考虑，WIFI6 AP 放在客厅，现有垃圾 AP 放在卧室。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;硬件改造成本共 1135 元&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;软路由： J4105，8G DDR4 + 64G SATA固态 咸鱼 750 元&lt;/li&gt;
+&lt;li&gt;交换机： 水星SG108C 塑料8口 JD 69元&lt;/li&gt;
+&lt;li&gt;AP： 华为AX3Pro 咸鱼 295 元&lt;/li&gt;
+&lt;li&gt;网线： 绿联6类线 0.5m x3 JD 21元&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;哭，现在设备各种涨价， ax3pro 暴涨 150 元，蹲了二周才蹲到低于 300 元的 AP，J4105 也涨了 100 多，不知道是不是受了这一波矿潮影响…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;总之，想把网络环境做好，最大的变化就是没有变化，让用户感觉不到就成功了，只需要默默地提供稳定的服务就好~&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="心得" scheme="https://blog.mutoe.com/categories/%E5%BF%83%E5%BE%97/"/>
+    
+    
+    <category term="Docker" scheme="https://blog.mutoe.com/tags/Docker/"/>
+    
+    <category term="OpenWrt" scheme="https://blog.mutoe.com/tags/OpenWrt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React Vite 迁移指南</title>
+    <link href="https://blog.mutoe.com/2021/react-vite-migration/"/>
+    <id>https://blog.mutoe.com/2021/react-vite-migration/</id>
+    <published>2021-03-06T14:12:53.000Z</published>
+    <updated>2021-03-06T14:12:53.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Vite2 发布有一段时间了，其内部使用了 ESBuild 进行打包，ESBuild 有着相对 Webpack 惊人的打包速度。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://static.mutoe.com/2021/react-vite-migration/esbuild-benchmark.svg&quot; alt=&quot;esbuild benchmark&quot;&gt;
+&lt;em&gt;&lt;a href=&quot;https://github.com/evanw/esbuild#why&quot;&gt;数据来自 github.com/evanw/esbuild&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;React 用户表示令人羡慕，不过 Vite 野心比较大，不止可以用来开发 Vue 项目，类似 Rollup，Vite2 可以使用插件来支持 React 项目。&lt;/p&gt;
+&lt;p&gt;这就巧了，手上刚好有一个 React 练习项目，使用 Create React App 创建并且进行过 Eject。接下来我们就用这个 React 项目来练练手吧，享受一下飞一般的构建速度！&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="教程" scheme="https://blog.mutoe.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="React" scheme="https://blog.mutoe.com/tags/React/"/>
+    
+    <category term="Vite" scheme="https://blog.mutoe.com/tags/Vite/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Bash Shell 学习笔记</title>
+    <link href="https://blog.mutoe.com/2020/bash-shell-study-notes/"/>
+    <id>https://blog.mutoe.com/2020/bash-shell-study-notes/</id>
+    <published>2020-06-16T15:44:01.000Z</published>
+    <updated>2020-06-16T15:44:01.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;变量&quot;&gt;&lt;a href=&quot;#变量&quot; class=&quot;headerlink&quot; title=&quot;变量&quot;&gt;&lt;/a&gt;变量&lt;/h1&gt;&lt;h2 id=&quot;字符串&quot;&gt;&lt;a href=&quot;#字符串&quot; class=&quot;headerlink&quot; title=&quot;字符串&quot;&gt;&lt;/a&gt;字符串&lt;/h2&gt;&lt;p</summary>
+        
+      
+    
+    
+    
+    <category term="笔记" scheme="https://blog.mutoe.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="Linux" scheme="https://blog.mutoe.com/tags/Linux/"/>
+    
+    <category term="Bash" scheme="https://blog.mutoe.com/tags/Bash/"/>
+    
+    <category term="Shell Script" scheme="https://blog.mutoe.com/tags/Shell-Script/"/>
+    
+  </entry>
   
   <entry>
     <title>手把手带你实践 TDD Nestjs Realworld 项目 - 6. 编写 API 集成测试</title>
@@ -42,11 +144,11 @@
     <category term="教程" scheme="https://blog.mutoe.com/categories/%E6%95%99%E7%A8%8B/"/>
     
     
+    <category term="Test" scheme="https://blog.mutoe.com/tags/Test/"/>
+    
     <category term="Nestjs" scheme="https://blog.mutoe.com/tags/Nestjs/"/>
     
     <category term="TypeScript" scheme="https://blog.mutoe.com/tags/TypeScript/"/>
-    
-    <category term="Test" scheme="https://blog.mutoe.com/tags/Test/"/>
     
   </entry>
   
@@ -194,6 +296,8 @@
     <category term="教程" scheme="https://blog.mutoe.com/categories/%E6%95%99%E7%A8%8B/"/>
     
     
+    <category term="Jest" scheme="https://blog.mutoe.com/tags/Jest/"/>
+    
     <category term="Nestjs" scheme="https://blog.mutoe.com/tags/Nestjs/"/>
     
     <category term="TypeScript" scheme="https://blog.mutoe.com/tags/TypeScript/"/>
@@ -203,8 +307,6 @@
     <category term="TypeORM" scheme="https://blog.mutoe.com/tags/TypeORM/"/>
     
     <category term="TDD" scheme="https://blog.mutoe.com/tags/TDD/"/>
-    
-    <category term="Jest" scheme="https://blog.mutoe.com/tags/Jest/"/>
     
     <category term="Docker" scheme="https://blog.mutoe.com/tags/Docker/"/>
     
@@ -236,6 +338,8 @@
     <category term="教程" scheme="https://blog.mutoe.com/categories/%E6%95%99%E7%A8%8B/"/>
     
     
+    <category term="Jest" scheme="https://blog.mutoe.com/tags/Jest/"/>
+    
     <category term="Nestjs" scheme="https://blog.mutoe.com/tags/Nestjs/"/>
     
     <category term="TypeScript" scheme="https://blog.mutoe.com/tags/TypeScript/"/>
@@ -246,8 +350,6 @@
     
     <category term="TDD" scheme="https://blog.mutoe.com/tags/TDD/"/>
     
-    <category term="Jest" scheme="https://blog.mutoe.com/tags/Jest/"/>
-    
     <category term="Docker" scheme="https://blog.mutoe.com/tags/Docker/"/>
     
     <category term="GitHub Actions" scheme="https://blog.mutoe.com/tags/GitHub-Actions/"/>
@@ -255,92 +357,6 @@
     <category term="Swagger" scheme="https://blog.mutoe.com/tags/Swagger/"/>
     
     <category term="ESLint" scheme="https://blog.mutoe.com/tags/ESLint/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Docker 学习心得</title>
-    <link href="https://blog.mutoe.com/2019/docker-study-note/"/>
-    <id>https://blog.mutoe.com/2019/docker-study-note/</id>
-    <published>2019-11-14T05:58:15.000Z</published>
-    <updated>2019-11-14T05:58:15.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;通信&quot;&gt;&lt;a href=&quot;#通信&quot; class=&quot;headerlink&quot; title=&quot;通信&quot;&gt;&lt;/a&gt;通信&lt;/h1&gt;&lt;h2 id=&quot;容器间通信的一些-Q-amp-A&quot;&gt;&lt;a href=&quot;#容器间通信的一些-Q-amp-A&quot; class=&quot;headerlink&quot; </summary>
-        
-      
-    
-    
-    
-    <category term="心得" scheme="https://blog.mutoe.com/categories/%E5%BF%83%E5%BE%97/"/>
-    
-    
-    <category term="Docker" scheme="https://blog.mutoe.com/tags/Docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在 Jenkins 中产出由 Cypress 生成的测试视频</title>
-    <link href="https://blog.mutoe.com/2019/generate-cypress-video-report-in-jenkins/"/>
-    <id>https://blog.mutoe.com/2019/generate-cypress-video-report-in-jenkins/</id>
-    <published>2019-10-27T10:34:02.000Z</published>
-    <updated>2019-10-27T10:34:02.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;最近在使用 Cypress 作为前端项目的 E2E 测试，发布到 CI 环境时自动运行。&lt;/p&gt;
-&lt;p&gt;运行时发现在 Pipeline 测试报告中有生成 mp4 格式的视频，这才想起来 Cypress 自带生成视频快照的功能，结合 Jenkins 收集报告产物，不就可以拿到视频快照了吗？&lt;/p&gt;
-&lt;p&gt;哈哈，talk is cheap, show my code!&lt;/p&gt;
-&lt;p&gt;下面是 jenkins 配置&lt;/p&gt;
-&lt;figure class=&quot;highlight groovy&quot;&gt;&lt;figcaption&gt;&lt;span&gt;Jenkinsfile&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pipeline &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  agent any&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  environment &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    CHROME_BIN = &lt;span class=&quot;string&quot;&gt;&amp;#x27;/bin/google-chrome&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  stages &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    stage(&lt;span class=&quot;string&quot;&gt;&amp;#x27;Environment&amp;#x27;&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      steps &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        sh &lt;span class=&quot;string&quot;&gt;&amp;#x27;uname -a&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        sh &lt;span class=&quot;string&quot;&gt;&amp;#x27;apt-get update&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        sh &lt;span class=&quot;string&quot;&gt;&amp;#x27;apt-get install -y xvfb libgtk-3-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 ttf-wqy-zenhei&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        sh &lt;span class=&quot;string&quot;&gt;&amp;#x27;fc-cache -v&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        sh &lt;span class=&quot;string&quot;&gt;&amp;#x27;yarn install&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    stage(&lt;span class=&quot;string&quot;&gt;&amp;#x27;Test&amp;#x27;&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      steps &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        sh &lt;span class=&quot;string&quot;&gt;&amp;#x27;yarn test:e2e --headless&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        junit &lt;span class=&quot;string&quot;&gt;&amp;#x27;reporter/output.xml&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        archiveArtifacts &lt;span class=&quot;string&quot;&gt;&amp;#x27;tests/e2e/videos/*.mp4&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;其中 &lt;code&gt;ttf-wqy-zenhei&lt;/code&gt; 是用来解决 Ubuntu 系统中没有中文字体等问题，否则生成的视频报告中的中文都为方框乱码。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;如果是在 CentOS 中，执行 &lt;code&gt;yum -y groupinstall chinese-support&lt;/code&gt; 解决中文问题&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;如果不知道 Jenkins 所属运行环境，使用 &lt;code&gt;uname -a&lt;/code&gt; 查看系统信息&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;code&gt;archiveArtifacts&lt;/code&gt; 用来收集报告产物&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;junit&lt;/code&gt; 用来收集测试报告，但 Cypress 默认是不生成报告的，需要在 &lt;code&gt;cypress.json&lt;/code&gt; 中增加以下内容&lt;/p&gt;
-&lt;figure class=&quot;highlight json&quot;&gt;&lt;figcaption&gt;&lt;span&gt;cypress.json&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;&amp;quot;reporter&amp;quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&amp;quot;junit&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;&amp;quot;reporterOptions&amp;quot;&lt;/span&gt;: &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;&amp;quot;mochaFile&amp;quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&amp;quot;reporter/output.xml&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;&amp;quot;toConsole&amp;quot;&lt;/span&gt;: &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="心得" scheme="https://blog.mutoe.com/categories/%E5%BF%83%E5%BE%97/"/>
-    
-    
-    <category term="Cypress" scheme="https://blog.mutoe.com/tags/Cypress/"/>
-    
-    <category term="CI" scheme="https://blog.mutoe.com/tags/CI/"/>
-    
-    <category term="Jenkins" scheme="https://blog.mutoe.com/tags/Jenkins/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在 Shell 脚本中进行交互的一些心得</title>
-    <link href="https://blog.mutoe.com/2019/interactive-command-in-shell/"/>
-    <id>https://blog.mutoe.com/2019/interactive-command-in-shell/</id>
-    <published>2019-10-17T04:12:16.000Z</published>
-    <updated>2019-10-17T04:12:16.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;我们在写 shell 脚本时经常会遇到一些需要交互的操作，比如修改某个文件，或是使用 &lt;code&gt;yum install&lt;/code&gt; &lt;code&gt;ssh-keygen&lt;/code&gt; &lt;code&gt;certbot --nginx&lt;/code&gt; 等操作时，需要输入一些指令如 “y”, “Enter” 和其他的一些信息。&lt;/p&gt;
-&lt;p&gt;我们写脚本就是为了自动操作，怎么可以等命令执行一会之后在按个回车进行下一步呢？既然我知道接下来要输入什么命令，我告诉你你帮我输入了不就得了？&lt;/p&gt;
-&lt;p&gt;&lt;ruby&gt;聪明&lt;rt&gt;tōu lǎn&lt;rt&gt;&lt;/ruby&gt;的我们想到了一些办法来避免这种无谓的等待，记录下来分享给大家&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="心得" scheme="https://blog.mutoe.com/categories/%E5%BF%83%E5%BE%97/"/>
-    
-    
-    <category term="Linux" scheme="https://blog.mutoe.com/tags/Linux/"/>
-    
-    <category term="Shell" scheme="https://blog.mutoe.com/tags/Shell/"/>
     
   </entry>
   

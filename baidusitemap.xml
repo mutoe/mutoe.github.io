@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.mutoe.com/2021/home-network-infra-notes/</loc>
+    <lastmod>2021-04-11</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.mutoe.com/2021/react-vite-migration/</loc>
+    <lastmod>2021-03-06</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.mutoe.com/2020/bash-shell-study-notes/</loc>
+    <lastmod>2020-06-16</lastmod>
+  </url>
+  <url>
     <loc>https://blog.mutoe.com/2020/TDD-nestjs-realworld-example-app-6/</loc>
     <lastmod>2020-05-04</lastmod>
   </url>
